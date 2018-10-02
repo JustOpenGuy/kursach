@@ -35,6 +35,8 @@ public class Controller  {
     private Button Register;
 
     @FXML
+
+
     void initialize() {
         Register.setOnAction(event ->{Register.getScene().getWindow().hide();
 
@@ -52,8 +54,10 @@ public class Controller  {
             Stage stage = new Stage();
             stage.setScene(new Scene(rot));
             stage.showAndWait();
-            
+
 //            Register.getScene().getWindow();
         });
     }
+
+
 }
