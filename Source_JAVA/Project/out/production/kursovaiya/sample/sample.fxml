@@ -9,29 +9,29 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #08088A;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #242f54;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane accessibleRole="IMAGE_VIEW" layoutX="-7.0" layoutY="114.0" prefHeight="292.0" prefWidth="707.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <TextField fx:id="login_fild" layoutX="33.0" layoutY="100.0" opacity="0.75" prefHeight="26.0" prefWidth="214.0" promptText="Логин" style="-fx-background-color: #fafafa; -fx-border-color: #8A0829; -fx-border-radius: 10;">
+            <TextField fx:id="login_fild" layoutX="33.0" layoutY="100.0" opacity="0.75" prefHeight="26.0" prefWidth="214.0" promptText="Логин" style="-fx-background-color: #fafafa; -fx-border-color: #4a8c89; -fx-border-radius: 10;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </TextField>
-            <PasswordField fx:id="password_fild" layoutX="33.0" layoutY="143.0" opacity="0.75" prefHeight="26.0" prefWidth="214.0" promptText="Пароль" style="-fx-background-color: #fafafa; -fx-border-color: #8A0829; -fx-border-radius: 10;" />
-            <Label layoutX="55.0" layoutY="14.0" prefHeight="74.0" prefWidth="181.0" text="Авторизация" textFill="#8a0829" textOverrun="CENTER_WORD_ELLIPSIS">
+            <PasswordField fx:id="password_fild" layoutX="33.0" layoutY="143.0" opacity="0.75" prefHeight="26.0" prefWidth="214.0" promptText="Пароль" style="-fx-background-color: #fafafa; -fx-border-color: #4a8c89; -fx-border-radius: 10;" />
+            <Label layoutX="55.0" layoutY="14.0" prefHeight="74.0" prefWidth="181.0" text="Авторизация" textFill="#4a8c89" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="Gabriola" size="39.0" />
                </font>
             </Label>
-            <Button fx:id="SignIn" layoutX="92.0" layoutY="202.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="96.0" style="-fx-background-color: #8A0829;" text="Войти" textFill="WHITE">
+            <Button fx:id="SignIn" layoutX="92.0" layoutY="207.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="96.0" style="-fx-background-color: #4a8c89;" text="Войти" textFill="WHITE">
                <font>
                   <Font name="Gabriola" size="23.0" />
                </font>
             </Button>
-            <Text fill="#d20472" fontSmoothingType="LCD" layoutX="401.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="        Наш сервис создан специально для студентов и преподователей, если вы еще не зарегестрированы, то просим вас это сделать:3" wrappingWidth="259.73675537109375">
+            <Text fill="#4a8c89" fontSmoothingType="LCD" layoutX="402.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="        Наш сервис создан специально для студентов и преподователей, если вы еще не зарегестрированы, то просим вас это сделать:3" wrappingWidth="259.73675537109375">
                <font>
-                  <Font name="Gill Sans Nova" size="19.0" />
+                  <Font name="Leelawadee UI Semilight" size="19.0" />
                </font>
             </Text>
          </children>
@@ -41,14 +41,14 @@
             <Font name="Ebrima Bold" size="21.0" />
          </font>
       </Label>
-      <Button fx:id="Register" layoutX="528.0" layoutY="23.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="142.0" style="-fx-background-color: #8A0829;" text="Регистрация" textFill="WHITE">
+      <Button fx:id="Register" layoutX="538.0" layoutY="33.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="142.0" style="-fx-background-color: #4a8c89;" text="Регистрация" textFill="WHITE">
          <font>
             <Font name="Gabriola" size="23.0" />
          </font>
       </Button>
-      <Label layoutX="37.0" layoutY="17.0" prefHeight="74.0" prefWidth="204.0" text="StudHellp" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+      <Label layoutX="37.0" layoutY="17.0" prefHeight="75.0" prefWidth="349.0" text="StudHellp" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
-            <Font name="Gabriola" size="60.0" />
+            <Font name="Gunny Rewritten" size="60.0" />
          </font>
       </Label>
    </children>
