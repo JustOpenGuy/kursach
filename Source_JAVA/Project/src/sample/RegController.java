@@ -19,6 +19,8 @@ import javafx.stage.Stage;
 
 public class RegController {
 
+
+
      ObservableList<String>choiceBoxList = FXCollections.observableArrayList("Преподаватель", "Студент");
     @FXML
     private ResourceBundle resources;
@@ -41,10 +43,14 @@ public class RegController {
     @FXML
     private Button backButton;
 
+
+
     @FXML
     void initialize() {
         choiceBox.setValue("Студент");
         choiceBox.setItems(choiceBoxList);
+
+
 
         backButton.setOnAction(event ->{backButton.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
