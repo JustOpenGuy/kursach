@@ -14,7 +14,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class Controller {
+public class Controller  {
 
     @FXML
     private ResourceBundle resources;
@@ -37,19 +37,23 @@ public class Controller {
     @FXML
     void initialize() {
         Register.setOnAction(event ->{Register.getScene().getWindow().hide();
+
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/registration.fxml"));
+            loader.setLocation(getClass().getResource("registration.fxml"));
+
            try {
                loader.load();
            } catch (IOException e) {
                e.printStackTrace();
            }
-           loader.setRoot(loader);
-            Parent root = loader.getRoot();
-          
+
+            Parent rot = loader.getRoot();
+            loader.setRoot(rot);
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
+            stage.setScene(new Scene(rot));
             stage.showAndWait();
+            
+//            Register.getScene().getWindow();
         });
     }
 }

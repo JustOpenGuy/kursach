@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #242f54;" type="AnchorPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #242f54;"  xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegController">
    <children>
       <AnchorPane accessibleRole="IMAGE_VIEW" layoutX="-7.0" layoutY="114.0" prefHeight="292.0" prefWidth="707.0" style="-fx-background-color: #FFFFFF;">
          <children>
@@ -63,4 +63,4 @@
          </font>
       </Button>
    </children>
-</fx:root>
+</AnchorPane>
