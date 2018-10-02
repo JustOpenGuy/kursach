@@ -44,7 +44,9 @@ public class Controller {
            } catch (IOException e) {
                e.printStackTrace();
            }
+           loader.setRoot(loader);
             Parent root = loader.getRoot();
+          
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.showAndWait();
