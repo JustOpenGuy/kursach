@@ -50,14 +50,14 @@ public class Controller  {
            } catch (IOException e) {
                e.printStackTrace();
            }
-
             Parent rot = loader.getRoot();
             loader.setRoot(rot);
             Stage stage = new Stage();
             stage.setScene(new Scene(rot));
+            stage.setResizable(false);
+            stage.sizeToScene();
             stage.showAndWait();
 
-//            Register.getScene().getWindow();
         });
         SignIn.setOnAction(event ->{SignIn.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
@@ -70,6 +70,8 @@ public class Controller  {
             Parent root = loader.getRoot();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.sizeToScene();
             stage.showAndWait();
         });
     }

@@ -50,9 +50,9 @@ public class RegController {
         choiceBox.setValue("Студент");
         choiceBox.setItems(choiceBoxList);
 
+        backButton.setOnAction(event ->{
 
-
-        backButton.setOnAction(event ->{backButton.getScene().getWindow().hide();
+            backButton.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("sample.fxml"));
@@ -62,13 +62,14 @@ public class RegController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             Parent rot = loader.getRoot();
             loader.setRoot(rot);
             Stage stage = new Stage();
             stage.setScene(new Scene(rot));
+            stage.setResizable(false);
+            stage.sizeToScene();
             stage.show();
-            stage.showAndWait();
+
     });
 
     }
