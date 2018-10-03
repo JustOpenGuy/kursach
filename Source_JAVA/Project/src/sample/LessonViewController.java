@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LessonView implements Initializable {
+public class LessonViewController implements Initializable {
     @FXML
     private WebView webView;
 
