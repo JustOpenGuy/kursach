@@ -7,16 +7,18 @@ import javafx.scene.web.WebView;
 import javafx.scene.web.WebEngine;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LessonViewController implements Initializable {
+public class LessonViewController {
     @FXML
     private WebView webView;
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb){
+    @FXML
+    public void initialize(){
         WebEngine engine = webView.getEngine();
-        engine.load("http://www.google.com");
-}
-}
+        engine.load(PersonalAccountController.urlS);
+
+    }
+    }

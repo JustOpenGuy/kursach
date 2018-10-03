@@ -9,8 +9,18 @@ import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class PersonalAccountController {
+    public URL url = this.getClass().getResource("/sample/C++/les1.html");
+
+    public static String urlS;
+    public static void setUrl(String u){
+        urlS = u;
+    }
+    public static String getUrl(){
+        return urlS;
+    }
     @FXML
     private Button GoToLesson;
 
@@ -31,7 +41,7 @@ public class PersonalAccountController {
 
     @FXML
     void initialize() {
-
+        setUrl(url.toString());
 
         LogOut.setOnAction(event -> {
             GoToLesson.getScene().getWindow().hide();
@@ -120,7 +130,7 @@ public class PersonalAccountController {
             stage.setScene(new Scene(root));
             stage.setResizable(false);
             stage.sizeToScene();
-            stage.showAndWait();
+            stage.show();
         });
     }
 }
