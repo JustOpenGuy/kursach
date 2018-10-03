@@ -53,6 +53,7 @@ public class RegController {
 
 
         backButton.setOnAction(event ->{backButton.getScene().getWindow().hide();
+
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("sample.fxml"));
 
@@ -66,8 +67,9 @@ public class RegController {
             loader.setRoot(rot);
             Stage stage = new Stage();
             stage.setScene(new Scene(rot));
+            stage.show();
             stage.showAndWait();
-        });
+    });
 
     }
 
