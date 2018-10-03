@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -61,7 +60,7 @@ public class Controller  {
         });
         SignIn.setOnAction(event ->{SignIn.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/PersonalAccount.fxml"));
+            loader.setLocation(getClass().getResource("/sample/y_PersonalAccount.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {

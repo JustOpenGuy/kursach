@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 
-public class PersonalAccountController {
+public class y_PersonalAccountController {
     public URL url = this.getClass().getResource("/sample/C++/les1.html");
 
     public static String urlS;
@@ -119,7 +119,7 @@ public class PersonalAccountController {
         );
         GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/Lesson.fxml"));
+            loader.setLocation(getClass().getResource("/sample/y_Lesson.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
