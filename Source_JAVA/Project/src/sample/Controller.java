@@ -61,7 +61,7 @@ public class Controller  {
         });
         SignIn.setOnAction(event ->{SignIn.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/Lesson.fxml"));
+            loader.setLocation(getClass().getResource("/sample/PersonalAccount.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
