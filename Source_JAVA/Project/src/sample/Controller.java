@@ -14,6 +14,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+
+
 public class Controller  {
 
     @FXML
@@ -35,6 +37,8 @@ public class Controller  {
     private Button Register;
 
     @FXML
+
+
     void initialize() {
         Register.setOnAction(event ->{Register.getScene().getWindow().hide();
 
@@ -52,7 +56,7 @@ public class Controller  {
             Stage stage = new Stage();
             stage.setScene(new Scene(rot));
             stage.showAndWait();
-            
+
 //            Register.getScene().getWindow();
         });
         SignIn.setOnAction(event ->{SignIn.getScene().getWindow().hide();
@@ -69,4 +73,6 @@ public class Controller  {
             stage.showAndWait();
         });
     }
+
+
 }
