@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="338.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="68.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Выбрать и запустить курс" />
+      <Text layoutX="68.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Пройти необходимые уроки" />
+      <Text layoutX="68.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Получить оценку" />
+      <Text layoutX="68.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Плакать" />
+      <Text layoutX="68.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. Идти к преподу на пересдачу" />
+      <Text layoutX="68.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6. Завалить" />
+      <Text layoutX="68.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7. Плакать" />
+      <Text layoutX="68.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8. Профиит" />
+   </children>
+</AnchorPane>

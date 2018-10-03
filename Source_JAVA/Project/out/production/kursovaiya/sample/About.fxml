@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="278.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="82.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Программа создана с помощью Intellij IDEA и Scene Builder" wrappingWidth="278.779296875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="82.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Команда &quot;Чисто для бюджетников&quot;">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="С любовью,">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

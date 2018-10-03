@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PersonalAccountController">
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Личный кабинет">
+            <items>
+                  <MenuItem fx:id="ChangePass" mnemonicParsing="false" text="Изменить пароль" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="LogOut" mnemonicParsing="false" text="Выйти" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Помощь">
+            <items>
+                  <MenuItem fx:id="Information" mnemonicParsing="false" text="Описание курса" />
+              <MenuItem fx:id="About" mnemonicParsing="false" text="О программе" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="14.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Доступные курсы:" wrappingWidth="232.5419921875">
+         <font>
+            <Font name="Consolas" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Мои оценки:" wrappingWidth="264.5419921875">
+         <font>
+            <Font name="Consolas" size="24.0" />
+         </font>
+      </Text>
+      <ChoiceBox layoutX="14.0" layoutY="120.0" prefWidth="150.0" />
+      <Button fx:id="GetMarks" layoutX="202.0" layoutY="275.0" mnemonicParsing="false" text="Узнать оценки" />
+      <ChoiceBox layoutX="14.0" layoutY="275.0" prefWidth="150.0" />
+      <Button fx:id="GoToLesson" layoutX="202.0" layoutY="120.0" mnemonicParsing="false" text="Запуск курса" />
+      <TableView editable="true" layoutX="14.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Урок" />
+          <TableColumn prefWidth="75.0" text="Оценка" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
