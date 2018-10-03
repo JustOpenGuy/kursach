@@ -30,12 +30,6 @@ public class Main extends Application {
         primaryStage.show();
 
 
-        /*Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setResizable(false);
-        primaryStage.sizeToScene();
-        primaryStage.setTitle("StudHelp");
-        primaryStage.setScene(new Scene(root, 700, 400));
-        primaryStage.show();*/
     }
 
 
@@ -43,3 +37,8 @@ public class Main extends Application {
         launch(args);
     }
 }
+
+
+/*  Ставить перед выводом окна заменив сцены
+primaryStage.setResizable(false);
+        primaryStage.sizeToScene();*/
