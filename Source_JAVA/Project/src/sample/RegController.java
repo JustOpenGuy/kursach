@@ -21,8 +21,8 @@ public class  RegController {
 
 
 
-    /* ObservableList<String>choiceBoxList = FXCollections.observableArrayList("Мужской", "Женский");
-     //для ЧекБоха М/Ж*/
+     ObservableList<String>choiceBoxList = FXCollections.observableArrayList("Мужской", "Женский");
+     //для ЧекБоха М/Ж
 
     @FXML
     private ResourceBundle resources;
@@ -39,8 +39,8 @@ public class  RegController {
     @FXML
     private PasswordField password_field;
 
-   /* @FXML
-    private ComboBox choiceBox;*/
+    @FXML
+    private ComboBox choiceBox;
 
     @FXML
     private Button backButton;
@@ -49,18 +49,8 @@ public class  RegController {
 
     @FXML
     void initialize() {
-        /*choiceBox.setValue("М/Ж");
-        choiceBox.setItems(choiceBoxList);*/
-
-        DatabaseHandler dbHandler = new DatabaseHandler();
-
-
-        nextButton.setOnAction(event -> {
-            dbHandler.signUpUser(login_field.getText(), password_field.getText());
-
-        });
-
-
+        choiceBox.setValue("М/Ж");
+        choiceBox.setItems(choiceBoxList);
 
         backButton.setOnAction(event ->{
 
