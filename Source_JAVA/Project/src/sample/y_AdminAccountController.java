@@ -104,7 +104,7 @@ public class y_AdminAccountController {
             stage.show();
         });
 
-        ChangePass.setOnAction(event ->{Edit.getScene().getWindow().hide();
+        ChangePass.setOnAction(event ->{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
             try {

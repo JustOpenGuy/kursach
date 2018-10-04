@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.*?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: fafafa;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_LessonViewController">
    <children>
-      <WebView fx:id="webView" layoutX="6.0" layoutY="6.0" prefHeight="674.0" prefWidth="893.0" />
-      <Button fx:id="Exit" layoutX="785.0" layoutY="686.0" mnemonicParsing="false" text="Законить урок" />
+      <WebView fx:id="webView" layoutX="6.0" layoutY="6.0" prefHeight="624.0" prefWidth="947.0" />
+      <Button fx:id="Exit" layoutX="841.0" layoutY="636.0" mnemonicParsing="false" text="Законить урок" />
    </children>
 </AnchorPane>
