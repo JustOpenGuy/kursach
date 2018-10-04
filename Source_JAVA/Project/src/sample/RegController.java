@@ -52,11 +52,12 @@ public class  RegController {
         /*choiceBox.setValue("М/Ж");
         choiceBox.setItems(choiceBoxList);*/
 
-        DatabaseHandler dbHandler = new DatabaseHandler();
+
 
 
         nextButton.setOnAction(event -> {
-            dbHandler.signUpUser(login_field.getText(), password_field.getText());
+
+            RegNewUser();
 
         });
 
@@ -83,6 +84,18 @@ public class  RegController {
             stage.show();
 
     });
+
+    }
+
+    private void RegNewUser() {
+        DatabaseHandler dbHandler = new DatabaseHandler();
+
+        String userName = login_field.getText();
+        String password = password_field.getText();
+
+        Users user = new Users(userName, password);
+
+        dbHandler.signUpUser(user);
 
     }
 

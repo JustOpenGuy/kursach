@@ -24,7 +24,7 @@ public class DatabaseHandler extends Configs {
     }
 
 
-    public void signUpUser(String userName, String password){
+    public void signUpUser(Users user){
         String insert = "INSERT INTO " + Const.USER_TABLE + " (" +
                 Const.USER_USERNAME + "," + Const.USER_PASSWORD + ")"
                 + "VALUES(?,?)";
@@ -33,8 +33,8 @@ public class DatabaseHandler extends Configs {
 
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setString(1, userName);
-            prSt.setString(2, password);
+            prSt.setString(1, user.getUserName());
+            prSt.setString(2, user.getPassword());
 
 
             prSt.executeUpdate();
