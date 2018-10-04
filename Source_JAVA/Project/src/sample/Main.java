@@ -24,7 +24,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         setPrimaryStage(primaryStage); // **Set the Stage**
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/sample.fxml"));
         primaryStage.setScene(new Scene(root, 700, 400));
         primaryStage.setTitle("StudHelp");
         primaryStage.setResizable(false);

@@ -46,7 +46,7 @@ public class y_PersonalAccountController {
         LogOut.setOnAction(event -> {
             GoToLesson.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("sample.fxml"));
+            loader.setLocation(getClass().getResource("FXML/sample.fxml"));
 
             try {
                 loader.load();
@@ -65,7 +65,7 @@ public class y_PersonalAccountController {
         About.setOnAction(event -> {
 
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("About.fxml"));
+                    loader.setLocation(getClass().getResource("FXML/About.fxml"));
                     try {
                         loader.load();
                     } catch (IOException e) {
@@ -83,7 +83,7 @@ public class y_PersonalAccountController {
         Information.setOnAction(event -> {
 
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("Inf.fxml"));
+                    loader.setLocation(getClass().getResource("FXML/Inf.fxml"));
                     try {
                         loader.load();
                     } catch (IOException e) {
@@ -98,28 +98,28 @@ public class y_PersonalAccountController {
                     stage.show();
                 }
         );
-        LogOut.setOnAction(event -> {
-                    GoToLesson.getScene().getWindow().hide();
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("sample.fxml"));
-
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
-                }
-        );
+//        LogOut.setOnAction(event -> {
+//                    GoToLesson.getScene().getWindow().hide();
+//                    FXMLLoader loader = new FXMLLoader();
+//                    loader.setLocation(getClass().getResource("FXML/sample.fxml"));
+//
+//                    try {
+//                        loader.load();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                    Parent rot = loader.getRoot();
+//                    loader.setRoot(rot);
+//                    Stage stage = new Stage();
+//                    stage.setScene(new Scene(rot));
+//                    stage.setResizable(false);
+//                    stage.sizeToScene();
+//                    stage.show();
+//                }
+//        );
         GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/y_Lesson.fxml"));
+            loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {

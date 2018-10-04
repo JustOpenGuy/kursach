@@ -17,11 +17,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class RegController {
+public class  RegController {
 
 
 
-     ObservableList<String>choiceBoxList = FXCollections.observableArrayList("Преподаватель", "Студент");
+     ObservableList<String>choiceBoxList = FXCollections.observableArrayList("Мужской", "Женский");
     @FXML
     private ResourceBundle resources;
 
@@ -47,7 +47,7 @@ public class RegController {
 
     @FXML
     void initialize() {
-        choiceBox.setValue("Студент");
+        choiceBox.setValue("М/Ж");
         choiceBox.setItems(choiceBoxList);
 
         backButton.setOnAction(event ->{
@@ -55,7 +55,7 @@ public class RegController {
             backButton.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("sample.fxml"));
+            loader.setLocation(getClass().getResource("FXML/sample.fxml"));
 
             try {
                 loader.load();

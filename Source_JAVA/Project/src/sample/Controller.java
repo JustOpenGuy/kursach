@@ -42,7 +42,7 @@ public class Controller  {
         Register.setOnAction(event ->{Register.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("registration.fxml"));
+            loader.setLocation(getClass().getResource("FXML/registration.fxml"));
 
            try {
                loader.load();
@@ -60,7 +60,7 @@ public class Controller  {
         });
         SignIn.setOnAction(event ->{SignIn.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/y_PersonalAccount.fxml"));
+            loader.setLocation(getClass().getResource("/sample/FXML/y_PersonalAccount.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {

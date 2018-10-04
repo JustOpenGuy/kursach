@@ -39,7 +39,7 @@
                   <Font name="Gabriola" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="193.0" layoutY="171.0" prefHeight="29.0" prefWidth="126.0" text="Тип аккаунта:" textAlignment="CENTER" textFill="#4a8c89">
+            <Label layoutX="193.0" layoutY="171.0" prefHeight="29.0" prefWidth="126.0" text="Пол:" textAlignment="CENTER" textFill="#4a8c89">
                <font>
                   <Font name="Gabriola" size="23.0" />
                </font>

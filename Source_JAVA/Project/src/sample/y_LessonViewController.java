@@ -27,7 +27,7 @@ public class y_LessonViewController {
             Exit.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("y_PersonalAccount.fxml"));
+            loader.setLocation(getClass().getResource("FXML/y_PersonalAccount.fxml"));
 
             try {
                 loader.load();
