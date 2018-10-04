@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.net.URL;
 
 public class y_PersonalAccountController {
-    public URL url = this.getClass().getResource("/sample/C++/les1.html");
+    public URL url = this.getClass().getResource("/sample/C++/les1/p1.html");
 
     public static String urlS;
     public static void setUrl(String u){
@@ -102,6 +102,21 @@ public class y_PersonalAccountController {
         GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+        });
+        ChangePass.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {

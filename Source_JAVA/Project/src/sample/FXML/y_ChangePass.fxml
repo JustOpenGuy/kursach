@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="240.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_ChangePass">
+   <children>
+      <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите ваш старый пароль:" />
+      <Text layoutX="14.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите новый пароль:" />
+      <Text layoutX="14.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите новый пароль еще раз:" />
+      <Button fx:id="Change" layoutX="307.0" layoutY="195.0" mnemonicParsing="false" text="Изменить пароль" />
+      <TextField fx:id="Old" layoutX="14.0" layoutY="35.0" />
+      <TextField fx:id="New" layoutX="14.0" layoutY="89.0" />
+      <TextField fx:id="Again" layoutX="14.0" layoutY="140.0" />
+   </children>
+</AnchorPane>
