@@ -58,21 +58,7 @@ public class Controller  {
             stage.showAndWait();
 
         });
-        SignIn.setOnAction(event ->{                         //переписал ибо нужно синхр с БД
-            String loginText = login_fild.getText().trim(); //метод трим - удаляет лишние пробелы в строке
-            String loginPassword = password_fild.getText().trim();
-
-
-            if(!loginText.equals("") && !loginPassword.equals(""))
-                loginUser(loginText, loginPassword);
-            else
-                System.out.println("Login or password is empty");
-
-
-            //допилить переход!!!
-
-
-            SignIn.getScene().getWindow().hide();
+        SignIn.setOnAction(event ->{SignIn.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_PersonalAccount.fxml"));
             try {
@@ -87,10 +73,6 @@ public class Controller  {
             stage.sizeToScene();
             stage.showAndWait();
         });
-    }
-
-    private void loginUser(String loginText, String loginPassword) {
-
     }
 
 
