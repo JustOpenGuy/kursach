@@ -23,10 +23,9 @@ public class y_LessonViewController {
 
     @FXML
     public void initialize(){
-        WebEngine engine = webView.getEngine();
-  //       engine.loadContent(HtmlToString(y_PersonalAccountController.urlS),"UTF-8");
-        engine.load(y_PersonalAccountController.urlS);
-        Exit.setOnAction(event ->{
+        WebEngine engine = webView.getEngine();         //иниц.ВебВью движок
+        engine.load(y_PersonalAccountController.urlS);  //Отправляем ему нашу ссылку на файл
+        Exit.setOnAction(event ->{                      //при выходе по идее потом переход на тесты нашего урока, а пока в лк
 
             Exit.getScene().getWindow().hide();
 
@@ -49,23 +48,5 @@ public class y_LessonViewController {
         });
     }
 
-  /*  private String HtmlToString(String url){
-        String str = new String();
-        try(FileReader reader = new FileReader(url))
-        {
-            // читаем посимвольно
-            int c;
-            while((c=reader.read())!=-1){
 
-                str += (char)c;
-            }
-        }
-        catch(IOException ex){
-
-            System.out.println(ex.getMessage());
-        }
-        System.out.println(str);
-        return str;
-    }
-*/
 }

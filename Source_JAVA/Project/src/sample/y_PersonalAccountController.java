@@ -12,15 +12,19 @@ import java.io.IOException;
 import java.net.URL;
 
 public class y_PersonalAccountController {
-    public URL url = this.getClass().getResource("/sample/C++/film.html");
+    private String rafUrl = new String("/sample/C++/les1/p1.html"); //Создаем сырую строку получения ссылки на
+                                                                            // урок(которую будем модифицировать,
+                                                                            // в зависимости от того, какой урок  нам нужен
+    public URL url = this.getClass().getResource(rafUrl); //чтоб получить точную ссылку на наш урок, где бы не находилась прога
 
-    public static String urlS;
+    public static String urlS;                             //строка с полной ссылкой, статик, потому что вебВью принимает только статик ссылки
     public static void setUrl(String u){
         urlS = u;
-    }
+    }       //методы для работы с статик полем
     public static String getUrl(){
         return urlS;
-    }
+    }                                                           //эта ссылка паблик, потому что нам нужно будет с ней работать во многих классах,
+                                                                // например класс с тестами в кнопке (след урок)
     @FXML
     private Button GoToLesson;
 
@@ -60,7 +64,7 @@ public class y_PersonalAccountController {
             stage.setResizable(false);
             stage.sizeToScene();
             stage.show();
-        }
+        }       //кнопка выход
         );
         About.setOnAction(event -> {
 
@@ -78,7 +82,7 @@ public class y_PersonalAccountController {
                     stage.setResizable(false);
                     stage.sizeToScene();
                     stage.show();
-                }
+                }          //кнопка о программе
         );
         Information.setOnAction(event -> {
 
@@ -96,10 +100,10 @@ public class y_PersonalAccountController {
                     stage.setResizable(false);
                     stage.sizeToScene();
                     stage.show();
-                }
+                }      //кнопка о гайде
         );
 
-        GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
+        GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();       //тут как всегда
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
             try {
