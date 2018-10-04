@@ -98,25 +98,7 @@ public class y_PersonalAccountController {
                     stage.show();
                 }
         );
-//        LogOut.setOnAction(event -> {
-//                    GoToLesson.getScene().getWindow().hide();
-//                    FXMLLoader loader = new FXMLLoader();
-//                    loader.setLocation(getClass().getResource("FXML/sample.fxml"));
-//
-//                    try {
-//                        loader.load();
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                    Parent rot = loader.getRoot();
-//                    loader.setRoot(rot);
-//                    Stage stage = new Stage();
-//                    stage.setScene(new Scene(rot));
-//                    stage.setResizable(false);
-//                    stage.sizeToScene();
-//                    stage.show();
-//                }
-//        );
+
         GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));

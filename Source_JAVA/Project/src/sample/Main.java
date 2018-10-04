@@ -15,10 +15,12 @@ public class Main extends Application {
     private void setPrimaryStage(Stage stage) {
         Main.primaryStage = stage;
     }
+    //обращаемся к методу главного класса для установки начального Стейджа
+
 
     static public Stage getPrimaryStage() {
         return Main.primaryStage;
-    }
+    }  //обращаемся к методу главного класса для получ начального Стейджа
 
 
     @Override
@@ -27,17 +29,10 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FXML/sample.fxml"));
         primaryStage.setScene(new Scene(root, 700, 400));
         primaryStage.setTitle("StudHelp");
-        primaryStage.setResizable(false);
-        primaryStage.sizeToScene();
+        primaryStage.setResizable(false);   //Эти строки вводим перед .show()
+        primaryStage.sizeToScene();         //они не дают изменять размер сцены
         primaryStage.show();
 
-
-        /*Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setResizable(false);
-        primaryStage.sizeToScene();
-        primaryStage.setTitle("StudHelp");
-        primaryStage.setScene(new Scene(root, 700, 400));
-        primaryStage.show();*/
     }
 
 
