@@ -39,12 +39,12 @@
                   <Font name="Gabriola" size="23.0" />
                </font>
             </Label>
-            <!--<Label layoutX="193.0" layoutY="171.0" prefHeight="29.0" prefWidth="126.0" text="Пол:" textAlignment="CENTER" textFill="#4a8c89">
+            <Label layoutX="193.0" layoutY="171.0" prefHeight="29.0" prefWidth="126.0" text="Пол:" textAlignment="CENTER" textFill="#4a8c89">
                <font>
                   <Font name="Gabriola" size="23.0" />
                </font>
-            </Label>-->
-            <!--<ComboBox fx:id="choiceBox" layoutX="340.0" layoutY="173.0" opacity="0.48" prefHeight="25.0" prefWidth="160.0" />-->
+            </Label>
+            <ComboBox fx:id="choiceBox" layoutX="340.0" layoutY="173.0" opacity="0.48" prefHeight="25.0" prefWidth="160.0" />
          </children>
       </AnchorPane>
       <Label layoutX="14.0" layoutY="14.0" prefHeight="49.0" prefWidth="230.0" textFill="#f209db" textOverrun="CENTER_WORD_ELLIPSIS">

@@ -4,6 +4,7 @@ import sample.Configs;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 
@@ -23,8 +24,24 @@ public class DatabaseHandler extends Configs {
     }
 
 
-    public void signUpUser(String userName, String password, String gender){
+    public void signUpUser(String userName, String password){
         String insert = "INSERT INTO " + Const.USER_TABLE + " (" +
-                Const.USER_USERNAME + "," + Const.USER_PASSWORD + "," + Const.USER_GENDER;
+                Const.USER_USERNAME + "," + Const.USER_PASSWORD + ")"
+                + "VALUES(?,?)";
+
+
+
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+            prSt.setString(1, userName);
+            prSt.setString(2, password);
+
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

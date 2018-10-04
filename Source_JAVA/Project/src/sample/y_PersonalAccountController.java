@@ -12,7 +12,8 @@ import java.io.IOException;
 import java.net.URL;
 
 public class y_PersonalAccountController {
-    public URL url = this.getClass().getResource("/sample/C++/p1.html");
+    public URL url = this.getClass().getResource("/sample/C++/les1.html");
+
     public static String urlS;
     public static void setUrl(String u){
         urlS = u;
