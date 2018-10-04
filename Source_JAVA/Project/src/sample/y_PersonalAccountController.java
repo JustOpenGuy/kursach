@@ -114,7 +114,7 @@ public class y_PersonalAccountController {
             stage.sizeToScene();
             stage.show();
         });
-        ChangePass.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
+        ChangePass.setOnAction(event ->{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
             try {

@@ -22,6 +22,7 @@ public class y_ChangePass {
     void initialize(){
         Change.setOnAction(event ->{
             if(Users.getPassword().equals(Old.getText()) && New.getText().equals(Again.getText()));
+            Users.setPassword(Old.getText());
         });
     }
 }
