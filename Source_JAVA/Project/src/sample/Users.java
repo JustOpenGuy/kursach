@@ -7,9 +7,9 @@ public class Users {
     private String userName;
     private static String password;
 
-    public Users(String userName, String pass) {
+    public Users(String userName, String password) {
         this.userName = userName;
-        password = pass;
+        this.password = password;
     }
     public Users() {
     }
@@ -23,11 +23,11 @@ public class Users {
         this.userName = userName;
     }
 
-    public static String  getPassword() {
+    public static String   getPassword() {
         return password;
     }
 
-    public static void setPassword(String pass) {
-        password = pass;
+    public  static void setPassword(String pas) {
+        password = pas;
     }
 }
