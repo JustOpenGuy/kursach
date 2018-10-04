@@ -11,6 +11,9 @@ public class Users {
         this.userName = userName;
         this.password = password;
     }
+    public Users() {
+    }
+
 
     public String getUserName() {
         return userName;
@@ -20,7 +23,7 @@ public class Users {
         this.userName = userName;
     }
 
-    public String getPassword() {
+    public String  getPassword() {
         return password;
     }
 

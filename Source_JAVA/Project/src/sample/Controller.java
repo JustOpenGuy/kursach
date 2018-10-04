@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+import java.sql.ResultSet;
 
 
 public class Controller  {
@@ -63,10 +63,13 @@ public class Controller  {
             String loginPassword = password_fild.getText().trim();
 
 
-            if(!loginText.equals("") && !loginPassword.equals(""))
-                loginUser(loginText, loginPassword);
+            if(!loginText.equals("") && !loginPassword.equals(""))      //
+                loginUser(loginText, loginPassword);                    //
             else
                 System.out.println("Login or password is empty");
+
+
+
 
 
             //допилить переход!!!
@@ -86,11 +89,22 @@ public class Controller  {
             stage.setResizable(false);
             stage.sizeToScene();
             stage.showAndWait();
+
+
+
+
         });
-    }
+
+
+            
+
+        }
+
 
     private void loginUser(String loginText, String loginPassword) {
-
+        DatabaseHandler dbHandler;
+        Users user = new Users();
+        user.setUserName(loginText);
     }
 
 
