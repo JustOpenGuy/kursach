@@ -46,18 +46,40 @@ public class DatabaseHandler extends Configs {
         }
     }
 
+    public ResultSet getAdmin(Users user) {
+        ResultSet resSet = null;
+
+        String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " +
+                Const.USER_ID + "=? AND " + Const.USER_USERNAME + "=? AND " + Const.USER_PASSWORD + "=?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, "1");
+            prSt.setString(2, user.getUserName());
+            prSt.setString(3, user.getPassword());
+
+
+           resSet = prSt.executeQuery();  //executeQuery - получение данных
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
     public ResultSet getUser(Users user) {
         ResultSet resSet = null;
 
         String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " +
-                Const.USER_USERNAME + "=? AND " + Const.USER_PASSWORD + "=?";
+                 Const.USER_USERNAME + "=? AND " + Const.USER_PASSWORD + "=?";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
-            prSt.setString(1, user.getUserName());
+           prSt.setString(1, user.getUserName());
             prSt.setString(2, user.getPassword());
 
 
-           resSet = prSt.executeQuery();  //executeQuery - получение данных
+            resSet = prSt.executeQuery();  //executeQuery - получение данных
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

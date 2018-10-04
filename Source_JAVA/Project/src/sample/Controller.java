@@ -2,6 +2,7 @@ package sample;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -63,48 +64,82 @@ public class Controller  {
             String loginPassword = password_fild.getText().trim();
 
 
-            if(!loginText.equals("") && !loginPassword.equals(""))      //
-                loginUser(loginText, loginPassword);                    //
+            if(!loginText.equals("") && !loginPassword.equals("")){      //
+               if(loginUser(loginText, loginPassword).equals("ADMIN"))
+               {
+                   SignIn.getScene().getWindow().hide();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("/sample/FXML/y_AdminAccount.fxml"));
+                try {
+                    loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Parent root = loader.getRoot();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setResizable(false);
+                stage.sizeToScene();
+                stage.showAndWait();
+               }
+               else if(loginUser(loginText, loginPassword).equals("USER")) {
+                   SignIn.getScene().getWindow().hide();
+                   FXMLLoader loader = new FXMLLoader();
+                   loader.setLocation(getClass().getResource("/sample/FXML/y_PersonalAccount.fxml"));
+                   try {
+                       loader.load();
+                   } catch (IOException e) {
+                       e.printStackTrace();
+                   }
+                   Parent root = loader.getRoot();
+                   Stage stage = new Stage();
+                   stage.setScene(new Scene(root));
+                   stage.setResizable(false);
+                   stage.sizeToScene();
+                   stage.showAndWait();
+               }
+            }
             else
                 System.out.println("Login or password is empty");
 
 
 
-
-
-            //допилить переход!!!
-
-
-            SignIn.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/y_PersonalAccount.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.showAndWait();
-
-
-
-
         });
-
-
-            
 
         }
 
 
-    private void loginUser(String loginText, String loginPassword) {
-        DatabaseHandler dbHandler;
+    private String loginUser(String loginText, String loginPassword) {
+        DatabaseHandler dbHandler = new DatabaseHandler();
         Users user = new Users();
         user.setUserName(loginText);
+        user.setPassword(loginPassword);
+        ResultSet result = dbHandler.getUser(user);
+
+        int counter = 0, counter1=0;
+
+        try {
+            while(result.next()) {
+                counter++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        if(counter>=1){
+             result = dbHandler.getAdmin(user);
+            try {
+                while(result.next()) {
+                    counter1++;
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+             if(counter1>=1)
+                 return "ADMIN";
+            else return "USER";
+        }else return "NON_USER";
+
     }
 
 

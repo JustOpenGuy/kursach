@@ -7,12 +7,16 @@ public class Users {
     private String userName;
     private static String password;
 
+
     public Users(String userName, String password) {
         this.userName = userName;
         this.password = password;
+
     }
     public Users() {
+
     }
+
 
 
     public String getUserName() {
