@@ -5,7 +5,7 @@ package sample;
  */
 public class Users {
     private String userName;
-    private String password;
+    private static String password;
 
     public Users(String userName, String password) {
         this.userName = userName;
@@ -23,11 +23,11 @@ public class Users {
         this.userName = userName;
     }
 
-    public String  getPassword() {
+    public static String   getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public  static void setPassword(String pas) {
+        password = pas;
     }
 }
