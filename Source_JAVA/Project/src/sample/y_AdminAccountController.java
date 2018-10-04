@@ -90,7 +90,7 @@ public class y_AdminAccountController {
 
         Edit.setOnAction(event ->{Edit.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/y_edit.fxml"));
+            loader.setLocation(getClass().getResource("/sample/FXML/y_Edit.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
