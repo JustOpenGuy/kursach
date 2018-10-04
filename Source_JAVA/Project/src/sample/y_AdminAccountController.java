@@ -103,5 +103,21 @@ public class y_AdminAccountController {
             stage.sizeToScene();
             stage.show();
         });
+
+        ChangePass.setOnAction(event ->{Edit.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+        });
     }
 }
