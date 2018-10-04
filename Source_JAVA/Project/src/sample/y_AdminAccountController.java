@@ -9,19 +9,10 @@ import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 
-public class y_PersonalAccountController {
-    public URL url = this.getClass().getResource("/sample/C++/p1.html");
-    public static String urlS;
-    public static void setUrl(String u){
-        urlS = u;
-    }
-    public static String getUrl(){
-        return urlS;
-    }
+public class y_AdminAccountController {
     @FXML
-    private Button GoToLesson;
+    private Button Edit;
 
     @FXML
     private Button GetMarks;
@@ -40,26 +31,25 @@ public class y_PersonalAccountController {
 
     @FXML
     void initialize() {
-        setUrl(url.toString());
 
         LogOut.setOnAction(event -> {
-            GoToLesson.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("FXML/sample.fxml"));
+                    Edit.getScene().getWindow().hide();
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("FXML/sample.fxml"));
 
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent rot = loader.getRoot();
-            loader.setRoot(rot);
-            Stage stage = new Stage();
-            stage.setScene(new Scene(rot));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.show();
-        }
+                    try {
+                        loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Parent rot = loader.getRoot();
+                    loader.setRoot(rot);
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(rot));
+                    stage.setResizable(false);
+                    stage.sizeToScene();
+                    stage.show();
+                }
         );
         About.setOnAction(event -> {
 
@@ -98,9 +88,9 @@ public class y_PersonalAccountController {
                 }
         );
 
-        GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
+        Edit.setOnAction(event ->{Edit.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
+            loader.setLocation(getClass().getResource("/sample/FXML/y_edit.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
@@ -115,5 +105,3 @@ public class y_PersonalAccountController {
         });
     }
 }
-
-
