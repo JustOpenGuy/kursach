@@ -10,6 +10,8 @@ import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
 
 import javax.swing.text.html.HTML;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class y_EditController {
@@ -21,7 +23,8 @@ public class y_EditController {
 
     @FXML
     void initialize(){
-        //HTMLEditor
+        Editor.setHtmlText(HtmlToString(y_PersonalAccountController.rafURL));
+        System.out.println(HtmlToString(y_PersonalAccountController.rafURL)+"test"+y_PersonalAccountController.rafURL);
         End.setOnAction(event ->{
 
             End.getScene().getWindow().hide();
@@ -42,6 +45,19 @@ public class y_EditController {
             stage.sizeToScene();
             stage.show();
         });
+    }
+    private String HtmlToString(String URL) {
+        StringBuilder contentBuilder = new StringBuilder();
+        try {
+            BufferedReader in = new BufferedReader(new FileReader(URL));
+            String str;
+            while ((str = in.readLine()) != null) {
+                contentBuilder.append(str);
+            }
+            in.close();
+        } catch (IOException e) {
+        }
+        return contentBuilder.toString();
     }
 
 }

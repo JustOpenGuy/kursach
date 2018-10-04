@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: fafafa;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_LessonViewController">
+<AnchorPane prefHeight="800.0" prefWidth="1024.0" style="-fx-background-color: fafafa;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_LessonViewController">
    <children>
-      <WebView fx:id="webView" layoutX="6.0" layoutY="6.0" prefHeight="624.0" prefWidth="947.0" />
-      <Button fx:id="Exit" layoutX="841.0" layoutY="636.0" mnemonicParsing="false" text="Законить урок" />
+      <WebView fx:id="webView" layoutX="14.0" layoutY="14.0" prefHeight="706.0" prefWidth="1000.0" />
+      <Button fx:id="Exit" layoutX="890.0" layoutY="740.0" mnemonicParsing="false" text="Законить урок" />
    </children>
 </AnchorPane>

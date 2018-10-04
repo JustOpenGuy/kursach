@@ -12,14 +12,26 @@ import java.io.IOException;
 import java.net.URL;
 
 public class y_PersonalAccountController {
-    public URL url = this.getClass().getResource("/sample/C++/les1/p1.html");
+
+
+    public static String rafURL = new String("/sample/C++/les1/p1.html");
+
+
+    public URL url = this.getClass().getResource(rafURL);
 
     public static String urlS;
+
     public static void setUrl(String u){
         urlS = u;
     }
     public static String getUrl(){
         return urlS;
+    }
+    public static String getRafURL() {
+        return rafURL;
+    }
+    public static void setRafURL(String rafURL) {
+        y_PersonalAccountController.rafURL = rafURL;
     }
     @FXML
     private Button GoToLesson;

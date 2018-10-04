@@ -15,7 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.sql.ResultSet;
 
-
 public class Controller  {
 
     @FXML

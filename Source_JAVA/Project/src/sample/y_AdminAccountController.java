@@ -102,6 +102,19 @@ public class y_AdminAccountController {
             stage.setResizable(false);
             stage.sizeToScene();
             stage.show();
+            loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            root = loader.getRoot();
+            stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
         });
 
         ChangePass.setOnAction(event ->{

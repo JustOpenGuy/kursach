@@ -8,6 +8,9 @@ import javafx.scene.web.WebView;
 import javafx.scene.web.WebEngine;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 
@@ -19,10 +22,10 @@ public class y_LessonViewController {
     private Button Exit;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         WebEngine engine = webView.getEngine();
         engine.load(y_PersonalAccountController.urlS);
-        Exit.setOnAction(event ->{
+        Exit.setOnAction(event -> {
 
             Exit.getScene().getWindow().hide();
 
@@ -44,4 +47,6 @@ public class y_LessonViewController {
 
         });
     }
-    }
+
+
+}
