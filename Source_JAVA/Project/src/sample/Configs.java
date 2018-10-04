@@ -8,6 +8,4 @@ public class Configs {
     protected String dbUser= "root";
     protected String dbPass= "Bladez1235_";
     protected String dbName= "kursach";
-
-
 }
