@@ -22,7 +22,6 @@ public class y_ChangePass {
     void initialize(){
         Change.setOnAction(event ->{
             if(Users.getPassword().equals(Old.getText()) && New.getText().equals(Again.getText())) {
-                System.out.println("SUCCESS" + Users.getUserName());
                 String tmp = Users.getUserName();
                 DatabaseHandler dbHandler = new DatabaseHandler();
                 dbHandler.SetPass(tmp, New.getText());
