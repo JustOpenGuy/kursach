@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/y_AdminAccountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/C++/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/courses/C++/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/C++/les1/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/courses/C++/les1/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/C++/les1/p1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/courses/C++/les1/p1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/C++/les1/p2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/courses/C++/les1/p2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/C++/les1/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/courses/C++/les1/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/C++/p1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/courses/C++/p1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,21 +114,21 @@
           <entry key="dummy" value="36" />
           <entry key="fxml" value="152" />
           <entry key="html" value="117" />
-          <entry key="java" value="4173" />
+          <entry key="java" value="4388" />
           <entry key="txt" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="117" />
-          <entry key="JAVA" value="4173" />
+          <entry key="JAVA" value="4388" />
           <entry key="PLAIN_TEXT" value="68" />
           <entry key="XML" value="152" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="18" />
+          <entry key="fxml" value="19" />
           <entry key="html" value="3" />
           <entry key="iml" value="1" />
           <entry key="java" value="42" />
@@ -132,7 +141,7 @@
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="42" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="18" />
+          <entry key="XML" value="19" />
         </counts>
       </usages-collector>
     </session>
@@ -143,34 +152,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
-              <folding>
-                <element signature="e#605#1323#0" />
-                <element signature="e#1361#2022#0" />
-                <element signature="e#2066#2725#0" />
-                <element signature="e#2817#3340#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/C++/les1/test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -224,11 +219,11 @@
         <option value="$PROJECT_DIR$/src/sample/FXML/y_ChangePass.fxml" />
         <option value="$PROJECT_DIR$/src/sample/y_ChangePass.java" />
         <option value="$PROJECT_DIR$/src/sample/Users.java" />
-        <option value="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" />
         <option value="$PROJECT_DIR$/src/sample/y_LessonViewController.java" />
         <option value="$PROJECT_DIR$/src/sample/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/src/sample/C++/les1/test.txt" />
         <option value="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" />
+        <option value="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" />
       </list>
     </option>
   </component>
@@ -239,7 +234,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="736" />
     <option name="width" value="1193" />
     <option name="height" value="1038" />
@@ -272,20 +267,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="C++" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="FXML" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -302,7 +283,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539017835902" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539024796499" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mysql-connector-java-5.1.47/mysql-connector-java-5.1.47.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -698,10 +679,10 @@
     <option name="totallyTimeSpent" value="21701000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="589" y="0" width="954" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.7558946" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.7557047" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -711,7 +692,7 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.18077475" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.17872341" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39957717" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -787,14 +768,14 @@
     <entry file="file://$PROJECT_DIR$/src/sample/e_RegController.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/registration.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/C++/film.html" />
-    <entry file="file://$PROJECT_DIR$/src/sample/C++/les1/p2.html">
+    <entry file="file://$PROJECT_DIR$/src/sample/courses/C++/les1/p2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/C++/les1/p1.html">
+    <entry file="file://$PROJECT_DIR$/src/sample/courses/C++/les1/p1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
@@ -809,7 +790,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/C++/p1.html">
+    <entry file="file://$PROJECT_DIR$/src/sample/courses/C++/p1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
@@ -935,18 +916,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/C++/les1/test.txt">
+    <entry file="file://$PROJECT_DIR$/src/sample/courses/C++/les1/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
@@ -955,14 +925,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+        <state relative-caret-position="-166">
+          <caret line="57" column="51" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
           <folding>
             <element signature="e#605#1323#0" />
             <element signature="e#1361#2022#0" />
             <element signature="e#2066#2725#0" />
             <element signature="e#2817#3340#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>

@@ -6,11 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
@@ -32,7 +29,7 @@ public class y_AdminAccountController {
         y_PersonalAccountController.rafURL = rafURL;
     }
     protected static void inizRafUrlAdm(){
-        rafURLAdm = new String("/sample/C++/les1/p1.html");
+        rafURLAdm = new String("/sample/courses/1/les1/p1.html");
     }
 
     @FXML
@@ -55,7 +52,7 @@ public class y_AdminAccountController {
 
     @FXML
     void initialize() {
-        rafURLAdm = new String("/sample/C++/les1/p2.html");       //Инициализация строки пути к файла
+        rafURLAdm = new String("/sample/courses/1/les1/p2.html");       //Инициализация строки пути к файла
         urlAdm = this.getClass().getResource(rafURLAdm);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
         setUrlAdm(urlAdm.toString());                       //Эта ф-ция трансформирует нужную нам ссылку в строку
 
