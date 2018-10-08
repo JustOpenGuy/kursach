@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane prefHeight="240.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_ChangePass">
+<AnchorPane prefHeight="240.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_ChangePassController">
    <children>
       <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите ваш старый пароль:" />
       <Text layoutX="14.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите новый пароль:" />

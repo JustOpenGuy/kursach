@@ -52,20 +52,19 @@ public class DatabaseHandler extends Configs {
                 + "SET password = ? "
                 + "WHERE username = ?";
 
-
-
+        
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
             prSt.setString(1, pass);
             prSt.setString(2, name);
-
-
+            
             prSt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        
     }
 
     public ResultSet getAdmin(Users user) {

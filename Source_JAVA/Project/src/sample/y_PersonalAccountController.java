@@ -7,25 +7,20 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 
 public class y_PersonalAccountController {
 
-
-    public static String rafURL = new String("/sample/C++/les1/p1.html");
-
-
-    public URL url = this.getClass().getResource(rafURL);
-
-    public static String urlS;
+    public static String rafURL;       //Сырая строка урока
+    public URL url;                    //Ссылка на файл
+    public static String urlFull;         //Полная ссылка на файл в строке
 
     public static void setUrl(String u){
-        urlS = u;
+        urlFull = u;
     }
     public static String getUrl(){
-        return urlS;
+        return urlFull;
     }
     public static String getRafURL() {
         return rafURL;
@@ -33,6 +28,10 @@ public class y_PersonalAccountController {
     public static void setRafURL(String rafURL) {
         y_PersonalAccountController.rafURL = rafURL;
     }
+    protected static void inizRafUrl(){
+        rafURL = new String("/sample/C++/les1/p1.html");
+    }
+
     @FXML
     private Button GoToLesson;
 
@@ -53,9 +52,11 @@ public class y_PersonalAccountController {
 
     @FXML
     void initialize() {
-        setUrl(url.toString());
+        rafURL = new String("/sample/C++/les1/p1.html");       //Инициализация строки пути к файла
+        url = this.getClass().getResource(rafURL);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
+        setUrl(url.toString());                       //Эта ф-ция трансформирует нужную нам ссылку в строку
 
-        LogOut.setOnAction(event -> {
+        LogOut.setOnAction(event -> {                       //Возврат на окно регистрации
             GoToLesson.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("FXML/sample.fxml"));
@@ -74,44 +75,44 @@ public class y_PersonalAccountController {
             stage.show();
         }
         );
-        About.setOnAction(event -> {
 
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/About.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
-                }
-        );
-        Information.setOnAction(event -> {
-
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/Inf.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
-                }
+        About.setOnAction(event -> {    //Про программу
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("FXML/About.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent rot = loader.getRoot();
+            loader.setRoot(rot);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rot));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+            }
         );
 
-        GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide();
+        Information.setOnAction(event -> { //Про курс
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("FXML/Inf.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent rot = loader.getRoot();
+            loader.setRoot(rot);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rot));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+        }
+        );
+
+        GoToLesson.setOnAction(event ->{GoToLesson.getScene().getWindow().hide(); //Открывает просмотр урока
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
             try {
@@ -125,8 +126,10 @@ public class y_PersonalAccountController {
             stage.setResizable(false);
             stage.sizeToScene();
             stage.show();
-        });
-        ChangePass.setOnAction(event ->{
+        }
+        );
+
+        ChangePass.setOnAction(event ->{        //Открывает смену пароля
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
             try {
@@ -140,7 +143,8 @@ public class y_PersonalAccountController {
             stage.setResizable(false);
             stage.sizeToScene();
             stage.show();
-        });
+        }
+        );
     }
 }
 

@@ -27,7 +27,7 @@ public class Users {
         userName = user;
     }
 
-    public static String   getPassword() {
+    public static String getPassword() {
         return password;
     }
 

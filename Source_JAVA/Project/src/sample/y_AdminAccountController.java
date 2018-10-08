@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -32,11 +33,10 @@ public class y_AdminAccountController {
     @FXML
     void initialize() {
 
-        LogOut.setOnAction(event -> {
+        LogOut.setOnAction(event -> {               //Выход на окно регистрации
                     Edit.getScene().getWindow().hide();
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("FXML/sample.fxml"));
-
                     try {
                         loader.load();
                     } catch (IOException e) {
@@ -51,8 +51,8 @@ public class y_AdminAccountController {
                     stage.show();
                 }
         );
-        About.setOnAction(event -> {
 
+        About.setOnAction(event -> {            //Открывает онко "Про программу"
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("FXML/About.fxml"));
                     try {
@@ -69,7 +69,8 @@ public class y_AdminAccountController {
                     stage.show();
                 }
         );
-        Information.setOnAction(event -> {
+
+        Information.setOnAction(event -> {              //Открывает окно информации о программе
 
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("FXML/Inf.fxml"));
@@ -89,9 +90,10 @@ public class y_AdminAccountController {
         );
 
         Edit.setOnAction(event ->{
+            //FileChooser();
         });
 
-        ChangePass.setOnAction(event ->{
+        ChangePass.setOnAction(event ->{        //Открывает окно смены пароля
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
             try {
