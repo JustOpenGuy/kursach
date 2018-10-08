@@ -10,9 +10,9 @@ import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
 
 import javax.swing.text.html.HTML;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class y_EditController {
     @FXML
@@ -22,10 +22,10 @@ public class y_EditController {
     private Button End;
 
     @FXML
-    void initialize(){
+    void initialize() {
         Editor.setHtmlText(HtmlToString(y_PersonalAccountController.rafURL));
-        System.out.println(HtmlToString(y_PersonalAccountController.rafURL)+"test"+y_PersonalAccountController.rafURL);
-        End.setOnAction(event ->{
+        System.out.println(HtmlToString(y_PersonalAccountController.rafURL) + "test" + y_PersonalAccountController.rafURL);
+        End.setOnAction(event -> {
 
             End.getScene().getWindow().hide();
 
@@ -46,6 +46,7 @@ public class y_EditController {
             stage.show();
         });
     }
+
     private String HtmlToString(String URL) {
         StringBuilder contentBuilder = new StringBuilder();
         try {
@@ -59,5 +60,6 @@ public class y_EditController {
         }
         return contentBuilder.toString();
     }
+
 
 }
