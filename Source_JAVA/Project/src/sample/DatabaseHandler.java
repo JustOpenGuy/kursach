@@ -46,6 +46,28 @@ public class DatabaseHandler extends Configs {
         }
     }
 
+    public void SetPass(String name, String pass){
+
+        String sqlUpdate = "UPDATE users "
+                + "SET password = ? "
+                + "WHERE username = ?";
+
+
+
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
+            prSt.setString(1, pass);
+            prSt.setString(2, name);
+
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public ResultSet getAdmin(Users user) {
         ResultSet resSet = null;
 

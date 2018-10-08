@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class y_ChangePass {
-    private String temp;
+
     @FXML
     private Button Change;
 
@@ -21,8 +21,13 @@ public class y_ChangePass {
     @FXML
     void initialize(){
         Change.setOnAction(event ->{
-            if(Users.getPassword().equals(Old.getText()) && New.getText().equals(Again.getText()));
-            Users.setPassword(Old.getText());
+            if(Users.getPassword().equals(Old.getText()) && New.getText().equals(Again.getText())) {
+                System.out.println("SUCCESS" + Users.getUserName());
+                String tmp = Users.getUserName();
+                DatabaseHandler dbHandler = new DatabaseHandler();
+                dbHandler.SetPass(tmp, New.getText());
+
+            }
         });
     }
 }

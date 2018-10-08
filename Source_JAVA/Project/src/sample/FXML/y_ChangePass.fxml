@@ -14,8 +14,8 @@
       <Text layoutX="14.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите новый пароль:" />
       <Text layoutX="14.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите новый пароль еще раз:" />
       <Button fx:id="Change" layoutX="307.0" layoutY="195.0" mnemonicParsing="false" text="Изменить пароль" />
-      <TextField fx:id="Old" layoutX="14.0" layoutY="35.0" />
-      <TextField fx:id="New" layoutX="14.0" layoutY="89.0" />
-      <TextField fx:id="Again" layoutX="14.0" layoutY="140.0" />
+      <PasswordField fx:id="Old" promptText="Старый пароль" layoutX="14.0" layoutY="35.0" />
+      <PasswordField fx:id="New" promptText="Новый пароль" layoutX="14.0" layoutY="89.0" />
+      <PasswordField fx:id="Again" promptText="Новый пароль еще раз" layoutX="14.0" layoutY="140.0" />
    </children>
 </AnchorPane>

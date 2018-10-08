@@ -4,7 +4,7 @@ package sample;
  * Created by evgen on 04.10.2018.
  */
 public class Users {
-    private String userName;
+    private static String userName;
     private static String password;
 
 
@@ -19,12 +19,12 @@ public class Users {
 
 
 
-    public String getUserName() {
+    public static String getUserName() {
         return userName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public static void setUserName(String user) {
+        userName = user;
     }
 
     public static String   getPassword() {
