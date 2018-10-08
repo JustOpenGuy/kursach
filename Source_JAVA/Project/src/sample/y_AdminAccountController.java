@@ -55,7 +55,7 @@ public class y_AdminAccountController {
 
     @FXML
     void initialize() {
-        rafURLAdm = new String("/sample/C++/les1/test.txt");       //Инициализация строки пути к файла
+        rafURLAdm = new String("/sample/C++/les1/p2.html");       //Инициализация строки пути к файла
         urlAdm = this.getClass().getResource(rafURLAdm);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
         setUrlAdm(urlAdm.toString());                       //Эта ф-ция трансформирует нужную нам ссылку в строку
 
@@ -117,10 +117,22 @@ public class y_AdminAccountController {
         );
 
         Edit.setOnAction(event -> {
-            System.out.println(getUrlAdm());
+            String file = new String(getUrlAdm());
+            file = file.replaceAll("file:/","");
             String open = new String("start notepad ");
-
+            String[] startNotePad = new String[] {"CMD.EXE", "/C", "start", "notepad", file };
+            Process runtimeProcess = null;
+            try {
+                runtimeProcess = Runtime.getRuntime().exec(startNotePad);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+                    try {
+                        runtimeProcess.waitFor();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
         );
         ChangePass.setOnAction(event ->{        //Открывает окно смены пароля
             FXMLLoader loader = new FXMLLoader();
