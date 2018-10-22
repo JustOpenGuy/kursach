@@ -34,6 +34,8 @@ public class y_AdminAccountController {
     protected static void inizRafUrlAdm(){
         rafURLAdm = new String("/sample/C++/les1/p1.html");
     }
+    @FXML
+    private Button d_ChooseT;
 
     @FXML
     private Button Edit;
@@ -137,6 +139,21 @@ public class y_AdminAccountController {
         ChangePass.setOnAction(event ->{        //Открывает окно смены пароля
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+        });
+        d_ChooseT.setOnAction(event ->{        //Открывает окно смены пароля
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/FXML/d_CooseTest.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
