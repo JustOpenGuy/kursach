@@ -52,16 +52,11 @@ public class  RegController {
         /*choiceBox.setValue("М/Ж");
         choiceBox.setItems(choiceBoxList);*/
 
-
-
-
         nextButton.setOnAction(event -> {
-
             RegNewUser();
+            backButton.fire();
 
         });
-
-
 
         backButton.setOnAction(event ->{
 
