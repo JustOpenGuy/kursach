@@ -1,8 +1,6 @@
 package sample;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,16 +9,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
-public class d_ChooseTest{
+import java.io.IOException;
 
-    @FXML
-    private Button Edit;
+public class d_tree {
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private MenuItem ChangePass;
@@ -35,33 +27,33 @@ public class d_ChooseTest{
     private MenuItem About;
 
     @FXML
-    private Button Test1;
+    private Button exit;
 
     @FXML
-    private Button Test3;
+    private Button d_Test;
 
-    @FXML
-    private Button Test2;
 
     @FXML
     void initialize() {
-        ChangePass.setOnAction(event ->{        //Открывает окно смены пароля
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.show();
-        });
-        Information.setOnAction(event -> {              //Открывает окно информации о программе
+         About.setOnAction(event -> {    //Про программу
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("FXML/About.fxml"));
+                    try {
+                        loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Parent rot = loader.getRoot();
+                    loader.setRoot(rot);
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(rot));
+                    stage.setResizable(false);
+                    stage.sizeToScene();
+                    stage.show();
+                }
+        );
 
+        Information.setOnAction(event -> { //Про курс
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("FXML/Inf.fxml"));
                     try {
@@ -79,41 +71,52 @@ public class d_ChooseTest{
                 }
         );
 
-        About.setOnAction(event -> {            //Открывает онко "Про программу"
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/About.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
-                }
-        );
-        LogOut.setOnAction(event -> {               //Выход на окно регистрации
-                    Edit.getScene().getWindow().hide();
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/sample/FXML/sample.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
-                }
-        );
 
+        ChangePass.setOnAction(event ->{        //Открывает смену пароля
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
+                    try {
+                        loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Parent root = loader.getRoot();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root));
+                    stage.setResizable(false);
+                    stage.sizeToScene();
+                    stage.show();
+                }
+        );
+        exit.setOnAction(event ->{        //Открывает окно смены пароля
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/FXML/d_PersonalAccount.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+        });
+        d_Test.setOnAction(event ->{        //Открывает окно смены пароля
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/FXML/d_ChooseTest"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+        });
     }
 }
