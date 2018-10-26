@@ -26,19 +26,19 @@ public class DatabaseHandler extends Configs {
 
 
     public void signUpUser(Users user){
-        String insert = "INSERT INTO " + Const.USER_TABLE + " (" +
-                Const.USER_USERNAME + "," + Const.USER_PASSWORD + ")"
-                + "VALUES(?,?)";
+        String insert = "INSERT INTO " + Const.USER_TABLE + " (" +//помещаем в табл польз
+                Const.USER_USERNAME + "," + Const.USER_PASSWORD + ")"//пароль и имя
+                + "VALUES(?,?)";//вставка данных
 
 
 
         try {
-            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+            PreparedStatement prSt = getDbConnection().prepareStatement(insert);//подключение к базе и передача
             prSt.setString(1, user.getUserName());
             prSt.setString(2, user.getPassword());
 
 
-            prSt.executeUpdate();
+            prSt.executeUpdate();//выполнение команды
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -70,8 +70,8 @@ public class DatabaseHandler extends Configs {
     public ResultSet getAdmin(Users user) {
         ResultSet resSet = null;
 
-        String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " +
-                Const.USER_ID + "=? AND " + Const.USER_USERNAME + "=? AND " + Const.USER_PASSWORD + "=?";
+        String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " + //выбираем все из бд
+                Const.USER_ID + "=? AND " + Const.USER_USERNAME + "=? AND " + Const.USER_PASSWORD + "=?";//где логин и пароля чему-то равны
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             prSt.setString(1, "1");
@@ -79,7 +79,7 @@ public class DatabaseHandler extends Configs {
             prSt.setString(3, user.getPassword());
 
 
-           resSet = prSt.executeQuery();  //executeQuery - получение данных
+           resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

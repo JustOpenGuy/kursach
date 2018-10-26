@@ -32,6 +32,7 @@ public class y_AdminAccountController {
         rafURLAdm = new String("/sample/courses/1/les1/p1.html");
     }
 
+
     @FXML
     private Button Edit;
 
@@ -146,5 +147,6 @@ public class y_AdminAccountController {
             stage.sizeToScene();
             stage.show();
         });
+
     }
 }
