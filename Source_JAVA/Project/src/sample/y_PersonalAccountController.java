@@ -168,7 +168,7 @@ public class y_PersonalAccountController {
         );
         d_ChooseT.setOnAction(event ->{        //Открывает окно смены пароля
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/d_CooseTest.fxml"));
+            loader.setLocation(getClass().getResource("/sample/FXML/d_tree.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
