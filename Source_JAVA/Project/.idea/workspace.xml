@@ -4,6 +4,7 @@
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/C++/les1/p2.html" afterPath="" />
 =======
       <change afterPath="$PROJECT_DIR$/src/sample/FXML/d_tree.fxml" afterDir="false" />
@@ -20,6 +21,9 @@
       <change beforePath="$PROJECT_DIR$/src/sample/FXML/y_AdminAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/y_AdminAccount.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/d_ChooseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/d_ChooseTest.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/y_AdminAccountController.class" beforeDir="false" />
+>>>>>>> parent of 73763d3... Kusochek govna
       <change beforePath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/y_LessonViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/y_LessonViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" afterDir="false" />
@@ -189,6 +193,7 @@
         </counts>
       </usages-collector>
     </session>
+<<<<<<< HEAD
     <session id="1849526640">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
@@ -231,12 +236,15 @@
         </counts>
       </usages-collector>
     </session>
+=======
+>>>>>>> parent of 73763d3... Kusochek govna
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
 <<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/sample/FXML/d_CooseTest.fxml">
@@ -310,12 +318,25 @@
                 <element signature="e#966#967#0" expanded="true" />
                 <element signature="e#1032#1033#0" expanded="true" />
 >>>>>>> 8f6ebbbe47bd386bce000014b7b68353684c0709
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+              <folding>
+                <element signature="e#605#1323#0" />
+                <element signature="e#1361#2022#0" />
+                <element signature="e#2066#2725#0" />
+                <element signature="e#2817#3340#0" />
+>>>>>>> parent of 73763d3... Kusochek govna
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -335,11 +356,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/sample/C++/les1/test.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+>>>>>>> parent of 73763d3... Kusochek govna
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/sample/FXML/d_tree.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
@@ -391,6 +419,12 @@
             <state relative-caret-position="323">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
 >>>>>>> 8f6ebbbe47bd386bce000014b7b68353684c0709
+=======
+        <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+>>>>>>> parent of 73763d3... Kusochek govna
             </state>
           </provider>
 =======
@@ -448,9 +482,13 @@
         <option value="$PROJECT_DIR$/src/sample/configs.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <option value="$PROJECT_DIR$/src/sample/RegController.java" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+        <option value="$PROJECT_DIR$/src/sample/RegController.java" />
+>>>>>>> parent of 73763d3... Kusochek govna
         <option value="$PROJECT_DIR$/src/sample/C++/film.html" />
         <option value="$PROJECT_DIR$/src/sample/C++/les1.html" />
         <option value="$PROJECT_DIR$/src/sample/C++/les1/p1.html" />
@@ -460,13 +498,18 @@
         <option value="$PROJECT_DIR$/src/sample/FXML/y_Edit.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Configs.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+>>>>>>> parent of 73763d3... Kusochek govna
         <option value="$PROJECT_DIR$/src/sample/y_EditController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/y_ChangePass.fxml" />
         <option value="$PROJECT_DIR$/src/sample/y_ChangePass.java" />
         <option value="$PROJECT_DIR$/src/sample/Users.java" />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/sample/C++/les1/test.txt" />
         <option value="$PROJECT_DIR$/src/sample/FXML/DCooseTest.java" />
@@ -488,6 +531,13 @@
         <option value="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" />
         <option value="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+        <option value="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" />
+        <option value="$PROJECT_DIR$/src/sample/y_LessonViewController.java" />
+        <option value="$PROJECT_DIR$/src/sample/DatabaseHandler.java" />
+        <option value="$PROJECT_DIR$/src/sample/C++/les1/test.txt" />
+        <option value="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" />
+>>>>>>> parent of 73763d3... Kusochek govna
       </list>
     </option>
   </component>
@@ -498,6 +548,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
 <<<<<<< HEAD
     <option name="x" value="735" />
@@ -508,6 +559,12 @@
     <option name="width" value="1495" />
     <option name="height" value="1300" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+  <component name="ProjectFrameBounds">
+    <option name="x" value="736" />
+    <option name="width" value="1193" />
+    <option name="height" value="1038" />
+>>>>>>> parent of 73763d3... Kusochek govna
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -519,6 +576,7 @@
     <panes>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="PackagesPane" />
 =======
       <pane id="AndroidView" />
@@ -527,6 +585,10 @@
       <pane id="Scope" />
       <pane id="PackagesPane" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+>>>>>>> parent of 73763d3... Kusochek govna
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -551,15 +613,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               <item name="FXML" type="462c0819:PsiDirectoryNode" />
 =======
               <item name="1" type="462c0819:PsiDirectoryNode" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+              <item name="C++" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="FXML" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of 73763d3... Kusochek govna
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <pane id="Scratches" />
@@ -569,6 +643,8 @@
       <pane id="PackagesPane" />
 =======
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+>>>>>>> parent of 73763d3... Kusochek govna
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -582,10 +658,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540416301096" />
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539024804421" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539017835902" />
+>>>>>>> parent of 73763d3... Kusochek govna
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mysql-connector-java-5.1.47/mysql-connector-java-5.1.47.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -990,9 +1070,10 @@
 >>>>>>> 8f6ebbbe47bd386bce000014b7b68353684c0709
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
+    <frame x="589" y="0" width="954" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1033,6 +1114,9 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.7557047" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+      <window_info content_ui="combo" id="Project" order="0" weight="0.7558946" />
+>>>>>>> parent of 73763d3... Kusochek govna
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -1043,10 +1127,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.17986578" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986577" />
 =======
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.17872341" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.18077475" />
+>>>>>>> parent of 73763d3... Kusochek govna
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39957717" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1056,10 +1144,14 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067115" side_tool="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Version Control" order="9" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3261745" />
 =======
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32765958" />
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32855093" />
+>>>>>>> parent of 73763d3... Kusochek govna
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1258,6 +1350,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Project.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1270,44 +1363,38 @@
     <entry file="file://$PROJECT_DIR$/src/sample/y_EditController.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_Edit.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_ChangePass.fxml">
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_AdminAccount.fxml">
+>>>>>>> parent of 73763d3... Kusochek govna
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="663">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/C++/les1/test.txt">
+    <entry file="file://$PROJECT_DIR$/src/Project.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/DCooseTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/app.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_181/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state relative-caret-position="131">
+          <caret line="457" column="22" selection-start-line="457" selection-start-column="22" selection-end-line="457" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/y_ChangePassController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Configs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
@@ -1326,6 +1413,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/y_EditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="56" column="51" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_Edit.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+>>>>>>> parent of 73763d3... Kusochek govna
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -1361,6 +1465,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/sample.fxml">
+<<<<<<< HEAD
+=======
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+>>>>>>> parent of 73763d3... Kusochek govna
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="20" column="131" lean-forward="true" selection-start-line="20" selection-start-column="131" selection-end-line="20" selection-end-column="150" />
@@ -1369,6 +1477,10 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_ChangePass.fxml">
+<<<<<<< HEAD
+=======
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+>>>>>>> parent of 73763d3... Kusochek govna
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
@@ -1385,13 +1497,18 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/Configs.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/RegController.java">
+>>>>>>> parent of 73763d3... Kusochek govna
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="113">
+          <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_181/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/y_ChangePass.java" />
@@ -1399,21 +1516,36 @@
 =======
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_AdminAccount.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/Users.java">
+>>>>>>> parent of 73763d3... Kusochek govna
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="251">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/d_test1.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
 >>>>>>> 8f6ebbbe47bd386bce000014b7b68353684c0709
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/DatabaseHandler.java">
+>>>>>>> parent of 73763d3... Kusochek govna
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="66" />
+        <state relative-caret-position="188">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="method#getDbConnection#0;class#DatabaseHandler#0" />
+            <element signature="method#signUpUser#0;class#DatabaseHandler#0" />
+            <element signature="method#SetPass#0;class#DatabaseHandler#0" />
+            <element signature="method#getAdmin#0;class#DatabaseHandler#0" />
+            <element signature="method#getUser#0;class#DatabaseHandler#0" />
+          </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/d_CooseTest.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -1465,11 +1597,18 @@
 <<<<<<< HEAD
         <state relative-caret-position="51">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/y_ChangePassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+>>>>>>> parent of 73763d3... Kusochek govna
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="238">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
@@ -1590,6 +1729,40 @@
             <element signature="e#588#1267#0" />
             <element signature="e#1312#1981#0" />
             <element signature="e#2026#2693#0" />
+=======
+        <state relative-caret-position="98">
+          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/C++/les1/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+          <folding>
+            <element signature="e#605#1323#0" />
+            <element signature="e#1361#2022#0" />
+            <element signature="e#2066#2725#0" />
+            <element signature="e#2817#3340#0" />
+>>>>>>> parent of 73763d3... Kusochek govna
           </folding>
 >>>>>>> 8f6ebbbe47bd386bce000014b7b68353684c0709
         </state>
@@ -1650,10 +1823,14 @@
       <state key="JdkListConfigurable.UI">
         <settings>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <last-edited>10</last-edited>
 =======
           <last-edited>1.8</last-edited>
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+          <last-edited>1.8</last-edited>
+>>>>>>> parent of 73763d3... Kusochek govna
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1679,10 +1856,14 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <last-edited>mysql-connector-java-5.1.471</last-edited>
 =======
           <last-edited>mysql-connector-java-5.1.47</last-edited>
 >>>>>>> 1d3dcfcd0d0298d8c0319baa075c0d00b9bb246c
+=======
+          <last-edited>mysql-connector-java-5.1.47</last-edited>
+>>>>>>> parent of 73763d3... Kusochek govna
           <splitter-proportions>
             <option name="proportions">
               <list>

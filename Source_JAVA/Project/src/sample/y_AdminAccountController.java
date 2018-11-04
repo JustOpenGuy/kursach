@@ -31,7 +31,10 @@ public class y_AdminAccountController {
     protected static void inizRafUrlAdm(){
         rafURLAdm = new String("/sample/courses/1/les1/p1.html");
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 73763d3... Kusochek govna
 
     @FXML
     private Button Edit;
@@ -147,6 +150,9 @@ public class y_AdminAccountController {
             stage.sizeToScene();
             stage.show();
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 73763d3... Kusochek govna
     }
 }

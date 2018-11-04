@@ -35,7 +35,6 @@ public class Controller  {
     @FXML
     private Button Register;
 
-
     @FXML
 
 
@@ -62,7 +61,6 @@ public class Controller  {
         SignIn.setOnAction(event ->{                         //переписал ибо нужно синхр с БД
             String loginText = login_fild.getText().trim(); //метод трим - удаляет лишние пробелы в строке
             String loginPassword = password_fild.getText().trim();
-
 
 
             if(!loginText.equals("") && !loginPassword.equals("")){      //
@@ -120,7 +118,7 @@ public class Controller  {
         int counter = 0, counter1=0;
 
         try {
-            while(result.next()) {//проходим по всем юзерам и считаем их кол-во
+            while(result.next()) {
                 counter++;
             }
         } catch (SQLException e) {
