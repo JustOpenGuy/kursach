@@ -19,13 +19,35 @@ public class y_LessonViewController {
     private Button Exit;
 
     @FXML
+    private Button d_tests;
+
+    @FXML
     public void initialize() {
         WebEngine engine = webView.getEngine();
         engine.load(y_PersonalAccountController.urlFull);       //Чтение файла урока
         Exit.setOnAction(event -> {                             //Выход на тесты
             Exit.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/d_tree.fxml"));
+            loader.setLocation(getClass().getResource("/sample/FXML/sample.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent rot = loader.getRoot();
+            loader.setRoot(rot);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rot));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+        });
+
+        d_tests.setOnAction(event -> {
+            d_tests.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("FXML/d_CooseTest.fxml"));
+
             try {
                 loader.load();
             } catch (IOException e) {
@@ -40,6 +62,4 @@ public class y_LessonViewController {
             stage.show();
         });
     }
-
-
 }

@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 public class d_ChooseTest{
 
     @FXML
-    private Button Exit;
+    private Button Edit;
 
     @FXML
     private ResourceBundle resources;
@@ -97,7 +97,7 @@ public class d_ChooseTest{
                 }
         );
         LogOut.setOnAction(event -> {               //Выход на окно регистрации
-//                    Exit.getScene().getWindow().hide();
+                    Edit.getScene().getWindow().hide();
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("/sample/FXML/sample.fxml"));
                     try {
