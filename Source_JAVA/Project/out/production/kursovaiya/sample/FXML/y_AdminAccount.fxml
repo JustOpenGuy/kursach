@@ -41,10 +41,10 @@
             <Font name="Consolas" size="24.0" />
          </font>
       </Text>
-      <ChoiceBox layoutX="14.0" layoutY="120.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="courseChoice" layoutX="14.0" layoutY="161.0" prefWidth="150.0" />
       <Button fx:id="GetMarks" layoutX="214.0" layoutY="316.0" mnemonicParsing="false" text="Узнать оценки" />
       <ChoiceBox layoutX="14.0" layoutY="275.0" prefWidth="150.0" />
-      <Button fx:id="Edit" layoutX="202.0" layoutY="120.0" mnemonicParsing="false" text="Редактирование курса" />
+      <Button fx:id="Edit" layoutX="202.0" layoutY="108.0" mnemonicParsing="false" text="Редактирование курса" />
       <TableView editable="true" layoutX="5.0" layoutY="368.0" prefHeight="259.0" prefWidth="513.0">
         <columns>
           <TableColumn prefWidth="96.0" text="Урок" />
@@ -52,5 +52,7 @@
         </columns>
       </TableView>
       <ChoiceBox layoutX="14.0" layoutY="316.0" prefWidth="150.0" />
+      <Button fx:id="testEdit" layoutX="202.0" layoutY="161.0" mnemonicParsing="false" text="Редактирование тестов" />
+      <Button fx:id="courseAdd" layoutX="39.0" layoutY="108.0" mnemonicParsing="false" text=" Добавить курс" />
    </children>
 </AnchorPane>
