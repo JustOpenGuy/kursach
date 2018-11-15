@@ -54,5 +54,91 @@ public class Tests {
         this.fourthTrueThirdAnsw = fourthTrueThirdAnsw;
         this.fifthTrueThirdAnsw = fifthTrueThirdAnsw;
     }
+
+    public String getFirstQues() {
+        return firstQues;
+    }
+
+
+
+    public int getId() {
+        return id;
+    }
+
+    public String getSecQues() {
+        return secQues;
+    }
+
+    public String getThurdQues() {
+        return thurdQues;
+    }
+
+    public String getFourthQues() {
+        return fourthQues;
+    }
+
+    public String getFifthQues() {
+        return fifthQues;
+    }
+
+    public String getFirstFirstAnsw() {
+        return firstFirstAnsw;
+    }
+
+    public String getFirstSecondAnsw() {
+        return firstSecondAnsw;
+    }
+
+    public String getSecFirstAnsw() {
+        return secFirstAnsw;
+    }
+
+    public String getSecSecondAnsw() {
+        return secSecondAnsw;
+    }
+
+    public String getThirdFirstAnsw() {
+        return thirdFirstAnsw;
+    }
+
+    public String getThirdSecondAnsw() {
+        return thirdSecondAnsw;
+    }
+
+    public String getFourthFirstAnsw() {
+        return fourthFirstAnsw;
+    }
+
+    public String getFourthSecondAnsw() {
+        return fourthSecondAnsw;
+    }
+
+    public String getFifthfFirstAnsw() {
+        return fifthfFirstAnsw;
+    }
+
+    public String getFifthSecondAnsw() {
+        return fifthSecondAnsw;
+    }
+
+    public String getFirstTrueThirdAnsw() {
+        return firstTrueThirdAnsw;
+    }
+
+    public String getSecTrueThirdAnsw() {
+        return secTrueThirdAnsw;
+    }
+
+    public String getThirdTrueThirdAnsw() {
+        return thirdTrueThirdAnsw;
+    }
+
+    public String getFourthTrueThirdAnsw() {
+        return fourthTrueThirdAnsw;
+    }
+
+    public String getFifthTrueThirdAnsw() {
+        return fifthTrueThirdAnsw;
+    }
 }
 

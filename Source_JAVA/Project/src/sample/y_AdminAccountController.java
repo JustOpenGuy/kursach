@@ -17,7 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class y_AdminAccountController {
+public class y_AdminAccountController  {
     public static String rafURLAdm;       //Сырая строка урока
     public URL urlAdm;                    //Ссылка на файл
     public static String urlFullAdm;         //Полная ссылка на файл в строке
@@ -41,8 +41,7 @@ public class y_AdminAccountController {
 
 
 
-    @FXML
-    private ChoiceBox<String> courseChoice;
+
 
 
     @FXML
@@ -70,8 +69,15 @@ public class y_AdminAccountController {
     @FXML
     private Button testEdit;
 
+
+
+
+
+
     @FXML
     void initialize() {
+
+
         rafURLAdm = new String("/sample/courses/1/les1/p2.html");       //Инициализация строки пути к файла
         urlAdm = this.getClass().getResource(rafURLAdm);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
         setUrlAdm(urlAdm.toString());                       //Эта ф-ция трансформирует нужную нам ссылку в строку
@@ -82,18 +88,19 @@ public class y_AdminAccountController {
         String str = new String();
         try {
             int num=0;
-            Tests[] testss = new Tests[4];
+
 
             while(res.next()){
 
-                testss[num]=new Tests(res.getInt(1), res.getString(2),res.getString(3),
+               /*num++; testss[num]=new Tests(res.getInt(1), res.getString(2),res.getString(3),
                         res.getString(4),res.getString(5),res.getString(6),
                         res.getString(7),res.getString(8),res.getString(9),res.getString(10),
                         res.getString(11), res.getString(12),res.getString(13),res.getString(14),
                         res.getString(15),res.getString(16),res.getString(17),res.getString(18),
-                        res.getString(19),res.getString(20),res.getString(21));
+                        res.getString(19),res.getString(20),res.getString(21));*/
                 ids.add(res.getString(2));
-                num++;
+
+
                 /*str+=res.getInt(1)+", ";*/
 
             }
@@ -101,9 +108,6 @@ public class y_AdminAccountController {
             e.printStackTrace();
         }
 
-        ObservableList<String> choiceBoxList = FXCollections.observableArrayList(ids);
-        courseChoice.setValue("Доступные курсы");
-        courseChoice.setItems(choiceBoxList);
 
 
         LogOut.setOnAction(event -> {               //Выход на окно регистрации
@@ -129,6 +133,7 @@ public class y_AdminAccountController {
 
                 FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("FXML/testWriter.fxml"));
+
         try {
             loader.load();
         } catch (IOException e) {
@@ -141,6 +146,7 @@ public class y_AdminAccountController {
         stage.setResizable(false);
         stage.sizeToScene();
         stage.show();
+
     }
 
         );

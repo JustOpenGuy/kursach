@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -15,17 +17,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.testWriterController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
+            <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem fx:id="saveButton" mnemonicParsing="false" text="Save" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem fx:id="revertButton" mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem fx:id="menuButton" mnemonicParsing="false" text="Main menu" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
@@ -39,7 +38,7 @@
       <items>
         <AnchorPane>
           <children>
-                  <TextField fx:id="firstQues" layoutX="14.0" layoutY="77.0" prefHeight="25.0" prefWidth="339.0" />
+                <TextField fx:id="firstQues" layoutX="14.0" layoutY="77.0" prefHeight="25.0" prefWidth="339.0" />
                   <TextField fx:id="secQues" layoutX="14.0" layoutY="178.0" prefHeight="25.0" prefWidth="339.0" />
                   <TextField fx:id="thurdQues" layoutX="14.0" layoutY="277.0" prefHeight="25.0" prefWidth="339.0" />
                   <TextField fx:id="fourthQues" layoutX="14.0" layoutY="384.0" prefHeight="25.0" prefWidth="339.0" />
@@ -74,6 +73,13 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
+                  <Text fill="#9f9f9f" layoutX="225.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер курса" underline="true" wrappingWidth="106.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="courseChoice" layoutX="204.0" layoutY="38.0" prefWidth="150.0" />
+                  <Button fx:id="refreshButton" layoutX="132.0" layoutY="38.0" mnemonicParsing="false" text="Refresh" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
