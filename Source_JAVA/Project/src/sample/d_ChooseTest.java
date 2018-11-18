@@ -45,6 +45,7 @@ public class d_ChooseTest{
 
     @FXML
     void initialize() {
+
         ChangePass.setOnAction(event ->{        //Открывает окно смены пароля
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
@@ -97,7 +98,7 @@ public class d_ChooseTest{
                 }
         );
         LogOut.setOnAction(event -> {               //Выход на окно регистрации
-                    Edit.getScene().getWindow().hide();
+            LogOut.getParentPopup().getScene().getWindow().hide();
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("/sample/FXML/sample.fxml"));
                     try {
