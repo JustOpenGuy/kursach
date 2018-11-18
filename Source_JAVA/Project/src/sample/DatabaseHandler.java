@@ -24,6 +24,26 @@ public class DatabaseHandler extends Configs {
         return dbConnection;
     }
 
+    public ResultSet getQues(){
+        ResultSet resSet = null;
+        String select = "SELECT * FROM " + Const.TESTS_TABLE; /*+ " WHERE " + //выбираем все из бд
+                Const.USER_ID + "=?" ;*///где логин и пароля чему-то равны
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            /*String idd = String.valueOf(id);
+            prSt.setString(1, idd);*/
+
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resSet;
+    }
+
+
 
     public void signUpUser(Users user){
         String insert = "INSERT INTO " + Const.USER_TABLE + " (" +//помещаем в табл польз

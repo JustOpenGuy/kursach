@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.testWriterController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="saveButton" mnemonicParsing="false" text="Save" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem fx:id="helpButton" mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.41202672605790647, 0.7717149220489977" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane>
+          <children>
+                <TextField fx:id="firstQues" layoutX="14.0" layoutY="77.0" prefHeight="25.0" prefWidth="339.0" />
+                  <TextField fx:id="secQues" layoutX="14.0" layoutY="178.0" prefHeight="25.0" prefWidth="339.0" />
+                  <TextField fx:id="thurdQues" layoutX="14.0" layoutY="277.0" prefHeight="25.0" prefWidth="339.0" />
+                  <TextField fx:id="fourthQues" layoutX="14.0" layoutY="384.0" prefHeight="25.0" prefWidth="339.0" />
+                  <TextField fx:id="fifthQues" layoutX="14.0" layoutY="488.0" prefHeight="25.0" prefWidth="339.0" />
+                  <Text fill="#9f9f9f" layoutX="20.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вопросы" underline="true" wrappingWidth="76.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="20.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I вопрос" wrappingWidth="76.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="20.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="II вопрос" wrappingWidth="76.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="14.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="III вопрос" wrappingWidth="88.99998664855957">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="14.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IV вопрос" wrappingWidth="88.99998664855957">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="20.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V вопрос" wrappingWidth="88.99998664855957">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="225.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер курса" underline="true" wrappingWidth="106.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="courseChoice" layoutX="204.0" layoutY="38.0" prefWidth="150.0" />
+                  <Button fx:id="refreshButton" layoutX="132.0" layoutY="38.0" mnemonicParsing="false" text="Refresh" />
+          </children>
+        </AnchorPane>
+        <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+               <content>
+                  <AnchorPane prefHeight="549.0" prefWidth="316.0">
+                     <children>
+                        <TextField fx:id="firstFirstAnsw" layoutX="24.0" layoutY="77.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="firstSecondAnsw" layoutX="177.0" layoutY="77.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="secFirstAnsw" layoutX="24.0" layoutY="178.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="secSecondAnsw" layoutX="179.0" layoutY="178.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="thirdFirstAnsw" layoutX="26.0" layoutY="277.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="thirdSecondAnsw" layoutX="179.0" layoutY="277.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="fourthFirstAnsw" layoutX="26.0" layoutY="384.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="fourthSecondAnsw" layoutX="179.0" layoutY="384.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="fifthfFirstAnsw" layoutX="26.0" layoutY="488.0" prefHeight="25.0" prefWidth="122.0" />
+                        <TextField fx:id="fifthSecondAnsw" layoutX="179.0" layoutY="488.0" prefHeight="25.0" prefWidth="122.0" />
+                        <Text fill="#9f9f9f" layoutX="17.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Неверные ответы" underline="true" wrappingWidth="149.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="51.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I ответ" wrappingWidth="57.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="51.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I ответ" wrappingWidth="57.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="51.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I ответ" wrappingWidth="57.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="51.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I ответ" wrappingWidth="57.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="51.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I ответ" wrappingWidth="57.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="206.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="II ответ" wrappingWidth="63.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="202.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="II ответ" wrappingWidth="63.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="202.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="II ответ" wrappingWidth="63.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="202.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="II ответ" wrappingWidth="63.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9f9f9f" layoutX="206.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="II ответ" wrappingWidth="63.99999809265137">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+        </ScrollPane>
+        <AnchorPane>
+          <children>
+                  <TextField fx:id="firstTrueThirdAnsw" layoutX="40.0" layoutY="77.0" prefHeight="25.0" prefWidth="122.0" />
+                  <TextField fx:id="secTrueThirdAnsw" layoutX="40.0" layoutY="178.0" prefHeight="25.0" prefWidth="122.0" />
+                  <TextField fx:id="thirdTrueThirdAnsw" layoutX="40.0" layoutY="277.0" prefHeight="25.0" prefWidth="122.0" />
+                  <TextField fx:id="fourthTrueThirdAnsw" layoutX="39.0" layoutY="384.0" prefHeight="25.0" prefWidth="122.0" />
+                  <TextField fx:id="fifthTrueThirdAnsw" layoutX="39.0" layoutY="488.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Text fill="#9f9f9f" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Верный ответ" underline="true" wrappingWidth="149.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="68.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="III ответ" wrappingWidth="63.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="69.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="III ответ" wrappingWidth="63.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="67.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="III ответ" wrappingWidth="63.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="67.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="III ответ" wrappingWidth="63.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#9f9f9f" layoutX="68.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="III ответ" wrappingWidth="63.99999809265137">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Pane prefWidth="894.0" HBox.hgrow="ALWAYS" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

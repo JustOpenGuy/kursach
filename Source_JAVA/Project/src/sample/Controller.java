@@ -40,6 +40,7 @@ public class Controller  {
 
 
     void initialize() {
+
         Register.setOnAction(event ->{Register.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
@@ -60,6 +61,7 @@ public class Controller  {
 
         });
         SignIn.setOnAction(event ->{                         //переписал ибо нужно синхр с БД
+
             String loginText = login_fild.getText().trim(); //метод трим - удаляет лишние пробелы в строке
             String loginPassword = password_fild.getText().trim();
 
