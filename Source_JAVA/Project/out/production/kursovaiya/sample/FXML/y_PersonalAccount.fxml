@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Menu?>
@@ -12,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_PersonalAccountController">
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_PersonalAccountController">
    <children>
       <MenuBar prefHeight="32.0" prefWidth="800.0">
         <menus>
@@ -41,10 +45,10 @@
             <Font name="Consolas" size="24.0" />
          </font>
       </Text>
-      <ChoiceBox layoutX="14.0" layoutY="120.0" prefWidth="150.0" />
-      <Button fx:id="GetMarks" layoutX="210.0" layoutY="274.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Узнать оценки" />
-      <ChoiceBox layoutX="14.0" layoutY="275.0" prefWidth="150.0" />
-      <Button fx:id="GoToLesson" layoutX="210.0" layoutY="119.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Запуск курса" />
+      <ChoiceBox fx:id="courses" layoutX="14.0" layoutY="120.0" prefWidth="150.0" />
+      <Button fx:id="GetMarks" layoutX="210.0" layoutY="274.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="164.0" text="Узнать оценки" />
+      <ChoiceBox fx:id="marks" layoutX="14.0" layoutY="275.0" prefWidth="150.0" />
+      <Button fx:id="GoToLesson" layoutX="210.0" layoutY="119.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="164.0" text="Запуск курса" />
       <TableView editable="true" layoutX="14.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Урок" />

@@ -43,7 +43,7 @@ public class y_LessonViewController {
             stage.show();
         });
 
-        d_tests.setOnAction(event -> {
+     /*   d_tests.setOnAction(event -> {
             d_tests.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("FXML/d_CooseTest.fxml"));
@@ -61,5 +61,6 @@ public class y_LessonViewController {
             stage.sizeToScene();
             stage.show();
         });
+    */
     }
 }

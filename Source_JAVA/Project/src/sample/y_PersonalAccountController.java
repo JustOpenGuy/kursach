@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.Separator;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -35,18 +37,11 @@ public class y_PersonalAccountController {
     protected static void inizRafUrl(){
         rafURL = new String("/sample/courses/1/les1/p1.html");
     }
-    public String[] getList(){
-        String[] a = new String[10];
-        String u = "/sample/courses/1/les1/p1.html";
-        File f = new File(u);
-        if(f.exists() && !f.isDirectory())
-            a[1] = "HAHAHAHA";
-        return a;
 
-    }
+    ObservableList list = FXCollections.observableArrayList();
 
     @FXML
-    private ChoiceBox courses;
+    private ChoiceBox<String> courses;
 
     @FXML
     private Button GoToLesson;
@@ -68,12 +63,18 @@ public class y_PersonalAccountController {
     @FXML
     private MenuItem ChangePass;
 
+    private void loadData(){
+        list.removeAll(list);
+        String a = "test1";
+        String b = "test2";
+        list.addAll(a, b);
+        courses.getItems().addAll(list);
+    }
+
     @FXML
     void initialize() {
-        String[] List = getList();
-        ChoiceBox cb = new ChoiceBox(FXCollections.observableArrayList(List));
-
-        rafURL = new String("/sample/courses/1/les1/p1.html");       //Инициализация строки пути к файла
+        inizRafUrl();       //Инициализация строки пути к файла
+        loadData();
         url = this.getClass().getResource(rafURL);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
         setUrl(url.toString());                       //Эта ф-ция трансформирует нужную нам ссылку в строку
 
