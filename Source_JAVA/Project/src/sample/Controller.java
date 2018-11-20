@@ -44,7 +44,7 @@ public class Controller  {
         Register.setOnAction(event ->{Register.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("FXML/registration.fxml"));
+            loader.setLocation(getClass().getResource("FXML/Reg.fxml"));
 
            try {
                loader.load();
@@ -60,14 +60,14 @@ public class Controller  {
             stage.showAndWait();
 
         });
-        SignIn.setOnAction(event ->{                         //переписал ибо нужно синхр с БД
+            SignIn.setOnAction(event ->{                         //переписал ибо нужно синхр с БД
 
             String loginText = login_fild.getText().trim(); //метод трим - удаляет лишние пробелы в строке
             String loginPassword = password_fild.getText().trim();
 
 
 
-            if(!loginText.equals("") && !loginPassword.equals("")){      //
+            if(!loginText.isEmpty() && !loginPassword.isEmpty()){      //
                if(loginUser(loginText, loginPassword).equals("ADMIN"))
                {
                    SignIn.getScene().getWindow().hide();

@@ -1,7 +1,5 @@
 package sample;
 
-import sample.Configs;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -109,6 +107,8 @@ public class DatabaseHandler extends Configs {
         return resSet;
     }
 
+
+
     public ResultSet getUser(Users user) {
         ResultSet resSet = null;
 
@@ -121,6 +121,25 @@ public class DatabaseHandler extends Configs {
 
 
             resSet = prSt.executeQuery();  //executeQuery - получение данных
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    public ResultSet getLogin(Users user) { //функция для проверки на наличие юзера с таким логином
+        ResultSet resSet = null;
+
+        String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " + //выбираем все из бд
+                Const.USER_USERNAME + "=?";//где логинчему-то равен
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, user.getUserName());
+
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
