@@ -35,7 +35,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Text layoutX="14.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Доступные курсы:" wrappingWidth="232.5419921875">
+      <Text layoutX="14.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Доступные уроки:" wrappingWidth="232.5419921875">
          <font>
             <Font name="Consolas" size="24.0" />
          </font>
@@ -46,15 +46,12 @@
          </font>
       </Text>
       <ChoiceBox fx:id="courses" layoutX="14.0" layoutY="120.0" prefWidth="150.0" />
-      <Button fx:id="GetMarks" layoutX="210.0" layoutY="274.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="164.0" text="Узнать оценки" />
-      <ChoiceBox fx:id="marks" layoutX="14.0" layoutY="275.0" prefWidth="150.0" />
-      <Button fx:id="GoToLesson" layoutX="210.0" layoutY="119.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="164.0" text="Запуск курса" />
-      <TableView editable="true" layoutX="14.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0">
+      <Button fx:id="GoToLesson" layoutX="210.0" layoutY="119.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="164.0" text="Запуск урока" />
+      <TableView editable="true" layoutX="30.0" layoutY="274.0" prefHeight="297.0" prefWidth="293.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Урок" />
-          <TableColumn prefWidth="75.0" text="Оценка" />
+          <TableColumn prefWidth="114.0" text="Урок" />
+          <TableColumn prefWidth="178.0" text="Оценка" />
         </columns>
       </TableView>
-      <Button fx:id="d_ChooseT" layoutX="12.0" layoutY="599.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="293.0" text="Перейти к тестам" />
    </children>
 </AnchorPane>

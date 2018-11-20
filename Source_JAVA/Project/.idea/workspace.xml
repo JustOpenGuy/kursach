@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2f41287-b9cb-4f57-9f96-c51ec5e43090" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/y_PersonalAccountController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/y_LessonViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/y_LessonViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -82,12 +80,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="102" />
-          <entry key="java" value="1966" />
+          <entry key="java" value="1972" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1966" />
+          <entry key="JAVA" value="1972" />
           <entry key="XML" value="102" />
         </counts>
       </usages-collector>
@@ -98,14 +96,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="832">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
               <folding>
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#802#803#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#2052#2639#0" />
+                <element signature="e#2163#2811#0" />
                 <element signature="e#2850#3413#0" />
                 <element signature="e#3458#4007#0" />
-                <element signature="e#4051#4638#0" />
                 <element signature="e#4682#5237#0" />
-                <element signature="e#5279#5838#0" />
               </folding>
             </state>
           </provider>
@@ -250,7 +254,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542711799832" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542712865799" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -894,14 +898,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="832">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
           <folding>
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#2052#2639#0" />
+            <element signature="e#2163#2811#0" />
             <element signature="e#2850#3413#0" />
             <element signature="e#3458#4007#0" />
-            <element signature="e#4051#4638#0" />
             <element signature="e#4682#5237#0" />
-            <element signature="e#5279#5838#0" />
           </folding>
         </state>
       </provider>
