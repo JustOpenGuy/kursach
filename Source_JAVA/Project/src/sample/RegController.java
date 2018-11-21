@@ -20,10 +20,6 @@ import javafx.stage.Stage;
 public class  RegController {
 
 
-
-    /* ObservableList<String>choiceBoxList = FXCollections.observableArrayList("Мужской", "Женский");
-     //для ЧекБоха М/Ж*/
-
     @FXML
     private ResourceBundle resources;
 
