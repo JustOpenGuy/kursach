@@ -21,6 +21,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class testWriterController  {
+    int num=0, ex=0;
+
     @FXML
     private ChoiceBox<String> courseChoice;
 
@@ -105,6 +107,8 @@ public class testWriterController  {
     @FXML
     protected Tests[] testss = new Tests[4];
 
+
+
     @FXML
     void initialize() {
         ArrayList<String> ids = new ArrayList<String>();
@@ -112,7 +116,7 @@ public class testWriterController  {
         ResultSet res= dbt.getQues();
         String str = new String();
         try {
-            int num=0;
+
              while(res.next()){
 
                 testss[num]=new Tests(res.getInt(1), res.getString(2),res.getString(3),
@@ -120,8 +124,8 @@ public class testWriterController  {
                         res.getString(7),res.getString(8),res.getString(9),res.getString(10),
                         res.getString(11), res.getString(12),res.getString(13),res.getString(14),
                         res.getString(15),res.getString(16),res.getString(17),res.getString(18),
-                        res.getString(19),res.getString(20),res.getString(21));
-                ids.add(res.getString(2));
+                        res.getString(19),res.getString(20),res.getString(21), res.getString(22));
+                ids.add(res.getString(22));
                 num++;
             }
         } catch (SQLException e) {
@@ -132,15 +136,45 @@ public class testWriterController  {
 
 
         refreshButton.setOnAction(event -> {
-            firstQues.setText(testss[0].getFirstQues());secQues.setText(testss[0].getSecQues());thurdQues.setText(testss[0].getThurdQues());
-            fourthQues.setText(testss[0].getFourthQues());fifthQues.setText(testss[0].getFifthQues());firstFirstAnsw.setText(testss[0].getFifthfFirstAnsw());
-            firstSecondAnsw.setText(testss[0].getFirstSecondAnsw());secFirstAnsw.setText(testss[0].getSecFirstAnsw());
-            secSecondAnsw.setText(testss[0].getSecSecondAnsw());thirdFirstAnsw.setText(testss[0].getThirdFirstAnsw());
-            thirdSecondAnsw.setText(testss[0].getThirdSecondAnsw());fourthFirstAnsw.setText(testss[0].getFourthFirstAnsw());
-            fourthSecondAnsw.setText(testss[0].getFourthSecondAnsw());fifthfFirstAnsw.setText(testss[0].getFifthfFirstAnsw());
-            fifthSecondAnsw.setText(testss[0].getFifthSecondAnsw());firstTrueThirdAnsw.setText(testss[0].getFirstTrueThirdAnsw());
-            secTrueThirdAnsw.setText(testss[0].getSecTrueThirdAnsw());thirdTrueThirdAnsw.setText(testss[0].getThirdTrueThirdAnsw());
-            fourthTrueThirdAnsw.setText(testss[0].getFourthTrueThirdAnsw());fifthTrueThirdAnsw.setText(testss[0].getFifthTrueThirdAnsw());
+            String a;
+            a=courseChoice.getValue();
+            for(int i=0;i<num;++i){
+                if(a.equals(testss[i].getCourseName())) {ex=i; break;}
+            }
+            firstQues.setText(testss[ex].getFirstQues());secQues.setText(testss[ex].getSecQues());thurdQues.setText(testss[ex].getThurdQues());
+            fourthQues.setText(testss[ex].getFourthQues());fifthQues.setText(testss[ex].getFifthQues());firstFirstAnsw.setText(testss[ex].getFirstFirstAnsw());
+            firstSecondAnsw.setText(testss[ex].getFirstSecondAnsw());secFirstAnsw.setText(testss[ex].getSecFirstAnsw());
+            secSecondAnsw.setText(testss[ex].getSecSecondAnsw());thirdFirstAnsw.setText(testss[ex].getThirdFirstAnsw());
+            thirdSecondAnsw.setText(testss[ex].getThirdSecondAnsw());fourthFirstAnsw.setText(testss[ex].getFourthFirstAnsw());
+            fourthSecondAnsw.setText(testss[ex].getFourthSecondAnsw());fifthfFirstAnsw.setText(testss[ex].getFifthfFirstAnsw());
+            fifthSecondAnsw.setText(testss[ex].getFifthSecondAnsw());firstTrueThirdAnsw.setText(testss[ex].getFirstTrueThirdAnsw());
+            secTrueThirdAnsw.setText(testss[ex].getSecTrueThirdAnsw());thirdTrueThirdAnsw.setText(testss[ex].getThirdTrueThirdAnsw());
+            fourthTrueThirdAnsw.setText(testss[ex].getFourthTrueThirdAnsw());fifthTrueThirdAnsw.setText(testss[ex].getFifthTrueThirdAnsw());
+
+
+        });
+
+        saveButton.setOnAction(event -> {
+
+       String  firstQu= firstQues.getText();String  secQue= secQues.getText();
+       String  thurdQu= thurdQues.getText();String  fourthQ= fourthQues.getText();
+       String  fifthQu= fifthQues.getText();String  firstFi= firstFirstAnsw.getText();
+       String  firstSe= firstSecondAnsw.getText();String  secFirs= secFirstAnsw.getText();
+       String  secSeco= secSecondAnsw.getText();String  thirdFi= thirdFirstAnsw.getText();
+       String  thirdSe= thirdSecondAnsw.getText();String  fourthF= fourthFirstAnsw.getText();
+       String  fourthS= fourthSecondAnsw.getText();String  fifthfF= fifthfFirstAnsw.getText();
+       String  fifthSe= fifthSecondAnsw.getText();String  firstTr= firstTrueThirdAnsw.getText();
+       String  secTrue= secTrueThirdAnsw.getText();String  thirdTr= thirdTrueThirdAnsw.getText();
+       String  fourthT= fourthTrueThirdAnsw.getText();String  fifthTr= fifthTrueThirdAnsw.getText();
+       String  courseNa=courseChoice.getValue();
+
+            DatabaseHandler dbt1 = new DatabaseHandler();
+
+            Tests NEW1 = new Tests( ex+1, firstQu, secQue,thurdQu,fourthQ,fifthQu,firstFi, firstSe,secFirs,
+                    secSeco,thirdFi,thirdSe,fourthF,fourthS,fifthfF,fifthSe,firstTr,secTrue,thirdTr,fourthT,fifthTr, courseNa);
+
+            dbt1.SetTests(NEW1);
+
         });
     }
 }

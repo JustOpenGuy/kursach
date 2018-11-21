@@ -5,7 +5,7 @@ package sample;
  */
 public class Tests {
     private int id;
-    private String firstQues;
+    private String  firstQues;
     private String  secQues;
     private String  thurdQues;
     private String  fourthQues;
@@ -25,13 +25,40 @@ public class Tests {
     private String  thirdTrueThirdAnsw;
     private String  fourthTrueThirdAnsw;
     private String  fifthTrueThirdAnsw;
+    private String  courseName;
+
+
+    public Tests(Tests test) {                          //конструктор копирования
+
+        this.firstQues = test.getFirstQues();
+        this.secQues = test.getSecQues();
+        this.thurdQues = test.getThurdQues();
+        this.fourthQues = test.getFourthQues();
+        this.fifthQues = test.getFifthQues();
+        this.firstFirstAnsw = test.getFirstFirstAnsw();
+        this.firstSecondAnsw = test.getFirstSecondAnsw();
+        this.secFirstAnsw = test.getSecFirstAnsw();
+        this.secSecondAnsw = test.getSecSecondAnsw();
+        this.thirdFirstAnsw = test.getThirdFirstAnsw();
+        this.thirdSecondAnsw = test.getThirdSecondAnsw();
+        this.fourthFirstAnsw = test.getFourthFirstAnsw();
+        this.fourthSecondAnsw = test.getFourthSecondAnsw();
+        this.fifthfFirstAnsw = test.getFifthfFirstAnsw();
+        this.fifthSecondAnsw = test.getFifthSecondAnsw();
+        this.firstTrueThirdAnsw = test.getFirstTrueThirdAnsw();
+        this.secTrueThirdAnsw = test.getSecTrueThirdAnsw();
+        this.thirdTrueThirdAnsw = test.getThirdTrueThirdAnsw();
+        this.fourthTrueThirdAnsw = test.getFourthTrueThirdAnsw();
+        this.fifthTrueThirdAnsw = test.getFifthTrueThirdAnsw();
+
+    }
 
 
     public Tests(int id, String firstQues, String secQues, String thurdQues, String fourthQues,
                  String fifthQues, String firstFirstAnsw, String firstSecondAnsw, String secFirstAnsw,
                  String secSecondAnsw, String thirdFirstAnsw, String thirdSecondAnsw, String fourthFirstAnsw,
                  String fourthSecondAnsw, String fifthfFirstAnsw, String fifthSecondAnsw, String firstTrueThirdAnsw,
-                 String secTrueThirdAnsw, String thirdTrueThirdAnsw, String fourthTrueThirdAnsw, String fifthTrueThirdAnsw) {
+                 String secTrueThirdAnsw, String thirdTrueThirdAnsw, String fourthTrueThirdAnsw, String fifthTrueThirdAnsw, String courseName) {
         this.id = id;
         this.firstQues = firstQues;
         this.secQues = secQues;
@@ -53,11 +80,15 @@ public class Tests {
         this.thirdTrueThirdAnsw = thirdTrueThirdAnsw;
         this.fourthTrueThirdAnsw = fourthTrueThirdAnsw;
         this.fifthTrueThirdAnsw = fifthTrueThirdAnsw;
+        this.courseName = courseName;
     }
 
     public String getFirstQues() {
         return firstQues;
     }
+
+
+
 
 
 
@@ -139,6 +170,10 @@ public class Tests {
 
     public String getFifthTrueThirdAnsw() {
         return fifthTrueThirdAnsw;
+    }
+
+    public String getCourseName() {
+        return courseName;
     }
 }
 

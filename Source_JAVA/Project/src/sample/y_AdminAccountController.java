@@ -21,6 +21,7 @@ public class y_AdminAccountController  {
     public static String rafURLAdm;       //Сырая строка урока
     public URL urlAdm;                    //Ссылка на файл
     public static String urlFullAdm;         //Полная ссылка на файл в строке
+
     public static void setUrlAdm(String u){
         urlFullAdm = u;
     }
