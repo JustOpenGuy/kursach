@@ -53,5 +53,6 @@
       <ChoiceBox layoutX="14.0" layoutY="316.0" prefWidth="150.0" />
       <Button fx:id="testEdit" layoutX="393.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Редактирование тестов" />
       <Button fx:id="courseAdd" layoutX="39.0" layoutY="136.0" mnemonicParsing="false" text=" Добавить курс" />
+      <Button fx:id="TMPtest" layoutX="393.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="пробный тест" />
    </children>
 </AnchorPane>

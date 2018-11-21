@@ -15,7 +15,7 @@ public class DatabaseHandler extends Configs {
     public Connection getDbConnection()
             throws ClassNotFoundException, SQLException {     //Строка подключения к бД
         String connectionString = "jdbc:mysql://" + dbHost + ":"
-               + dbPort + "/" + dbName;
+                + dbPort + "/" + dbName;
 
         Class.forName("com.mysql.jdbc.Driver");
         dbConnection = DriverManager.getConnection(connectionString, dbUser,
@@ -43,7 +43,23 @@ public class DatabaseHandler extends Configs {
         return resSet;
     }
 
+    public ResultSet getDirectQues(String name){
+        ResultSet resSet = null;
+        String select = "SELECT * FROM tests WHERE " + //выбираем все из бд
+                "courseName =?";///где логин и пароля чему-то равны
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, name);
 
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resSet;
+    }
 
     public void signUpUser(Users user){
         String insert = "INSERT INTO " + Const.USER_TABLE + " (" +//помещаем в табл польз
@@ -72,30 +88,30 @@ public class DatabaseHandler extends Configs {
                 + "SET password = ? "
                 + "WHERE username = ?";
 
-        
+
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
             prSt.setString(1, pass);
             prSt.setString(2, name);
-            
+
             prSt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        
+
     }
 
     public void SetTests(Tests test){
 
 
         String sqlUpdate = "UPDATE tests "
-                + "SET firstQues = ? " + "AND SET secQues = ? "+ "AND SET thurdQues = ? "+ "AND SET fourthQues = ? "+ "AND SET fifthQues = ? "
-                + "AND SET firstFirstAnsw = ? "+ "AND SET firstSecondAnsw = ? "+ "AND SET secFirstAnsw = ? "+ "AND SET secSecondAnsw = ? "+ "AND SET thirdFirstAnsw = ? "
-                + "AND SET thirdSecondAnsw = ? "+ "AND SET fourthFirstAnsw = ? "+ "AND SET fourthSecondAnsw = ? "+ "AND SET fifthfFirstAnsw = ? "+ "AND SET fifthSecondAnsw = ? "
-                + "AND SET firstTrueThirdAnsw = ? "+ "AND SET secTrueThirdAnsw = ? "+ "AND SET thirdTrueThirdAnsw = ? "+ "AND SET fourthTrueThirdAnsw = ? "+ "AND SET fifthTrueThirdAnsw = ? "
-                + "AND SET courseName = ? "
+                + "SET firstQues = ? " + ",  secQues = ? "+ ",  thurdQues = ? "+ ",  fourthQues = ? "+ ",  fifthQues = ? "
+                + ",  firstFirstAnsw = ? "+ ",  firstSecondAnsw = ? "+ ",  secFirstAnsw = ? "+ ",  secSecondAnsw = ? "+ ",  thirdFirstAnsw = ? "
+                + ",  thirdSecondAnsw = ? "+ ",  fourthFirstAnsw = ? "+ ",  fourthSecondAnsw = ? "+ ",  fifthfFirstAnsw = ? "+ ",  fifthSecondAnsw = ? "
+                + ",  firstTrueThirdAnsw = ? "+ ",  secTrueThirdAnsw = ? "+ ",  thirdTrueThirdAnsw = ? "+ ",  fourthTrueThirdAnsw = ? "+ ",  fifthTrueThirdAnsw = ? "
+                + ", courseName = ? "
                 + "WHERE idtests = ?";
 
 
@@ -122,7 +138,7 @@ public class DatabaseHandler extends Configs {
             prSt.setString(19,  test.getFourthTrueThirdAnsw());
             prSt.setString(20,  test.getFifthTrueThirdAnsw());
             prSt.setString(21,  test.getCourseName());
-            prSt.setInt(22,     test.getId());    
+            prSt.setInt(22,     test.getId());
 
 
             System.out.println(test.getFirstQues());
@@ -132,7 +148,7 @@ public class DatabaseHandler extends Configs {
             System.out.println(test.getFifthQues());
             System.out.println(  test.getId());
 
-            
+
 
 
 
@@ -160,7 +176,7 @@ public class DatabaseHandler extends Configs {
             prSt.setString(3, user.getPassword());
 
 
-           resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -174,14 +190,33 @@ public class DatabaseHandler extends Configs {
         ResultSet resSet = null;
 
         String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " +
-                 Const.USER_USERNAME + "=? AND " + Const.USER_PASSWORD + "=?";
+                Const.USER_USERNAME + "=? AND " + Const.USER_PASSWORD + "=?";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
-           prSt.setString(1, user.getUserName());
+            prSt.setString(1, user.getUserName());
             prSt.setString(2, user.getPassword());
 
 
             resSet = prSt.executeQuery();  //executeQuery - получение данных
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    public ResultSet getLogin(Users user) { //функция для проверки на наличие юзера с таким логином
+        ResultSet resSet = null;
+
+        String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " + //выбираем все из бд
+                Const.USER_USERNAME + "=?";//где логинчему-то равен
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, user.getUserName());
+
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
