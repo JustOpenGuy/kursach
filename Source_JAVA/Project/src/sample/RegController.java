@@ -25,9 +25,6 @@ public class  RegController {
      //для ЧекБоха М/Ж*/
 
     @FXML
-    private TextField fio_field1;
-
-    @FXML
     private ResourceBundle resources;
 
     @FXML
@@ -95,7 +92,7 @@ public class  RegController {
     }
 
     private int RegNewUser() {
-        if (login_field.getText().isEmpty() || password_field.getText().isEmpty() || fio_field1.getText().isEmpty()) {
+        if (login_field.getText().isEmpty() || password_field.getText().isEmpty()) {
             //проверка на то, пустые ли поля, если да - устанавливаем код ошибки 1
             ErrorCode = 1;
             return 0;                   //выход при наличии ошибки
@@ -108,8 +105,7 @@ public class  RegController {
         DatabaseHandler dbHandler = new DatabaseHandler();
         String userName = login_field.getText();
         String password = password_field.getText();
-        String fio = fio_field1.getText();
-        Users user = new Users(userName, password, fio);
+        Users user = new Users(userName, password);
         dbHandler.signUpUser(user);
         ErrorCode = 0;
         return 0;
