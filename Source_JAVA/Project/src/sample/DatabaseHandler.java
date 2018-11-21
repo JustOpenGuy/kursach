@@ -63,8 +63,8 @@ public class DatabaseHandler extends Configs {
 
     public void signUpUser(Users user){
         String insert = "INSERT INTO " + Const.USER_TABLE + " (" +//помещаем в табл польз
-                Const.USER_USERNAME + "," + Const.USER_PASSWORD + ")"//пароль и имя
-                + "VALUES(?,?)";//вставка данных
+                Const.USER_USERNAME + "," + Const.USER_PASSWORD + "," + Const.USER_FIO + ")"//пароль и имя
+                + "VALUES(?,?,?)";//вставка данных
 
 
 
@@ -72,6 +72,7 @@ public class DatabaseHandler extends Configs {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);//подключение к базе и передача
             prSt.setString(1, user.getUserName());
             prSt.setString(2, user.getPassword());
+            prSt.setString(3, user.getFio());
 
 
             prSt.executeUpdate();//выполнение команды
@@ -114,7 +115,6 @@ public class DatabaseHandler extends Configs {
                 + ", courseName = ? "
                 + "WHERE idtests = ?";
 
-
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
             prSt.setString(1,  test.getFirstQues());
@@ -139,16 +139,6 @@ public class DatabaseHandler extends Configs {
             prSt.setString(20,  test.getFifthTrueThirdAnsw());
             prSt.setString(21,  test.getCourseName());
             prSt.setInt(22,     test.getId());
-
-
-            System.out.println(test.getFirstQues());
-            System.out.println(test.getSecQues());
-            System.out.println(test.getThurdQues());
-            System.out.println(test.getFourthQues());
-            System.out.println(test.getFifthQues());
-            System.out.println(  test.getId());
-
-
 
 
 
