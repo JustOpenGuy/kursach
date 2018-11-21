@@ -8,6 +8,6 @@
    <children>
       <WebView fx:id="webView" layoutX="14.0" layoutY="14.0" prefHeight="706.0" prefWidth="1000.0" />
       <Button fx:id="d_tests" layoutX="784.0" layoutY="739.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Тесты" />
-      <Button fx:id="Exit1" layoutX="894.0" layoutY="739.0" mnemonicParsing="false" text="Законить урок" />
+      <Button fx:id="Exit" layoutX="894.0" layoutY="739.0" mnemonicParsing="false" text="Законить урок" />
    </children>
 </AnchorPane>

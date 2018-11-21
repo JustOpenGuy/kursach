@@ -32,7 +32,6 @@ public class DatabaseHandler extends Configs {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             /*String idd = String.valueOf(id);
             prSt.setString(1, idd);*/
-
             resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
 
         } catch (SQLException e) {
@@ -103,6 +102,52 @@ public class DatabaseHandler extends Configs {
 
     }
 
+    public int TestCount() throws SQLException {
+        String select = "SELECT * FROM kursach.tests;";
+        ResultSet resSet = null;
+        int count = 0;
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        while(resSet.next()) {
+            count++;
+        };
+        return count;
+
+    }
+
+    public String getLessonName(int id){
+        String answer = new String();
+        ResultSet resSet = null;
+        String select = "SELECT * FROM " + Const.TESTS_TABLE + " WHERE " + Const.TESTS_ID + "=?" ;
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);;
+            prSt.setInt(1, id);
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (resSet.next())
+                try {
+                answer = resSet.getString(22);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return answer;
+    }
+
     public void SetTests(Tests test){
 
 
@@ -140,27 +185,12 @@ public class DatabaseHandler extends Configs {
             prSt.setString(21,  test.getCourseName());
             prSt.setInt(22,     test.getId());
 
-
-            System.out.println(test.getFirstQues());
-            System.out.println(test.getSecQues());
-            System.out.println(test.getThurdQues());
-            System.out.println(test.getFourthQues());
-            System.out.println(test.getFifthQues());
-            System.out.println(  test.getId());
-
-
-
-
-
-
-
             prSt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
 

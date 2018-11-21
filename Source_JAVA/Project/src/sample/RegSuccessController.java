@@ -41,7 +41,7 @@ public class RegSuccessController {
                 loader.setLocation(getClass().getResource("FXML/sample.fxml"));
             }else{
                                                                    //если была ошибка, то возвращаем юзера на окно регистрации
-                loader.setLocation(getClass().getResource("FXML/Reg.fxml"));
+                loader.setLocation(getClass().getResource("FXML/registration.fxml"));
             }
             try {
                 loader.load();
