@@ -114,7 +114,6 @@ public class testWriterController  {
         ArrayList<String> ids = new ArrayList<String>();
         DatabaseHandler dbt = new DatabaseHandler();
         ResultSet res= dbt.getQues();
-        String str = new String();
         try {
 
              while(res.next()){
