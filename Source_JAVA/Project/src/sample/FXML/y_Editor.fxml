@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="607.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML.YEditor">
+   <children>
+      <ChoiceBox fx:id="part" layoutX="28.0" layoutY="30.0" prefHeight="31.0" prefWidth="202.0" />
+      <Button fx:id="Edit" layoutX="257.0" layoutY="30.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="Редактировать" />
+      <HTMLEditor fx:id="Editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="6.0" layoutY="100.0" prefHeight="497.0" prefWidth="870.0" />
+   </children>
+</AnchorPane>

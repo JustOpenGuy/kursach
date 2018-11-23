@@ -1,11 +1,14 @@
 package sample;
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -17,7 +20,6 @@ import java.util.ArrayList;
 public class y_AdminAccountController  {
 
     public static String rafURLAdm;       //Сырая строка урока
-    public URL urlAdm;                    //Ссылка на файл
     public static String urlFullAdm;         //Полная ссылка на файл в строке
     public static void setUrlAdm(String u){
         urlFullAdm = u;
@@ -35,11 +37,22 @@ public class y_AdminAccountController  {
         rafURLAdm = new String("/sample/courses/1/les1/p1.html");
     }
 
-
+    public static ObservableList list = FXCollections.observableArrayList();
+    int lessonIndAdm;
+    String lessonNameAdm;
+    int lessonCounter;
 
     @FXML
-    private Button courseAdd;
+    private Button addLesson;
 
+    @FXML
+    private Button deleteLesson;
+
+    @FXML
+    private Button testEdit;
+
+    @FXML
+    private ChoiceBox<String> lesson;
 
     @FXML
     private Button Edit;
@@ -59,33 +72,55 @@ public class y_AdminAccountController  {
     @FXML
     private MenuItem ChangePass;
 
-    @FXML
-    private Button testEdit;
 
-
-        /*
-        int i = 1;
-        String a = new String(urlFull);
-
-        a = a.replace("file:/", "");
-        a = a.replaceAll("/", "//");
-        File f = new File(a);
-        System.out.println(f.exists()+a);
-        System.out.println("File name: " + f.getName());
-        System.out.println("File size: " + f.length());
-        while(f.exists()){
-                System.out.println("Checked" + i);
-                f = new File(a);
-                System.out.println("Checked" + i);
-            if(f.exists()){
-                list.add(i + ") ");
-                i++;
-                a = a.replace("les1", "les"+i);
-                System.out.println("i = " + i + " url = " + url);
-            }
+    private void loadData() {
+        list.removeAll(list);
+        ArrayList<String> lst = new ArrayList<String>();
+        DatabaseHandler dbHandler = new DatabaseHandler();
+        try {
+            lessonCounter = dbHandler.TestCount();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        lst.add("test1");
-        lst.add("teest2");*/
+        for(int i = 1; i <= lessonCounter; i++){
+            lst.add(dbHandler.getLessonName(i));
+        }
+        list.addAll(lst);
+        lesson.setItems(list);
+     //   lesson.getItems().addAll(list);
+    }
+
+    private void setUrlFinal(String s){
+        String tmp;
+        tmp = rafURLAdm;
+        tmp = tmp.replace("/sample/course/les1", "/sample/course/les"+(list.indexOf(s)+1));
+        setRafURLAdm(tmp);
+        lessonIndAdm = list.indexOf(s)+1;
+        lessonNameAdm = s;
+    }
+
+//        int i = 1;
+//        String a = new String(urlFull);
+//
+//        a = a.replace("file:/", "");
+//        a = a.replaceAll("/", "//");
+//        File f = new File(a);
+//        System.out.println(f.exists()+a);
+//        System.out.println("File name: " + f.getName());
+//        System.out.println("File size: " + f.length());
+//        while(f.exists()){
+//                System.out.println("Checked" + i);
+//                f = new File(a);
+//                System.out.println("Checked" + i);
+//            if(f.exists()){
+//                list.add(i + ") ");
+//                i++;
+//                a = a.replace("les1", "les"+i);
+//                System.out.println("i = " + i + " url = " + url);
+//            }
+//        }
+//        lst.add("test1");
+//        lst.add("teest2");
 
 
 
@@ -93,32 +128,34 @@ public class y_AdminAccountController  {
     void initialize() {
 
 
-        rafURLAdm = new String("/sample/course/les1/p1.html");       //Инициализация строки пути к файла
-        urlAdm = this.getClass().getResource(rafURLAdm);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
-        setUrlAdm(urlAdm.toString());                       //Эта ф-ция трансформирует нужную нам ссылку в строку
-
+        loadData();
+        lesson.setValue(list.get(0).toString());
         Edit.setOnAction(event -> {
-                    String file = new String(getUrlAdm());
-                    file = file.replaceAll("file:/","");
-                    String open = new String("start notepad ");
-                    String[] startNotePad = new String[] {"CMD.EXE", "/C", "start", "notepad", file };
-                    Process runtimeProcess = null;
-                    try {
-                        runtimeProcess = Runtime.getRuntime().exec(startNotePad);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    try {
-                        runtimeProcess.waitFor();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-        );
+//                    String file = new String(getUrlAdm());
+//                    file = file.replaceAll("file:/","");
+//                    String open = new String("start notepad ");
+//                    String[] startNotePad = new String[] {"CMD.EXE", "/C", "start", "notepad", file };
+//                    Process runtimeProcess = null;
+//                    try {
+//                        runtimeProcess = Runtime.getRuntime().exec(startNotePad);
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                    try {
+//                        runtimeProcess.waitFor();
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+                    inizRafUrlAdm();//Инициализация строки пути к файла
+                    setUrlFinal(lesson.getValue());
+                });
+
 
         testEdit.setOnAction( event ->{
-
-                FXMLLoader loader = new FXMLLoader();
+        inizRafUrlAdm();//Инициализация строки пути к файла
+        setUrlFinal(lesson.getValue());
+        FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("FXML/testWriter.fxml"));
 
         try {
@@ -135,7 +172,17 @@ public class y_AdminAccountController  {
         stage.show();
 
     }
+        );
 
+        addLesson.setOnAction( event ->{
+            String a = "set";
+            lessonCounter++;
+            System.out.println(lessonCounter);
+            Tests tmp = new Tests(lessonCounter, a);
+            DatabaseHandler dbt = new DatabaseHandler();
+            dbt.SetTests(tmp);
+            loadData();
+                }
         );
 
         About.setOnAction(event -> {            //Открывает онко "Про программу"

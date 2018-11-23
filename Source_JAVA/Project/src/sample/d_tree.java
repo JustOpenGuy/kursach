@@ -136,20 +136,6 @@ public class d_tree {
 
 
 
-        testButton.setOnAction(event ->{        //Открывает окно смены пароля
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/d_CooseTest.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.show();
-        });
+
     }
 }

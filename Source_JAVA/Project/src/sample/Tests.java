@@ -53,6 +53,30 @@ public class Tests {
 
     }
 
+    public Tests(int ID, String a){
+        this.id = ID;
+        this.firstQues = a;
+        this.secQues = a;
+        this.thurdQues = a;
+        this.fourthQues = a;
+        this.fifthQues = a;
+        this.firstFirstAnsw = a;
+        this.firstSecondAnsw = a;
+        this.secFirstAnsw = a;
+        this.secSecondAnsw = a;
+        this.thirdFirstAnsw = a;
+        this.thirdSecondAnsw = a;
+        this.fourthFirstAnsw = a;
+        this.fourthSecondAnsw = a;
+        this.fifthfFirstAnsw = a;
+        this.fifthSecondAnsw = a;
+        this.firstTrueThirdAnsw = a;
+        this.secTrueThirdAnsw = a;
+        this.thirdTrueThirdAnsw = a;
+        this.fourthTrueThirdAnsw = a;
+        this.fifthTrueThirdAnsw = a;
+        this.courseName = a;
+    }
 
     public Tests(int id, String firstQues, String secQues, String thurdQues, String fourthQues,
                  String fifthQues, String firstFirstAnsw, String firstSecondAnsw, String secFirstAnsw,

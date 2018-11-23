@@ -151,13 +151,13 @@ public class DatabaseHandler extends Configs {
     public void SetTests(Tests test){
 
 
-        String sqlUpdate = "UPDATE tests "
+        String sqlUpdate = "INSERT INTO tests "
                 + "SET firstQues = ? " + ",  secQues = ? "+ ",  thurdQues = ? "+ ",  fourthQues = ? "+ ",  fifthQues = ? "
                 + ",  firstFirstAnsw = ? "+ ",  firstSecondAnsw = ? "+ ",  secFirstAnsw = ? "+ ",  secSecondAnsw = ? "+ ",  thirdFirstAnsw = ? "
                 + ",  thirdSecondAnsw = ? "+ ",  fourthFirstAnsw = ? "+ ",  fourthSecondAnsw = ? "+ ",  fifthfFirstAnsw = ? "+ ",  fifthSecondAnsw = ? "
                 + ",  firstTrueThirdAnsw = ? "+ ",  secTrueThirdAnsw = ? "+ ",  thirdTrueThirdAnsw = ? "+ ",  fourthTrueThirdAnsw = ? "+ ",  fifthTrueThirdAnsw = ? "
                 + ", courseName = ? "
-                + "WHERE idtests = ?";
+                + ", idtests = ?";
 
 
         try {
