@@ -9,19 +9,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.Separator;
 import javafx.stage.Stage;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class y_PersonalAccountController {
-
 
 
     public static int lessonInd;
@@ -86,7 +80,7 @@ public class y_PersonalAccountController {
     }
 
     private void setUrlFinal(String s){
-        String tmp = new String();
+        String tmp;
         tmp = rafURL;
         tmp = tmp.replace("/sample/course/les1", "/sample/course/les"+(list.indexOf(s)+1));
         setRafURL(tmp);

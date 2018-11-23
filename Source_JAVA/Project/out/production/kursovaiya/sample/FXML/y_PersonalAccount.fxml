@@ -46,10 +46,9 @@
          </font>
       </Text>
       <ChoiceBox fx:id="courses" layoutX="14.0" layoutY="120.0" prefWidth="150.0" />
-      <Button fx:id="GetMarks" layoutX="210.0" layoutY="274.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="171.0" text="Узнать оценки" />
-      <ChoiceBox layoutX="14.0" layoutY="275.0" prefWidth="150.0" />
+      <Button fx:id="GetMarks" layoutX="14.0" layoutY="291.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="171.0" text="Узнать оценки" />
       <Button fx:id="GoToLesson" layoutX="210.0" layoutY="119.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="171.0" text="Запуск курса" />
-      <TableView editable="true" layoutX="14.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0">
+      <TableView editable="true" layoutX="14.0" layoutY="350.0" prefHeight="338.0" prefWidth="233.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Урок" />
           <TableColumn prefWidth="75.0" text="Оценка" />
