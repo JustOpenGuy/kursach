@@ -22,6 +22,11 @@ import java.util.ArrayList;
 
 public class y_PersonalAccountController {
 
+
+
+    public static int lessonInd;
+    public static String lessonName;
+
     public static String rafURL;       //Сырая строка урока
     public URL url;                    //Ссылка на файл
     public static String urlFull;         //Полная ссылка на файл в строке
@@ -61,32 +66,11 @@ public class y_PersonalAccountController {
     @FXML
     private MenuItem ChangePass;
 
+
+
     private void loadData() {
         list.removeAll(list);
         ArrayList<String> lst = new ArrayList<String>();
-        /*
-        int i = 1;
-        String a = new String(urlFull);
-
-        a = a.replace("file:/", "");
-        a = a.replaceAll("/", "//");
-        File f = new File(a);
-        System.out.println(f.exists()+a);
-        System.out.println("File name: " + f.getName());
-        System.out.println("File size: " + f.length());
-        while(f.exists()){
-                System.out.println("Checked" + i);
-                f = new File(a);
-                System.out.println("Checked" + i);
-            if(f.exists()){
-                list.add(i + ") ");
-                i++;
-                a = a.replace("les1", "les"+i);
-                System.out.println("i = " + i + " url = " + url);
-            }
-        }
-        lst.add("test1");
-        lst.add("teest2");*/
         int a = 0;
         DatabaseHandler dbHandler = new DatabaseHandler();
         try {
@@ -101,28 +85,40 @@ public class y_PersonalAccountController {
         courses.getItems().addAll(list);
     }
 
+    private void setUrlFinal(String s){
+        String tmp = new String();
+        tmp = rafURL;
+        tmp = tmp.replace("/sample/course/les1", "/sample/course/les"+(list.indexOf(s)+1));
+        setRafURL(tmp);
+        url = this.getClass().getResource(rafURL);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
+        setUrl(url.toString()); //Эта ф-ция трансформирует нужную нам ссылку в строку
+        lessonInd = list.indexOf(s)+1;
+        lessonName = s;
+    }
+
     @FXML
     void initialize() {
 
-        inizRafUrl();//Инициализация строки пути к файла
-        url = this.getClass().getResource(rafURL);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
-        setUrl(url.toString()); //Эта ф-ция трансформирует нужную нам ссылку в строку
+
         loadData();
+        courses.setValue(list.get(0).toString());
         GoToLesson.setOnAction(event -> {
             GoToLesson.getScene().getWindow().hide(); //Открывает просмотр урока
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent root = loader.getRoot();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
+            inizRafUrl();//Инициализация строки пути к файла
+            setUrlFinal(courses.getValue());
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
                 }
         );
 

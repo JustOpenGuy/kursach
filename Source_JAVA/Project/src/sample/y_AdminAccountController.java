@@ -70,7 +70,29 @@ public class y_AdminAccountController  {
     private Button testEdit;
 
 
+        /*
+        int i = 1;
+        String a = new String(urlFull);
 
+        a = a.replace("file:/", "");
+        a = a.replaceAll("/", "//");
+        File f = new File(a);
+        System.out.println(f.exists()+a);
+        System.out.println("File name: " + f.getName());
+        System.out.println("File size: " + f.length());
+        while(f.exists()){
+                System.out.println("Checked" + i);
+                f = new File(a);
+                System.out.println("Checked" + i);
+            if(f.exists()){
+                list.add(i + ") ");
+                i++;
+                a = a.replace("les1", "les"+i);
+                System.out.println("i = " + i + " url = " + url);
+            }
+        }
+        lst.add("test1");
+        lst.add("teest2");*/
 
 
 
@@ -78,7 +100,7 @@ public class y_AdminAccountController  {
     void initialize() {
 
 
-        rafURLAdm = new String("/sample/courses/1/les1/p2.html");       //Инициализация строки пути к файла
+        rafURLAdm = new String("/sample/course/les1/p1.html");       //Инициализация строки пути к файла
         urlAdm = this.getClass().getResource(rafURLAdm);   //Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
         setUrlAdm(urlAdm.toString());                       //Эта ф-ция трансформирует нужную нам ссылку в строку
 

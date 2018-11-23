@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class y_LessonViewController {
 
+
     @FXML
     private WebView webView;
 
@@ -28,7 +29,7 @@ public class y_LessonViewController {
         Exit.setOnAction(event -> {                             //Выход на тесты
             Exit.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/sample.fxml"));
+            loader.setLocation(getClass().getResource("/sample/FXML/y_PersonalAccount.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
