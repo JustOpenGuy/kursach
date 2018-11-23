@@ -105,7 +105,7 @@ public class testWriterController  {
     private TextField fifthTrueThirdAnsw;
 
     @FXML
-    protected Tests[] testss = new Tests[1000];
+    protected Tests[] testss = new Tests[20];
 
 
 

@@ -11,6 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
+
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -175,6 +177,8 @@ public class y_AdminAccountController  {
         );
 
         addLesson.setOnAction( event ->{
+            inizRafUrlAdm();//Инициализация строки пути к файла
+            setUrlFinal(list.get(lessonCounter-1).toString());
             String a = "set";
             lessonCounter++;
             System.out.println(lessonCounter);
@@ -182,6 +186,21 @@ public class y_AdminAccountController  {
             DatabaseHandler dbt = new DatabaseHandler();
             dbt.SetTests(tmp);
             loadData();
+            a = new String(urlFullAdm);
+        a = a.replace("file:/", "");
+        a = a.replaceAll("/", "//");
+        File f = new File(a);
+        a = a.replace("/sample/course/les1", "/sample/course/les"+(lessonCounter));
+        if(!f.exists()){
+            try {
+                f.createNewFile();
+                
+            } catch (IOException e) {
+
+
+            }
+        }
+
                 }
         );
 
