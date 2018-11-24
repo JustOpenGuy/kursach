@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2f41287-b9cb-4f57-9f96-c51ec5e43090" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/sample/course/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les1/p2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les2/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les2/p1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les2/p2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les2/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les3/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les3/p1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les3/p2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les3/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les4/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les4/p1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les4/p2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/course/les4/test.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -71,11 +85,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="28" />
+          <entry key="html" value="2" />
           <entry key="java" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="2" />
           <entry key="JAVA" value="45" />
           <entry key="XML" value="28" />
         </counts>
@@ -96,14 +112,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="234" column="39" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="39" />
+            <state relative-caret-position="763">
+              <caret line="331" lean-forward="true" selection-start-line="331" selection-end-line="331" />
               <folding>
                 <element signature="e#3721#4676#0" />
                 <element signature="e#4711#5297#0" />
+                <element signature="e#5901#7133#0" />
+                <element signature="e#6845#8639#0" />
                 <element signature="e#6174#6878#0" />
                 <element signature="e#6923#7635#0" />
                 <element signature="e#7679#8239#0" />
@@ -111,6 +129,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/course/empties/p1.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -245,6 +268,29 @@
               <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="empties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="les1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="FXML" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -257,7 +303,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543079778421" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543080667435" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -604,7 +650,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1885906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1885906" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -614,7 +660,7 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32765958" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3319149" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -923,13 +969,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/course/les1/p1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="234" column="39" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="39" />
+        <state relative-caret-position="763">
+          <caret line="331" lean-forward="true" selection-start-line="331" selection-end-line="331" />
           <folding>
             <element signature="e#3721#4676#0" />
             <element signature="e#4711#5297#0" />
+            <element signature="e#5901#7133#0" />
+            <element signature="e#6845#8639#0" />
             <element signature="e#6174#6878#0" />
             <element signature="e#6923#7635#0" />
             <element signature="e#7679#8239#0" />
@@ -937,6 +988,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/course/empties/p1.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

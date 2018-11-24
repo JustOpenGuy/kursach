@@ -204,6 +204,7 @@ public class y_AdminAccountController  {
 
         addLesson.setOnAction( event -> {
                     if (list.size() <= 19) {
+                        ErrorLabel.setText("");
                         inizRafUrlAdm();//Инициализация строки пути к файла
                         setUrlFinal(list.get(lessonCounter - 1).toString());
                         String a = "set";
@@ -231,6 +232,7 @@ public class y_AdminAccountController  {
 
         deleteLesson.setOnAction( event -> {
             if (list.size() != 1) {
+                ErrorLabel.setText("");
                 inizRafUrlAdm();//Инициализация строки пути к файла
                 setUrlFinal(list.get(lessonCounter - 1).toString());
                 String a = new String();
