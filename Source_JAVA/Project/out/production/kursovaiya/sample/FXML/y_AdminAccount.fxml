@@ -53,5 +53,10 @@
       <ChoiceBox fx:id="lesson" layoutX="39.0" layoutY="70.0" prefHeight="31.0" prefWidth="296.0" />
       <Button fx:id="addLesson" layoutX="596.0" layoutY="86.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="190.0" text="Добавить урок" />
       <Button fx:id="deleteLesson" layoutX="596.0" layoutY="157.0" mnemonicParsing="false" text="Удалить последний урок" />
+      <Label fx:id="ErrorLabel" layoutX="273.0" layoutY="449.0" prefHeight="31.0" prefWidth="517.0" textFill="RED">
+         <font>
+            <Font name="Candara Bold" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

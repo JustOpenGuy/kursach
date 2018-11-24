@@ -147,6 +147,25 @@ public class DatabaseHandler extends Configs {
         }
         return answer;
     }
+//DELETE FROM `kursach`.`tests` WHERE (`idtests` = '4');
+
+    public void deleteTests(int id){
+
+
+        String sqlUpdate = "DELETE FROM `kursach`.`tests` WHERE (`idtests` = ?)";
+
+
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
+            prSt.setInt(1, id);
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void SetTests(Tests test){
 

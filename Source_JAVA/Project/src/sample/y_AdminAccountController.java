@@ -9,8 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
+
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -75,6 +78,8 @@ public class y_AdminAccountController  {
     @FXML
     private MenuItem ChangePass;
 
+    @FXML
+    private Label ErrorLabel;
 
     private void loadData() {
         list.removeAll(list);
@@ -90,6 +95,7 @@ public class y_AdminAccountController  {
         }
         list.addAll(lst);
         lesson.setItems(list);
+        lesson.setValue(list.get(0).toString());
      //   lesson.getItems().addAll(list);
     }
 
@@ -102,6 +108,24 @@ public class y_AdminAccountController  {
         setUrlAdm(url.toString()); //Эта ф-ция трансформирует нужную нам ссылку в строку
         lessonIndAdm = list.indexOf(s)+1;
         lessonNameAdm = s;
+    }
+
+    private static void delete(File file) throws IOException {
+
+        for (File childFile : file.listFiles()) {
+
+            if (childFile.isDirectory()) {
+                delete(childFile);
+            } else {
+                if (!childFile.delete()) {
+                    throw new IOException();
+                }
+            }
+        }
+
+        if (!file.delete()) {
+            throw new IOException();
+        }
     }
 
 //        int i = 1;
@@ -134,7 +158,6 @@ public class y_AdminAccountController  {
 
 
         loadData();
-        lesson.setValue(list.get(0).toString());
         Edit.setOnAction(event -> {
 //                    String file = new String(getUrlAdm());
 //                    file = file.replaceAll("file:/","");
@@ -179,31 +202,54 @@ public class y_AdminAccountController  {
     }
         );
 
-        addLesson.setOnAction( event ->{
-            inizRafUrlAdm();//Инициализация строки пути к файла
-            setUrlFinal(list.get(lessonCounter-1).toString());
-            String a = "set";
-            lessonCounter++;
-            System.out.println(lessonCounter);
-            Tests tmp = new Tests(lessonCounter, a);
-            DatabaseHandler dbt = new DatabaseHandler();
-            dbt.SetTests(tmp);
-            loadData();
-            a = urlFullAdm;
-            a = a.replace("file:/", "");
-            a = a.replace("/sample/course/les1", "/sample/course/les"+(lessonCounter));
-            Path path = Paths.get(a);
-                    try {
-                        Files.createDirectories(path.getParent());
-                        a = a.replace("/sample/course/les"+(lessonCounter), "/sample/course/empties");
-                        Path path2 = Paths.get(a);
-                      Files.copy(path2, path);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+        addLesson.setOnAction( event -> {
+                    if (list.size() <= 19) {
+                        inizRafUrlAdm();//Инициализация строки пути к файла
+                        setUrlFinal(list.get(lessonCounter - 1).toString());
+                        String a = "set";
+                        lessonCounter++;
+                        Tests tmp = new Tests(lessonCounter, a);
+                        DatabaseHandler dbt = new DatabaseHandler();
+                        dbt.SetTests(tmp);
+                        loadData();
+                        a = urlFullAdm;
+                        a = a.replace("file:/", "");
+                        a = a.replace("/sample/course/les1", "/sample/course/les" + (lessonCounter));
+                        Path path = Paths.get(a);
+                        try {
+                            Files.createDirectories(path.getParent());
+                            a = a.replace("/sample/course/les" + (lessonCounter), "/sample/course/empties");
+                            Path path2 = Paths.get(a);
+                            Files.copy(path2, path);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
-                    System.out.println(a);
+                    else ErrorLabel.setText("Превышен лимит создания уроков!");
+                }
+        );
 
-        }
+        deleteLesson.setOnAction( event -> {
+            if (list.size() != 1) {
+                inizRafUrlAdm();//Инициализация строки пути к файла
+                setUrlFinal(list.get(lessonCounter - 1).toString());
+                String a = new String();
+                DatabaseHandler dbt = new DatabaseHandler();
+                dbt.deleteTests(lessonCounter);
+                a = new String(urlFullAdm);
+                a = a.replace("file:/", "");
+                a = a.replace("/sample/course/les1/p1.html", "/sample/course/les" + (lessonCounter) + "/");
+                a = a.replaceAll("/", "//");
+                File f = new File(a);
+                try {
+                    delete(f);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                loadData();
+            }
+                else ErrorLabel.setText("Остался всего один урок!");
+                }
         );
 
         About.setOnAction(event -> {            //Открывает онко "Про программу"
