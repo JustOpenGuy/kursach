@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane prefHeight="607.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML.YEditor">
+<AnchorPane prefHeight="607.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_EditorController">
    <children>
       <ChoiceBox fx:id="part" layoutX="28.0" layoutY="30.0" prefHeight="31.0" prefWidth="202.0" />
       <Button fx:id="Edit" layoutX="257.0" layoutY="30.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="Редактировать" />

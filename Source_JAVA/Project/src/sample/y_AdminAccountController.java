@@ -156,8 +156,8 @@ public class y_AdminAccountController  {
     @FXML
     void initialize() {
 
-
         loadData();
+
         Edit.setOnAction(event -> {
 //                    String file = new String(getUrlAdm());
 //                    file = file.replaceAll("file:/","");
@@ -175,10 +175,24 @@ public class y_AdminAccountController  {
 //                        e.printStackTrace();
 //                    }
 //                }
-                    inizRafUrlAdm();//Инициализация строки пути к файла
-                    setUrlFinal(lesson.getValue());
-                });
+            inizRafUrlAdm();//Инициализация строки пути к файла
+            setUrlFinal(lesson.getValue());
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("FXML/y_Editor.fxml"));
 
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent rot = loader.getRoot();
+            loader.setRoot(rot);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rot));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.show();
+                });
 
         testEdit.setOnAction( event ->{
         inizRafUrlAdm();//Инициализация строки пути к файла
