@@ -14,10 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 public class testWriterController  {
@@ -36,15 +33,9 @@ public class testWriterController  {
     private URL location;
 
     @FXML
-    private MenuItem saveButton;
+    private Button saveButton;
 
-    @FXML
-    private MenuItem revertButton;
-
-    @FXML
-    private MenuItem helpButton;
-
-    @FXML
+     @FXML
     private TextField firstQues;
 
     @FXML
@@ -109,6 +100,7 @@ public class testWriterController  {
 
 
 
+
     @FXML
     void initialize() {
         ArrayList<String> ids = new ArrayList<String>();
@@ -132,14 +124,13 @@ public class testWriterController  {
         ObservableList<String> choiceBoxList = FXCollections.observableArrayList(ids);
         courseChoice.setValue("Доступные курсы");
         courseChoice.setItems(choiceBoxList);
+        courseChoice.getSelectionModel().selectFirst();
+        refreshButton.fire();
+        courseChoice.setTooltip(new Tooltip("Выбери нужную лекцию"));
 
 
         refreshButton.setOnAction(event -> {
-            String a;
-            a=courseChoice.getValue();
-            for(int i=0;i<num;++i){
-                if(a.equals(testss[i].getCourseName())) {ex=i; break;}
-            }
+          int a=courseChoice.getSelectionModel().getSelectedIndex(); ex=a;
             firstQues.setText(testss[ex].getFirstQues());secQues.setText(testss[ex].getSecQues());thurdQues.setText(testss[ex].getThurdQues());
             fourthQues.setText(testss[ex].getFourthQues());fifthQues.setText(testss[ex].getFifthQues());firstFirstAnsw.setText(testss[ex].getFirstFirstAnsw());
             firstSecondAnsw.setText(testss[ex].getFirstSecondAnsw());secFirstAnsw.setText(testss[ex].getSecFirstAnsw());
@@ -149,9 +140,7 @@ public class testWriterController  {
             fifthSecondAnsw.setText(testss[ex].getFifthSecondAnsw());firstTrueThirdAnsw.setText(testss[ex].getFirstTrueThirdAnsw());
             secTrueThirdAnsw.setText(testss[ex].getSecTrueThirdAnsw());thirdTrueThirdAnsw.setText(testss[ex].getThirdTrueThirdAnsw());
             fourthTrueThirdAnsw.setText(testss[ex].getFourthTrueThirdAnsw());fifthTrueThirdAnsw.setText(testss[ex].getFifthTrueThirdAnsw());
-
-
-        });
+                    });
 
         saveButton.setOnAction(event -> {
 

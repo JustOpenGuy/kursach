@@ -1,10 +1,12 @@
 package sample;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,8 +14,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import java.sql.ResultSet;
+
+import static java.awt.event.KeyEvent.VK_ENTER;
 
 public class Controller  {
 
@@ -40,6 +45,11 @@ public class Controller  {
 
 
     void initialize() {
+/*
+        login_fild.setOnKeyTyped(new EventHandler<KeyEvent>() {
+            public void handle(KeyEvent ke) {
+                if (ke.equals(" ")){SignIn.fire();
+                System.out.println("YESSSSSS");} }});*/
 
         Register.setOnAction(event ->{Register.getScene().getWindow().hide();
 
@@ -60,6 +70,7 @@ public class Controller  {
             stage.showAndWait();
 
         });
+
         SignIn.setOnAction(event ->{                         //переписал ибо нужно синхр с БД
 
             String loginText = login_fild.getText().trim(); //метод трим - удаляет лишние пробелы в строке
@@ -104,8 +115,6 @@ public class Controller  {
             }
             else
                 System.out.println("Login or password is empty");
-
-
 
         });
 
