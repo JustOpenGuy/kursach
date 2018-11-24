@@ -11,17 +11,18 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
-
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.ResultSet;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class y_AdminAccountController  {
 
     public static String rafURLAdm;       //Сырая строка урока
+    public static URL url;
     public static String urlFullAdm;         //Полная ссылка на файл в строке
     public static void setUrlAdm(String u){
         urlFullAdm = u;
@@ -36,7 +37,7 @@ public class y_AdminAccountController  {
         y_PersonalAccountController.rafURL = rafURL;
     }
     protected static void inizRafUrlAdm(){
-        rafURLAdm = new String("/sample/courses/1/les1/p1.html");
+        rafURLAdm = new String("/sample/course/les1/p1.html");
     }
 
     public static ObservableList list = FXCollections.observableArrayList();
@@ -97,6 +98,8 @@ public class y_AdminAccountController  {
         tmp = rafURLAdm;
         tmp = tmp.replace("/sample/course/les1", "/sample/course/les"+(list.indexOf(s)+1));
         setRafURLAdm(tmp);
+        url = this.getClass().getResource(rafURLAdm);//Для чтения файла урока нужна полная ссылка на урок (Эта функция обрабатывает сырую ссылку в полную
+        setUrlAdm(url.toString()); //Эта ф-ция трансформирует нужную нам ссылку в строку
         lessonIndAdm = list.indexOf(s)+1;
         lessonNameAdm = s;
     }
@@ -186,22 +189,21 @@ public class y_AdminAccountController  {
             DatabaseHandler dbt = new DatabaseHandler();
             dbt.SetTests(tmp);
             loadData();
-            a = new String(urlFullAdm);
-        a = a.replace("file:/", "");
-        a = a.replaceAll("/", "//");
-        File f = new File(a);
-        a = a.replace("/sample/course/les1", "/sample/course/les"+(lessonCounter));
-        if(!f.exists()){
-            try {
-                f.createNewFile();
-                
-            } catch (IOException e) {
+            a = urlFullAdm;
+            a = a.replace("file:/", "");
+            a = a.replace("/sample/course/les1", "/sample/course/les"+(lessonCounter));
+            Path path = Paths.get(a);
+                    try {
+                        Files.createDirectories(path.getParent());
+                        a = a.replace("/sample/course/les"+(lessonCounter), "/sample/course/empties");
+                        Path path2 = Paths.get(a);
+                      Files.copy(path2, path);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(a);
 
-
-            }
         }
-
-                }
         );
 
         About.setOnAction(event -> {            //Открывает онко "Про программу"
