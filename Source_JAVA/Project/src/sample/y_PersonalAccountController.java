@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
@@ -49,6 +50,9 @@ public class y_PersonalAccountController {
     private Button GoToLesson;
 
     @FXML
+    private RadioButton Radio;
+
+    @FXML
     private MenuItem About;
 
     @FXML
@@ -60,6 +64,8 @@ public class y_PersonalAccountController {
     @FXML
     private MenuItem ChangePass;
 
+    @FXML
+    private Button GetMarks;
 
 
     private void loadData() {
@@ -189,6 +195,28 @@ public class y_PersonalAccountController {
                 }
         );
 
+
+        GetMarks.setOnAction(event ->{GetMarks.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("FXML/testsView.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent rot = loader.getRoot();
+            loader.setRoot(rot);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rot));
+            stage.setResizable(false);
+            stage.sizeToScene();
+            stage.showAndWait();
+
+        });
+
     }
+
 }
 

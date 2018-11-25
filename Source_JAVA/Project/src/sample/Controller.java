@@ -45,11 +45,7 @@ public class Controller  {
 
 
     void initialize() {
-/*
-        login_fild.setOnKeyTyped(new EventHandler<KeyEvent>() {
-            public void handle(KeyEvent ke) {
-                if (ke.equals(" ")){SignIn.fire();
-                System.out.println("YESSSSSS");} }});*/
+
 
         Register.setOnAction(event ->{Register.getScene().getWindow().hide();
 
@@ -153,6 +149,8 @@ public class Controller  {
         }else return "NON_USER";
 
     }
+
+
 
 
 }

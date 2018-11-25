@@ -42,13 +42,13 @@ public class DatabaseHandler extends Configs {
         return resSet;
     }
 
-    public ResultSet getDirectQues(String name){
+    public ResultSet getDirectQues(String inter){
         ResultSet resSet = null;
-        String select = "SELECT * FROM tests WHERE " + //выбираем все из бд
+        String select = "SELECT * FROM " + Const.TESTS_TABLE + " WHERE " + //выбираем все из бд
                 "courseName =?";///где логин и пароля чему-то равны
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
-            prSt.setString(1, name);
+            prSt.setString(1, inter);
 
             resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
 

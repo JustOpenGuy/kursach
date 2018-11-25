@@ -5,7 +5,7 @@ package sample;
  */
 public class Tests {
     private int id;
-    private String  firstQues;
+    public String  firstQues;
     private String  secQues;
     private String  thurdQues;
     private String  fourthQues;
@@ -28,30 +28,7 @@ public class Tests {
     private String  courseName;
 
 
-    public Tests(Tests test) {                          //конструктор копирования
-
-        this.firstQues = test.getFirstQues();
-        this.secQues = test.getSecQues();
-        this.thurdQues = test.getThurdQues();
-        this.fourthQues = test.getFourthQues();
-        this.fifthQues = test.getFifthQues();
-        this.firstFirstAnsw = test.getFirstFirstAnsw();
-        this.firstSecondAnsw = test.getFirstSecondAnsw();
-        this.secFirstAnsw = test.getSecFirstAnsw();
-        this.secSecondAnsw = test.getSecSecondAnsw();
-        this.thirdFirstAnsw = test.getThirdFirstAnsw();
-        this.thirdSecondAnsw = test.getThirdSecondAnsw();
-        this.fourthFirstAnsw = test.getFourthFirstAnsw();
-        this.fourthSecondAnsw = test.getFourthSecondAnsw();
-        this.fifthfFirstAnsw = test.getFifthfFirstAnsw();
-        this.fifthSecondAnsw = test.getFifthSecondAnsw();
-        this.firstTrueThirdAnsw = test.getFirstTrueThirdAnsw();
-        this.secTrueThirdAnsw = test.getSecTrueThirdAnsw();
-        this.thirdTrueThirdAnsw = test.getThirdTrueThirdAnsw();
-        this.fourthTrueThirdAnsw = test.getFourthTrueThirdAnsw();
-        this.fifthTrueThirdAnsw = test.getFifthTrueThirdAnsw();
-
-    }
+ public Tests(){};
 
     public Tests(int ID, String a){
         this.id = ID;
