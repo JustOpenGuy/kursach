@@ -220,7 +220,7 @@ public class y_AdminAccountController  {
                     if (list.size() <= 19) {
                         ErrorLabel.setText("");
                         inizRafUrlAdm();//Инициализация строки пути к файла
-                        setUrlFinal(list.get(lessonCounter - 1).toString());
+                        setUrlFinal(list.get(lessonCounter-1).toString());
                         String a = "set";
                         lessonCounter++;
                         Tests tmp = new Tests(lessonCounter, a);
@@ -230,6 +230,7 @@ public class y_AdminAccountController  {
                         a = urlFullAdm;
                         a = a.replace("file:/", "");
                         a = a.replace("/sample/course/les1", "/sample/course/les" + (lessonCounter));
+                        System.out.println(a+lessonCounter);
                         Path path = Paths.get(a);
                         try {
                             Files.createDirectories(path.getParent());

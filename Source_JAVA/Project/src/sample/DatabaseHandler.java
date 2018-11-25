@@ -170,13 +170,16 @@ public class DatabaseHandler extends Configs {
     public void SetTests(Tests test){
 
 
-        String sqlUpdate = "UPDATE tests "
-                + "SET firstQues = ? " + ",  secQues = ? "+ ",  thurdQues = ? "+ ",  fourthQues = ? "+ ",  fifthQues = ? "
-                + ",  firstFirstAnsw = ? "+ ",  firstSecondAnsw = ? "+ ",  secFirstAnsw = ? "+ ",  secSecondAnsw = ? "+ ",  thirdFirstAnsw = ? "
-                + ",  thirdSecondAnsw = ? "+ ",  fourthFirstAnsw = ? "+ ",  fourthSecondAnsw = ? "+ ",  fifthfFirstAnsw = ? "+ ",  fifthSecondAnsw = ? "
-                + ",  firstTrueThirdAnsw = ? "+ ",  secTrueThirdAnsw = ? "+ ",  thirdTrueThirdAnsw = ? "+ ",  fourthTrueThirdAnsw = ? "+ ",  fifthTrueThirdAnsw = ? "
-                + ", courseName = ? "
-                  + "WHERE idtests = ?";
+        String sqlUpdate =
+        "INSERT INTO " + Const.TESTS_TABLE + " (" +//помещаем в табл польз
+                "firstQues" + ",  secQues"+ ",  thurdQues"+ ",  fourthQues"+ ",  fifthQues"
+                + ",  firstFirstAnsw"+ ",  firstSecondAnsw"+ ",  secFirstAnsw"+ ",  secSecondAnsw"+ ",  thirdFirstAnsw"
+                + ",  thirdSecondAnsw"+ ",  fourthFirstAnsw"+ ",  fourthSecondAnsw"+ ",  fifthfFirstAnsw"+ ",  fifthSecondAnsw"
+                + ",  firstTrueThirdAnsw"+ ",  secTrueThirdAnsw"+ ",  thirdTrueThirdAnsw"+ ",  fourthTrueThirdAnsw"
+                + ",  fifthTrueThirdAnsw"
+                + ", courseName"
+                + ", idtests" + ")"//пароль и имя
+                + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
             prSt.setString(1,  test.getFirstQues());
