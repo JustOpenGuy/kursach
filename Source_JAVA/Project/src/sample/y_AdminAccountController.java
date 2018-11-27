@@ -30,12 +30,6 @@ public class y_AdminAccountController  {
     public static void setUrlAdm(String u){
         urlFullAdm = u;
     }
-    public static String getUrlAdm(){
-        return urlFullAdm;
-    }
-    public static String getRafURLAdm() {
-        return rafURLAdm;
-    }
     public static void setRafURLAdm(String rafURL) {
         y_PersonalAccountController.rafURL = rafURL;
     }
@@ -44,9 +38,9 @@ public class y_AdminAccountController  {
     }
 
     public static ObservableList list = FXCollections.observableArrayList();
-    int lessonIndAdm;
-    String lessonNameAdm;
-    int lessonCounter;
+    public static int  lessonIndAdm;
+    public static String lessonNameAdm;
+    public static int lessonCounter;
 
     @FXML
     private Button addLesson;
@@ -81,7 +75,7 @@ public class y_AdminAccountController  {
     @FXML
     private Label ErrorLabel;
 
-    private void loadData() {
+    public void loadData() {
         list.removeAll(list);
         ArrayList<String> lst = new ArrayList<String>();
         DatabaseHandler dbHandler = new DatabaseHandler();
@@ -110,7 +104,7 @@ public class y_AdminAccountController  {
         lessonNameAdm = s;
     }
 
-    private static void delete(File file) throws IOException {
+    public static void delete(File file) throws IOException {
 
         for (File childFile : file.listFiles()) {
 
@@ -127,30 +121,6 @@ public class y_AdminAccountController  {
             throw new IOException();
         }
     }
-
-//        int i = 1;
-//        String a = new String(urlFull);
-//
-//        a = a.replace("file:/", "");
-//        a = a.replaceAll("/", "//");
-//        File f = new File(a);
-//        System.out.println(f.exists()+a);
-//        System.out.println("File name: " + f.getName());
-//        System.out.println("File size: " + f.length());
-//        while(f.exists()){
-//                System.out.println("Checked" + i);
-//                f = new File(a);
-//                System.out.println("Checked" + i);
-//            if(f.exists()){
-//                list.add(i + ") ");
-//                i++;
-//                a = a.replace("les1", "les"+i);
-//                System.out.println("i = " + i + " url = " + url);
-//            }
-//        }
-//        lst.add("test1");
-//        lst.add("teest2");
-
 
 
     @FXML
@@ -191,7 +161,9 @@ public class y_AdminAccountController  {
             stage.setScene(new Scene(rot));
             stage.setResizable(false);
             stage.sizeToScene();
+            stage.setTitle(lessonNameAdm);
             stage.show();
+
                 });
 
         testEdit.setOnAction( event ->{
@@ -221,7 +193,7 @@ public class y_AdminAccountController  {
                         ErrorLabel.setText("");
                         inizRafUrlAdm();//Инициализация строки пути к файла
                         setUrlFinal(list.get(lessonCounter-1).toString());
-                        String a = "set";
+                        String a = "set"+lessonIndAdm;
                         lessonCounter++;
                         Tests tmp = new Tests(lessonCounter, a);
                         DatabaseHandler dbt = new DatabaseHandler();
@@ -230,12 +202,12 @@ public class y_AdminAccountController  {
                         a = urlFullAdm;
                         a = a.replace("file:/", "");
                         a = a.replace("/sample/course/les1", "/sample/course/les" + (lessonCounter));
-                        System.out.println(a+lessonCounter);
+
                         Path path = Paths.get(a);
                         try {
                             Files.createDirectories(path.getParent());
-                            a = a.replace("/sample/course/les" + (lessonCounter), "/sample/course/empties");
-                            Path path2 = Paths.get(a);
+                            String b = a.replace("/sample/course/les" + (lessonCounter), "/sample/course/empties");
+                            Path path2 = Paths.get(b);
                             Files.copy(path2, path);
                         } catch (IOException e) {
                             e.printStackTrace();

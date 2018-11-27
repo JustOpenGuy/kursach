@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.web.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,11 +8,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="607.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_EditorController">
+<AnchorPane prefHeight="817.0" prefWidth="1096.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.y_EditorController">
    <children>
       <ChoiceBox fx:id="part" layoutX="28.0" layoutY="30.0" prefHeight="31.0" prefWidth="202.0" />
       <Button fx:id="Edit" layoutX="257.0" layoutY="30.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="Редактировать" />
-      <HTMLEditor fx:id="Editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="6.0" layoutY="100.0" prefHeight="497.0" prefWidth="870.0" />
+      <HTMLEditor fx:id="Editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="6.0" layoutY="100.0" prefHeight="662.0" prefWidth="1083.0" />
+      <Button fx:id="setAmount" layoutX="979.0" layoutY="30.0" mnemonicParsing="false" text="Задать" />
+      <ChoiceBox fx:id="amount" layoutX="809.0" layoutY="30.0" prefWidth="150.0" />
+      <Text layoutX="599.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Задать количество уроков:" />
+      <Button fx:id="Save" layoutX="989.0" layoutY="772.0" mnemonicParsing="false" text="Сохранить" />
+      <Button fx:id="Open" layoutX="28.0" layoutY="772.0" mnemonicParsing="false" text="Открыть папку" />
+      <Text layoutX="169.0" layoutY="778.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*для добавления изображения в часть, нажмите на открыть папку и добавьте изображения " />
+      <Text layoutX="175.0" layoutY="799.0" strokeType="OUTSIDE" strokeWidth="0.0" text="с именем-номером соответсвующей части, в формате .jpg" />
    </children>
 </AnchorPane>

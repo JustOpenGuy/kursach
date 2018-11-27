@@ -121,11 +121,11 @@ public class testsViewer {
 
         /*rrayList<String> ids = new ArrayList<String>();*/
         DatabaseHandler dbt = new DatabaseHandler();
-        ResultSet res= dbt.getDirectQues("q");
+        ResultSet res= dbt.getDirectQues("set");
 
         try {
 
-            while(res.next()){
+            res.next();{
 
                 testss=new Tests(res.getInt(1), res.getString(2),res.getString(3),
                         res.getString(4),res.getString(5),res.getString(6),
@@ -133,14 +133,11 @@ public class testsViewer {
                         res.getString(11), res.getString(12),res.getString(13),res.getString(14),
                         res.getString(15),res.getString(16),res.getString(17),res.getString(18),
                         res.getString(19),res.getString(20),res.getString(21), res.getString(22));
-
-                num++;
-            }
+           }
         } catch (SQLException e) {
             e.printStackTrace();}
 
             firstQuesText.setText(testss.getFirstQues());
-
 //        radioB.setText(testss.getFirstFirstAnsw());
 
 
