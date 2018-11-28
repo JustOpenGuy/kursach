@@ -97,6 +97,8 @@ public class testsViewer extends openController{
     @FXML
     private RadioButton fitTest;
 
+
+
     @FXML
     private RadioButton stTest;
 
@@ -111,7 +113,7 @@ public class testsViewer extends openController{
 
         /*rrayList<String> ids = new ArrayList<String>();*/
         DatabaseHandler dbt = new DatabaseHandler();
-        ResultSet res= dbt.getDirectQues("q");
+        ResultSet res= dbt.getDirectQues(y_PersonalAccountController.lessonInd);
 
         try {
 
@@ -140,7 +142,7 @@ public class testsViewer extends openController{
         ftTest.setText(testss.getFirstTrueThirdAnsw());
 
         ssTest.setText(testss.getSecSecondAnsw());
-        stTest.setText(testss.getSecTrueThirdAnsw());
+
         tfTest.setText(testss.getThirdFirstAnsw());
         tsTest.setText(testss.getThirdSecondAnsw());
         ttTest.setText(testss.getThirdTrueThirdAnsw());
@@ -150,7 +152,7 @@ public class testsViewer extends openController{
         fifTest.setText(testss.getFifthfFirstAnsw());
         fisTest.setText(testss.getFifthSecondAnsw());
         fitTest.setText(testss.getFifthTrueThirdAnsw());
-
+        stTest.setText(testss.getSecTrueThirdAnsw());
 
 
 

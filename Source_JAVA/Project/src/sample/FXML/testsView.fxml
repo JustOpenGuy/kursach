@@ -59,7 +59,7 @@
                </toggleGroup>
             </RadioButton>
             <RadioButton fx:id="ssTest" mnemonicParsing="false" prefHeight="24.0" prefWidth="222.0" text="RadioButton" toggleGroup="$second" />
-            <RadioButton mnemonicParsing="false" prefHeight="24.0" prefWidth="225.0" text="RadioButton" toggleGroup="$second" />
+            <RadioButton fx:id="stTest" mnemonicParsing="false" prefHeight="24.0" prefWidth="225.0" text="RadioButton" toggleGroup="$second" />
          </children>
       </HBox>
       <HBox layoutX="113.0" layoutY="280.0" prefHeight="24.0" prefWidth="660.0">
