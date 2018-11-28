@@ -291,7 +291,6 @@ public class DatabaseHandler extends Configs {
             prSt.setString(1, user.getUserName());
             prSt.setString(2, user.getPassword());
 
-
             resSet = prSt.executeQuery();  //executeQuery - получение данных
         } catch (SQLException e) {
             e.printStackTrace();
