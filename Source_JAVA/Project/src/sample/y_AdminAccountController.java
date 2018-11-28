@@ -199,7 +199,7 @@ public class y_AdminAccountController extends openController {
                         lessonCounter++;
                         Tests tmp = new Tests(lessonCounter, a);
                         DatabaseHandler dbt = new DatabaseHandler();
-                        dbt.SetTests(tmp);
+                        dbt.SetDBTest(tmp);
                         loadData();
                         a = urlFullAdm;
                         a = a.replace("file:/", "");

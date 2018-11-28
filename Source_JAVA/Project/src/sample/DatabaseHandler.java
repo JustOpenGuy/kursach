@@ -170,6 +170,62 @@ public class DatabaseHandler extends Configs {
     public void SetTests(Tests test){
 
 
+        String sqlUpdate = "UPDATE tests "
+                + "SET firstQues = ? " + ",  secQues = ? "+ ",  thurdQues = ? "+ ",  fourthQues = ? "+ ",  fifthQues = ? "
+                + ",  firstFirstAnsw = ? "+ ",  firstSecondAnsw = ? "+ ",  secFirstAnsw = ? "+ ",  secSecondAnsw = ? "+ ",  thirdFirstAnsw = ? "
+                + ",  thirdSecondAnsw = ? "+ ",  fourthFirstAnsw = ? "+ ",  fourthSecondAnsw = ? "+ ",  fifthfFirstAnsw = ? "+ ",  fifthSecondAnsw = ? "
+                + ",  firstTrueThirdAnsw = ? "+ ",  secTrueThirdAnsw = ? "+ ",  thirdTrueThirdAnsw = ? "+ ",  fourthTrueThirdAnsw = ? "+ ",  fifthTrueThirdAnsw = ? "
+                + ", courseName = ? "
+                + "WHERE idtests = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
+            prSt.setString(1,  test.getFirstQues());
+            prSt.setString(2,  test.getSecQues());
+            prSt.setString(3,  test.getThurdQues());
+            prSt.setString(4,  test.getFourthQues());
+            prSt.setString(5,  test.getFifthQues());
+            prSt.setString(6,  test.getFirstFirstAnsw());
+            prSt.setString(7,  test.getFirstSecondAnsw());
+            prSt.setString(8,  test.getSecFirstAnsw());
+            prSt.setString(9,  test.getSecSecondAnsw());
+            prSt.setString(10,  test.getThirdFirstAnsw());
+            prSt.setString(11,  test.getThirdSecondAnsw());
+            prSt.setString(12,  test.getFourthFirstAnsw());
+            prSt.setString(13,  test.getFourthSecondAnsw());
+            prSt.setString(14,  test.getFifthfFirstAnsw());
+            prSt.setString(15,  test.getFifthSecondAnsw());
+            prSt.setString(16,  test.getFirstTrueThirdAnsw());
+            prSt.setString(17,  test.getSecTrueThirdAnsw());
+            prSt.setString(18,  test.getThirdTrueThirdAnsw());
+            prSt.setString(19,  test.getFourthTrueThirdAnsw());
+            prSt.setString(20,  test.getFifthTrueThirdAnsw());
+            prSt.setString(21,  test.getCourseName());
+            prSt.setInt(22,     test.getId());
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void SetDBTest(Tests test){
+
+
         String sqlUpdate =
         "INSERT INTO " + Const.TESTS_TABLE + " (" +//помещаем в табл польз
                 "firstQues" + ",  secQues"+ ",  thurdQues"+ ",  fourthQues"+ ",  fifthQues"

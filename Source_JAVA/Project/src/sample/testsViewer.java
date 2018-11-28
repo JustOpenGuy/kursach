@@ -109,10 +109,9 @@ public class testsViewer extends openController{
     void initialize(){
     int num=0;
 
-
         /*rrayList<String> ids = new ArrayList<String>();*/
         DatabaseHandler dbt = new DatabaseHandler();
-        ResultSet res= dbt.getDirectQues("set");
+        ResultSet res= dbt.getDirectQues("q");
 
         try {
 
@@ -151,6 +150,7 @@ public class testsViewer extends openController{
         fifTest.setText(testss.getFifthfFirstAnsw());
         fisTest.setText(testss.getFifthSecondAnsw());
         fitTest.setText(testss.getFifthTrueThirdAnsw());
+
 
 
 
