@@ -26,10 +26,16 @@ import javafx.stage.Stage;
 public class testsViewer extends openController{
 
     @FXML
-    private ResourceBundle resources;
+    private RadioButton ffTest;
 
     @FXML
-    private URL location;
+    private ToggleGroup first;
+
+    @FXML
+    private RadioButton fsTest;
+
+    @FXML
+    private RadioButton ftTest;
 
     @FXML
     private Text firstQuesText;
@@ -45,24 +51,6 @@ public class testsViewer extends openController{
 
     @FXML
     private Text fifthQuesText;
-
-    @FXML
-    private RadioButton radioB;
-
-    @FXML
-    private RadioButton sample;
-
-    @FXML
-    private CheckBox checkF;
-
-    @FXML
-    private ToggleGroup first;
-
-    @FXML
-    private RadioButton fsTest;
-
-    @FXML
-    private RadioButton ftTest;
 
     @FXML
     private RadioButton sfTest;
@@ -110,6 +98,9 @@ public class testsViewer extends openController{
     private RadioButton fitTest;
 
     @FXML
+    private RadioButton stTest;
+
+    @FXML
     private Button endButton;
 
     private Tests testss = new Tests();
@@ -138,7 +129,30 @@ public class testsViewer extends openController{
             e.printStackTrace();}
 
             firstQuesText.setText(testss.getFirstQues());
-//        radioB.setText(testss.getFirstFirstAnsw());
+        secQuesText.setText(testss.getSecQues());
+        thirdQuesText.setText(testss.getThurdQues());
+        fourthQuesText.setText(testss.getFourthQues());
+        fifthQuesText.setText(testss.getFifthQues());
+
+        ffTest.setText(testss.getFirstFirstAnsw());
+        fsTest.setText(testss.getFirstSecondAnsw());
+       sfTest.setText(testss.getSecFirstAnsw());
+
+        ftTest.setText(testss.getFirstTrueThirdAnsw());
+
+        ssTest.setText(testss.getSecSecondAnsw());
+        stTest.setText(testss.getSecTrueThirdAnsw());
+        tfTest.setText(testss.getThirdFirstAnsw());
+        tsTest.setText(testss.getThirdSecondAnsw());
+        ttTest.setText(testss.getThirdTrueThirdAnsw());
+        fofTest.setText(testss.getFourthFirstAnsw());
+        fosTest.setText(testss.getFourthSecondAnsw());
+        fotTest.setText(testss.getFourthTrueThirdAnsw());
+        fifTest.setText(testss.getFifthfFirstAnsw());
+        fisTest.setText(testss.getFifthSecondAnsw());
+        fitTest.setText(testss.getFifthTrueThirdAnsw());
+
+
 
 
         endButton.setOnAction(event ->{endButton.getScene().getWindow().hide();

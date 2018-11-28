@@ -5,7 +5,7 @@ package sample;
  */
 public class Tests {
     private int id;
-    public String  firstQues;
+    public String   firstQues;
     private String  secQues;
     private String  thurdQues;
     private String  fourthQues;

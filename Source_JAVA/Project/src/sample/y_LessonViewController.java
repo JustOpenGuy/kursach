@@ -1,7 +1,5 @@
 package sample;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,22 +29,13 @@ public class y_LessonViewController extends openController{
         Exit.setOnAction(event -> {                             //Выход на тесты
             Exit.getScene().getWindow().hide();
 
-            Exit.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {                             //Выход
-                    Exit.getScene().getWindow().hide();
-                    y_LessonViewController.super.openShow("/sample/FXML/y_PersonalAccount.fxml");
-                }
+                super.openShow("/sample/FXML/y_PersonalAccount.fxml");
             });
 
-            testsButton.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    testsButton.getScene().getWindow().hide();
-                    y_LessonViewController.super.openShow("FXML/testsView.fxml");
-                }
+            testsButton.setOnAction(event ->{
+                testsButton.getScene().getWindow().hide();
+                super.openShow("FXML/testsView.fxml");
             });
 
-        });
-}
+        }
 }

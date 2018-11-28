@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2f41287-b9cb-4f57-9f96-c51ec5e43090" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les1/p2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les1/p3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les1/p4.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les1/p5.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les1/p6.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/FXML/d_test1.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/FXML/d_tree.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/d_ChooseTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/d_tree.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/FXML/Inf.fxml" afterPath="$PROJECT_DIR$/out/production/kursovaiya/sample/FXML/Inf.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/FXML/y_Editor.fxml" afterPath="$PROJECT_DIR$/out/production/kursovaiya/sample/FXML/y_Editor.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les1/p1.html" afterPath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les1/p1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les2/p1.html" afterPath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les2/p1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/FXML/testsView.fxml" afterPath="$PROJECT_DIR$/src/sample/FXML/testsView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/RegController.java" afterPath="$PROJECT_DIR$/src/sample/RegController.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/testsViewer.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/FXML/y_Lesson.fxml" afterPath="$PROJECT_DIR$/src/sample/FXML/y_Lesson.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" afterPath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Tests.java" afterPath="$PROJECT_DIR$/src/sample/Tests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/testsViewer.java" afterPath="$PROJECT_DIR$/src/sample/testsViewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" afterPath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/y_LessonViewController.java" afterPath="$PROJECT_DIR$/src/sample/y_LessonViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" afterPath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -183,53 +169,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testsViewer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testsViewer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/testsViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state relative-caret-position="125">
+              <caret line="143" column="53" lean-forward="false" selection-start-line="143" selection-start-column="53" selection-end-line="143" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="y_AdminAccountController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
+      <file leaf-file-name="openController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/openController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3598">
-              <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+            <state relative-caret-position="236">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testWriterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/testWriterController.java">
+      <file leaf-file-name="y_LessonViewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-657">
-              <caret line="105" column="9" lean-forward="false" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/RegController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="101" column="1" lean-forward="false" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
+            <state relative-caret-position="406">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
-                <marker date="1543424835934" expanded="true" signature="2048:2133" ph="{...}" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegSuccessController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/RegSuccessController.java">
+      <file leaf-file-name="Tests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="43" column="76" lean-forward="false" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+            <state relative-caret-position="119">
+              <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="32" />
+              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="32" />
+              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="32" />
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="32" />
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -263,7 +243,6 @@
         <option value="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" />
         <option value="$PROJECT_DIR$/src/sample/testWriterController.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sample/Tests.java" />
         <option value="$PROJECT_DIR$/src/sample/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/src/sample/course/empties/p1.html" />
         <option value="$PROJECT_DIR$/src/sample/course/empties/p2.html" />
@@ -288,10 +267,11 @@
         <option value="$PROJECT_DIR$/src/sample/y_EditorController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/y_Editor.fxml" />
         <option value="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" />
-        <option value="$PROJECT_DIR$/src/sample/y_LessonViewController.java" />
         <option value="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" />
-        <option value="$PROJECT_DIR$/src/sample/testsViewer.java" />
         <option value="$PROJECT_DIR$/src/sample/RegController.java" />
+        <option value="$PROJECT_DIR$/src/sample/y_LessonViewController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Tests.java" />
+        <option value="$PROJECT_DIR$/src/sample/testsViewer.java" />
       </list>
     </option>
   </component>
@@ -849,10 +829,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36215000" />
+    <option name="totallyTimeSpent" value="37906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -869,7 +850,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26279318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26279318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -907,16 +888,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/openController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/testsViewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2278">
@@ -990,13 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1199,28 +1163,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/y_ChangePassController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1241,22 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/testsViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RegSuccessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="43" column="76" lean-forward="false" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/d_tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1272,6 +1202,60 @@
           <folding>
             <marker date="1543424835934" expanded="true" signature="2048:2133" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RegSuccessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="43" column="76" lean-forward="false" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="32" />
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="32" />
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="32" />
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="32" />
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/openController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/testsViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="143" column="53" lean-forward="false" selection-start-line="143" selection-start-column="53" selection-end-line="143" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
