@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +12,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import java.io.IOException;
 
-public class y_LessonViewController {
+public class y_LessonViewController extends openController{
 
 
     @FXML
@@ -20,25 +22,31 @@ public class y_LessonViewController {
     private Button Exit;
 
     @FXML
+    private Button testsButton;
+
+    @FXML
     public void initialize() {
         WebEngine engine = webView.getEngine();
         engine.load(y_PersonalAccountController.urlFull);       //Чтение файла урока
         Exit.setOnAction(event -> {                             //Выход на тесты
             Exit.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/y_PersonalAccount.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent rot = loader.getRoot();
-            loader.setRoot(rot);
-            Stage stage = new Stage();
-            stage.setScene(new Scene(rot));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.show();
+
+            Exit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {                             //Выход
+                    Exit.getScene().getWindow().hide();
+                    y_LessonViewController.super.openShow("/sample/FXML/y_PersonalAccount.fxml");
+                }
+            });
+
+            testsButton.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    testsButton.getScene().getWindow().hide();
+                    y_LessonViewController.super.openShow("FXML/testsView.fxml");
+                }
+            });
+
         });
-    }
+}
 }

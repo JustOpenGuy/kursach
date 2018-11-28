@@ -22,7 +22,7 @@ import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class y_AdminAccountController  {
+public class y_AdminAccountController extends openController {
 
     public static String rafURLAdm;       //Сырая строка урока
     public static URL url;
@@ -169,7 +169,9 @@ public class y_AdminAccountController  {
         testEdit.setOnAction( event ->{
         inizRafUrlAdm();//Инициализация строки пути к файла
         setUrlFinal(lesson.getValue());
-        FXMLLoader loader = new FXMLLoader();
+
+                    super.openShow("FXML/testWriter.fxml");
+        /*FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("FXML/testWriter.fxml"));
 
         try {
@@ -183,7 +185,7 @@ public class y_AdminAccountController  {
         stage.setScene(new Scene(rot));
         stage.setResizable(false);
         stage.sizeToScene();
-        stage.show();
+        stage.show();*/
 
     }
         );
@@ -241,75 +243,24 @@ public class y_AdminAccountController  {
                 }
         );
 
+
         About.setOnAction(event -> {            //Открывает онко "Про программу"
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/About.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
+                    super.openShow("FXML/About.fxml");
                 }
         );
 
         Information.setOnAction(event -> {              //Открывает окно информации о программе
-
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/Inf.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
+                    super.openShow("FXML/Inf.fxml");
                 }
         );
 
         ChangePass.setOnAction(event ->{        //Открывает окно смены пароля
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.show();
+            super.openShow("/sample/FXML/y_ChangePass.fxml");
         });
 
         LogOut.setOnAction(event -> {               //Выход на окно регистрации
                     Edit.getScene().getWindow().hide();
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/sample.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
+                    super.openShow("FXML/sample.fxml");
                 }
         );
 

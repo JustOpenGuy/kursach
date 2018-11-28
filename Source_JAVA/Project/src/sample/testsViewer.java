@@ -23,7 +23,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class testsViewer {
+public class testsViewer extends openController{
 
     @FXML
     private ResourceBundle resources;
@@ -143,21 +143,7 @@ public class testsViewer {
 
         endButton.setOnAction(event ->{endButton.getScene().getWindow().hide();
 
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("FXML/y_PersonalAccount.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent rot = loader.getRoot();
-            loader.setRoot(rot);
-            Stage stage = new Stage();
-            stage.setScene(new Scene(rot));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.showAndWait();
+        super.openScene("FXML/y_PersonalAccount.fxml");
 
         });
     }

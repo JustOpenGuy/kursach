@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 
 
-public class  RegController {
+public class  RegController extends openController {
 
     public static int ErrorCode;
 
@@ -39,9 +39,6 @@ public class  RegController {
     @FXML
     private PasswordField password_field;
 
-   /* @FXML
-    private ComboBox choiceBox;*/
-
     @FXML
     private Button backButton;
 
@@ -49,44 +46,16 @@ public class  RegController {
 
     @FXML
     void initialize() {
-        /*choiceBox.setValue("М/Ж");
-        choiceBox.setItems(choiceBoxList);*/
 
         nextButton.setOnAction(event -> {
             RegNewUser();
             nextButton.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("FXML/RegSuccess.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent rot = loader.getRoot();
-            loader.setRoot(rot);
-            Stage stage = new Stage();
-            stage.setScene(new Scene(rot));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.show();
+            super.openShow("FXML/RegSuccess.fxml");
         });
 
         backButton.setOnAction(event ->{
             backButton.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("FXML/sample.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent rot = loader.getRoot();
-            loader.setRoot(rot);
-            Stage stage = new Stage();
-            stage.setScene(new Scene(rot));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.show();
+            super.openShow("FXML/sample.fxml");
         });
 
     }

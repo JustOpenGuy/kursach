@@ -16,7 +16,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class y_PersonalAccountController {
+public class y_PersonalAccountController extends openController {
 
 
     public static int lessonInd;
@@ -106,115 +106,40 @@ public class y_PersonalAccountController {
             GoToLesson.getScene().getWindow().hide(); //Открывает просмотр урока
             inizRafUrl();//Инициализация строки пути к файла
             setUrlFinal(courses.getValue());
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/FXML/y_Lesson.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.show();
+
+            super.openShow("/sample/FXML/y_Lesson.fxml");
+
                 }
         );
 
         LogOut.setOnAction(event -> {                       //Возврат на окно регистрации
                     GoToLesson.getScene().getWindow().hide();
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/sample.fxml"));
-
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
+                    super.openShow("FXML/sample.fxml");
                 }
         );
 
         About.setOnAction(event -> {    //Про программу
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/About.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
+                    super.openScene("FXML/About.fxml");
+
                 }
         );
 
         Information.setOnAction(event -> { //Про курс
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("FXML/Inf.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent rot = loader.getRoot();
-                    loader.setRoot(rot);
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(rot));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
+                    super.openScene("FXML/Inf.fxml");
                 }
         );
 
         ChangePass.setOnAction(event -> {        //Открывает смену пароля
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/sample/FXML/y_ChangePass.fxml"));
-                    try {
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Parent root = loader.getRoot();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-                    stage.setResizable(false);
-                    stage.sizeToScene();
-                    stage.show();
+                    super.openScene("/sample/FXML/y_ChangePass.fxml");
                 }
         );
 
 
-        GetMarks.setOnAction(event ->{GetMarks.getScene().getWindow().hide();
+                GetMarks.setOnAction(event ->{GetMarks.getScene().getWindow().hide();
 
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("FXML/testsView.fxml"));
+                    super.openScene("FXML/testsView.fxml");
 
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent rot = loader.getRoot();
-            loader.setRoot(rot);
-            Stage stage = new Stage();
-            stage.setScene(new Scene(rot));
-            stage.setResizable(false);
-            stage.sizeToScene();
-            stage.showAndWait();
-
-        });
+                        });
 
     }
 
