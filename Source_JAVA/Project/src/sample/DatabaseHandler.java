@@ -167,6 +167,27 @@ public class DatabaseHandler extends Configs {
         }
     }
 
+
+
+
+    public void SetMarks(int id, int score, String us){
+        String sqlUpdate = "UPDATE users "
+                + "SET mark" + id + " = ? "
+                + "WHERE username = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
+            prSt.setInt(1,  score);
+            prSt.setString(2,  us);
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void SetTests(Tests test){
 
 
@@ -256,6 +277,28 @@ public class DatabaseHandler extends Configs {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+
+    public ResultSet getMark( String usernam) {
+        ResultSet resSet = null;
+
+        String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " + //выбираем все из бд
+                Const.USER_USERNAME + "=? ";//где логин и пароля чему-то равны
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, usernam);
+
+
+
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
     }
 
 

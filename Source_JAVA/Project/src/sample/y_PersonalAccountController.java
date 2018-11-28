@@ -137,7 +137,7 @@ public class y_PersonalAccountController extends openController {
 
                 GetMarks.setOnAction(event ->{GetMarks.getScene().getWindow().hide();
 
-                    super.openScene("FXML/testsView.fxml");
+                  
 
                         });
 

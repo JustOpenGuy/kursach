@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -158,53 +159,38 @@ public class testsViewer extends openController{
 
         Random(testss.getFirstFirstAnsw(), testss.getFirstSecondAnsw(), testss.getFirstTrueThirdAnsw(),ffTest, fsTest,  ftTest);
         Random(testss.getSecFirstAnsw(), testss.getSecSecondAnsw(), testss.getSecTrueThirdAnsw(),sfTest, ssTest,  stTest);
-        Random(testss.getThirdFirstAnsw(), testss.getThirdSecondAnsw(), testss.getFourthTrueThirdAnsw(),tfTest, tsTest,  ttTest);
+        Random(testss.getThirdFirstAnsw(), testss.getThirdSecondAnsw(), testss.getThirdTrueThirdAnsw(),tfTest, tsTest,  ttTest);
         Random(testss.getFourthFirstAnsw(), testss.getFourthSecondAnsw(), testss.getFirstTrueThirdAnsw(),fofTest, fosTest,  fotTest);
         Random(testss.getFifthfFirstAnsw(), testss.getFifthSecondAnsw(), testss.getFifthTrueThirdAnsw(),fifTest, fisTest,  fitTest);
 
 
 
-      /*
-        ffTest.setText(testss.getFirstFirstAnsw());
-        fsTest.setText(testss.getFirstSecondAnsw());
-       sfTest.setText(testss.getSecFirstAnsw());
-
-        ftTest.setText(testss.getFirstTrueThirdAnsw());
-
-        ssTest.setText(testss.getSecSecondAnsw());
-
-        tfTest.setText(testss.getThirdFirstAnsw());
-        tsTest.setText(testss.getThirdSecondAnsw());
-        ttTest.setText(testss.getThirdTrueThirdAnsw());
-        fofTest.setText(testss.getFourthFirstAnsw());
-        fosTest.setText(testss.getFourthSecondAnsw());
-        fotTest.setText(testss.getFourthTrueThirdAnsw());
-        fifTest.setText(testss.getFifthfFirstAnsw());
-        fisTest.setText(testss.getFifthSecondAnsw());
-        fitTest.setText(testss.getFifthTrueThirdAnsw());
-        stTest.setText(testss.getSecTrueThirdAnsw());
-*/
 
 
+        endButton.setOnAction((ActionEvent event) ->{endButton.getScene().getWindow().hide();
+            try { RadioButton selectedRadioButton = (RadioButton) first.getSelectedToggle();
+            if(selectedRadioButton.getText().equals(testss.getFirstTrueThirdAnsw()))score++;}
+            catch (NullPointerException e){ }
+            try { RadioButton sel2 = (RadioButton) second.getSelectedToggle();
+            if(sel2.getText().equals(testss.getSecTrueThirdAnsw()))score++;}
+            catch (NullPointerException e){ }
+            try {RadioButton sel3 = (RadioButton) third.getSelectedToggle();
+            if(sel3.getText().equals(testss.getThirdTrueThirdAnsw()))score++;}
+            catch (NullPointerException e){ }
+            try { RadioButton sel4 = (RadioButton) fourth.getSelectedToggle();
+            if(sel4.getText().equals(testss.getFourthTrueThirdAnsw()))score++;}
+            catch (NullPointerException e){ }
 
-        endButton.setOnAction(event ->{endButton.getScene().getWindow().hide();
-            RadioButton selectedRadioButton = (RadioButton) first.getSelectedToggle();
-            if(selectedRadioButton.getText().equals(testss.getFirstTrueThirdAnsw()));score++;
-
-            RadioButton sel2 = (RadioButton) second.getSelectedToggle();
-            if(sel2.getText().equals(testss.getSecTrueThirdAnsw()));score++;
-
-            RadioButton sel3 = (RadioButton) third.getSelectedToggle();
-            if(sel3.getText().equals(testss.getThirdTrueThirdAnsw()));score++;
-
-            RadioButton sel4 = (RadioButton) fourth.getSelectedToggle();
-            if(sel4.getText().equals(testss.getFourthTrueThirdAnsw()));score++;
-            RadioButton sel5 = (RadioButton) fifth.getSelectedToggle();
-            if(sel5.getText().equals(testss.getFifthTrueThirdAnsw()));score++;
+           try { RadioButton sel5 = (RadioButton) fifth.getSelectedToggle();
+            if(sel5.getText().equals(testss.getFifthTrueThirdAnsw()))score++;
+                         }
+           catch (NullPointerException e){ }
 
 
-          
-            System.out.println(score);
+
+
+                dbt.SetMarks(y_PersonalAccountController.lessonInd, score, Users.getUserName());
+                System.out.println(score);
 
         super.openScene("FXML/y_PersonalAccount.fxml");
 
