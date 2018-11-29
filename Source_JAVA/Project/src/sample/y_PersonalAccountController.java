@@ -6,13 +6,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -68,7 +69,16 @@ public class y_PersonalAccountController extends openController {
     private Button GetMarks;
 
 
-    private void loadData() {
+    @FXML
+    private ChoiceBox<String> LessonBox;
+
+    @FXML
+    private Label markLable;
+
+
+
+
+    public void loadData() {
         list.removeAll(list);
         ArrayList<String> lst = new ArrayList<String>();
         int a = 0;
@@ -83,6 +93,7 @@ public class y_PersonalAccountController extends openController {
         }
         list.addAll(lst);
         courses.getItems().addAll(list);
+        LessonBox.getItems().addAll(list);
     }
 
     private void setUrlFinal(String s){
@@ -101,6 +112,7 @@ public class y_PersonalAccountController extends openController {
 
 
         loadData();
+        LessonBox.setValue(list.get(0).toString());
         courses.setValue(list.get(0).toString());
         GoToLesson.setOnAction(event -> {
             GoToLesson.getScene().getWindow().hide(); //Открывает просмотр урока
@@ -112,6 +124,29 @@ public class y_PersonalAccountController extends openController {
                 }
         );
 
+        GetMarks.setOnAction(event -> {
+
+            DatabaseHandler dbt = new DatabaseHandler();
+            ResultSet res = dbt.getMark(Users.getUserName());
+            String snf = new String();
+            try {
+                res.next();snf = res.getString(4+LessonBox.getSelectionModel().getSelectedIndex()+1);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            markLable.setText(snf);
+
+
+
+            /*;lessonInd*/
+
+
+                }
+        );
+
+
+
+
         LogOut.setOnAction(event -> {                       //Возврат на окно регистрации
                     GoToLesson.getScene().getWindow().hide();
                     super.openShow("FXML/sample.fxml");
@@ -119,6 +154,7 @@ public class y_PersonalAccountController extends openController {
         );
 
         About.setOnAction(event -> {    //Про программу
+
                     super.openScene("FXML/About.fxml");
 
                 }
@@ -135,11 +171,6 @@ public class y_PersonalAccountController extends openController {
         );
 
 
-                GetMarks.setOnAction(event ->{GetMarks.getScene().getWindow().hide();
-
-                  
-
-                        });
 
     }
 

@@ -98,6 +98,9 @@ public class testWriterController  {
     private TextField fifthTrueThirdAnsw;
 
     @FXML
+    private TextField nameField;
+
+
     protected Tests[] testss = new Tests[20];
 
 
@@ -142,6 +145,7 @@ public class testWriterController  {
             fifthSecondAnsw.setText(testss[ex].getFifthSecondAnsw());firstTrueThirdAnsw.setText(testss[ex].getFirstTrueThirdAnsw());
             secTrueThirdAnsw.setText(testss[ex].getSecTrueThirdAnsw());thirdTrueThirdAnsw.setText(testss[ex].getThirdTrueThirdAnsw());
             fourthTrueThirdAnsw.setText(testss[ex].getFourthTrueThirdAnsw());fifthTrueThirdAnsw.setText(testss[ex].getFifthTrueThirdAnsw());
+            nameField.setText(testss[ex].getCourseName());
                     });
 
         saveButton.setOnAction(event -> {
@@ -156,7 +160,7 @@ public class testWriterController  {
        String  fifthSe= fifthSecondAnsw.getText();String  firstTr= firstTrueThirdAnsw.getText();
        String  secTrue= secTrueThirdAnsw.getText();String  thirdTr= thirdTrueThirdAnsw.getText();
        String  fourthT= fourthTrueThirdAnsw.getText();String  fifthTr= fifthTrueThirdAnsw.getText();
-       String  courseNa=courseChoice.getValue();
+       String  courseNa=nameField.getText();
 
             DatabaseHandler dbt1 = new DatabaseHandler();
 

@@ -62,6 +62,12 @@
                   <ChoiceBox fx:id="courseChoice" layoutX="204.0" layoutY="38.0" prefWidth="150.0" />
                   <Button fx:id="refreshButton" layoutX="132.0" layoutY="38.0" mnemonicParsing="false" text="Refresh" />
                   <Button fx:id="saveButton" layoutX="132.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Save" />
+                  <TextField fx:id="nameField" layoutX="14.0" layoutY="553.0" prefHeight="25.0" prefWidth="339.0" />
+                  <Text fill="#9f9f9f" layoutX="14.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя урока" wrappingWidth="122.00000882148743">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">

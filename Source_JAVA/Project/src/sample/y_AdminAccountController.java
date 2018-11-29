@@ -7,18 +7,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import javax.xml.soap.Text;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -42,11 +41,6 @@ public class y_AdminAccountController extends openController {
     public static String lessonNameAdm;
     public static int lessonCounter;
 
-    @FXML
-    private Button addLesson;
-
-    @FXML
-    private Button deleteLesson;
 
     @FXML
     private Button testEdit;
@@ -75,6 +69,28 @@ public class y_AdminAccountController extends openController {
     @FXML
     private Label ErrorLabel;
 
+    @FXML
+    private ChoiceBox<String> fioBox;
+
+
+    @FXML
+    private Button addLesson;
+
+    @FXML
+    private Button deleteLesson;
+
+    @FXML
+    private Label markLable;
+
+    @FXML
+    private ChoiceBox<String> lessonBox;
+
+
+
+
+
+
+
     public void loadData() {
         list.removeAll(list);
         ArrayList<String> lst = new ArrayList<String>();
@@ -90,6 +106,8 @@ public class y_AdminAccountController extends openController {
         list.addAll(lst);
         lesson.setItems(list);
         lesson.setValue(list.get(0).toString());
+        lessonBox.setItems(list);
+        lessonBox.setValue(list.get(0).toString());
      //   lesson.getItems().addAll(list);
     }
 
@@ -123,10 +141,48 @@ public class y_AdminAccountController extends openController {
     }
 
 
+
+
     @FXML
     void initialize() {
 
         loadData();
+        lessonBox.setValue(list.get(0).toString());
+        ArrayList<String> names = new ArrayList<>();
+        DatabaseHandler dbt = new DatabaseHandler();
+        ResultSet res = dbt.getNames();
+        try {
+            while (res.next()) {
+                names.add(res.getString(4));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        names.remove(0);
+        ObservableList<String> choiceBoxList = FXCollections.observableArrayList(names);
+        fioBox.setValue("ФИО");
+        fioBox.setItems(choiceBoxList);
+        fioBox.setTooltip(new Tooltip("Выбери нужного студента"));
+
+
+        GetMarks.setOnAction(event -> {
+            ResultSet res1 = dbt.getMarkFio(fioBox.getValue());
+            String snf = new String();
+            try {
+                res1.next();
+                snf = res1.getString(4 + lessonBox.getSelectionModel().getSelectedIndex() + 1);
+                markLable.setText(snf);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+
+
+                });
+
+
+
+
 
         Edit.setOnAction(event -> {
 //                    String file = new String(getUrlAdm());
@@ -198,8 +254,8 @@ public class y_AdminAccountController extends openController {
                         String a = "set"+lessonIndAdm;
                         lessonCounter++;
                         Tests tmp = new Tests(lessonCounter, a);
-                        DatabaseHandler dbt = new DatabaseHandler();
-                        dbt.SetDBTest(tmp);
+                        DatabaseHandler dbt2 = new DatabaseHandler();
+                        dbt2.SetDBTest(tmp);
                         loadData();
                         a = urlFullAdm;
                         a = a.replace("file:/", "");
@@ -225,8 +281,8 @@ public class y_AdminAccountController extends openController {
                 inizRafUrlAdm();//Инициализация строки пути к файла
                 setUrlFinal(list.get(lessonCounter - 1).toString());
                 String a = new String();
-                DatabaseHandler dbt = new DatabaseHandler();
-                dbt.deleteTests(lessonCounter);
+                DatabaseHandler dbt3 = new DatabaseHandler();
+                dbt3.deleteTests(lessonCounter);
                 a = new String(urlFullAdm);
                 a = a.replace("file:/", "");
                 a = a.replace("/sample/course/les1/p1.html", "/sample/course/les" + (lessonCounter) + "/");

@@ -62,8 +62,8 @@ public class DatabaseHandler extends Configs {
 
     public void signUpUser(Users user){
         String insert = "INSERT INTO " + Const.USER_TABLE + " (" +//помещаем в табл польз
-                Const.USER_USERNAME + "," + Const.USER_PASSWORD + ")"//пароль и имя
-                + "VALUES(?,?)";//вставка данных
+                Const.USER_USERNAME + "," + Const.USER_PASSWORD + "," + Const.USER_FIO + ")"//пароль и имя
+                + "VALUES(?,?,?)";//вставка данных
 
 
 
@@ -71,6 +71,7 @@ public class DatabaseHandler extends Configs {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);//подключение к базе и передача
             prSt.setString(1, user.getUserName());
             prSt.setString(2, user.getPassword());
+            prSt.setString(3, user.getFio());
 
 
             prSt.executeUpdate();//выполнение команды
@@ -151,7 +152,7 @@ public class DatabaseHandler extends Configs {
 
     public void deleteTests(int id){
 
-
+        SetMarksNull(id);
         String sqlUpdate = "DELETE FROM `kursach`.`tests` WHERE (`idtests` = ?)";
 
 
@@ -168,7 +169,22 @@ public class DatabaseHandler extends Configs {
     }
 
 
+    public void SetMarksNull(int id){
+        String sqlUpdate = "UPDATE users "
+                + "SET mark" + id + " = ? ";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
 
+            prSt.setInt(1,  0);
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public void SetMarks(int id, int score, String us){
         String sqlUpdate = "UPDATE users "
@@ -279,8 +295,48 @@ public class DatabaseHandler extends Configs {
         }
     }
 
+    public ResultSet getNames( ) {
+        ResultSet resSet = null;
 
-    public ResultSet getMark( String usernam) {
+        String select = "SELECT * FROM " + Const.USER_TABLE ;//где логин и пароля чему-то равны
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+
+
+
+
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    public ResultSet getMarkFio(String usernam) {
+        ResultSet resSet = null;
+
+        String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " + //выбираем все из бд
+                Const.USER_FIO + "=? ";//где логин и пароля чему-то равны
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, usernam);
+
+
+
+            resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    public ResultSet getMark(String usernam) {
         ResultSet resSet = null;
 
         String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " + //выбираем все из бд

@@ -21,6 +21,10 @@ public class  RegController extends openController {
 
     public static int ErrorCode;
 
+
+    @FXML
+    private TextField fio_field1;
+
     /* ObservableList<String>choiceBoxList = FXCollections.observableArrayList("Мужской", "Женский");
      //для ЧекБоха М/Ж*/
 
@@ -61,7 +65,7 @@ public class  RegController extends openController {
     }
 
     private int RegNewUser() {
-        if (login_field.getText().isEmpty() || password_field.getText().isEmpty()) {
+        if (login_field.getText().isEmpty() || password_field.getText().isEmpty() || fio_field1.getText().isEmpty()) {
             //проверка на то, пустые ли поля, если да - устанавливаем код ошибки 1
             ErrorCode = 1;
             return 0;                   //выход при наличии ошибки
@@ -74,7 +78,8 @@ public class  RegController extends openController {
         DatabaseHandler dbHandler = new DatabaseHandler();
         String userName = login_field.getText();
         String password = password_field.getText();
-        Users user = new Users(userName, password);
+        String fio = fio_field1.getText();
+        Users user = new Users(userName, password, fio);
         dbHandler.signUpUser(user);
         ErrorCode = 0;
         return 0;

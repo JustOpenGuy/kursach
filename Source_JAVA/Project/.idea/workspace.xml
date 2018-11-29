@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2f41287-b9cb-4f57-9f96-c51ec5e43090" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les1/p2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/kursovaiya/sample/course/les2/p1.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Const.java" afterPath="$PROJECT_DIR$/src/sample/Const.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DatabaseHandler.java" afterPath="$PROJECT_DIR$/src/sample/DatabaseHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/testsViewer.java" afterPath="$PROJECT_DIR$/src/sample/testsViewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/FXML/registration.fxml" afterPath="$PROJECT_DIR$/src/sample/FXML/registration.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/FXML/testWriter.fxml" afterPath="$PROJECT_DIR$/src/sample/FXML/testWriter.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/FXML/y_AdminAccount.fxml" afterPath="$PROJECT_DIR$/src/sample/FXML/y_AdminAccount.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" afterPath="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/RegController.java" afterPath="$PROJECT_DIR$/src/sample/RegController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Users.java" afterPath="$PROJECT_DIR$/src/sample/Users.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/testWriterController.java" afterPath="$PROJECT_DIR$/src/sample/testWriterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" afterPath="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/y_LessonViewController.java" afterPath="$PROJECT_DIR$/src/sample/y_LessonViewController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" afterPath="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" />
     </list>
@@ -122,56 +131,57 @@
       <file leaf-file-name="DatabaseHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/DatabaseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="282" column="29" lean-forward="false" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
+            <state relative-caret-position="633">
+              <caret line="177" column="29" lean-forward="false" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
               <folding>
-                <marker date="1543441929044" expanded="true" signature="784:798" ph="SELECT * FRO... tests" />
-                <marker date="1543441929044" expanded="true" signature="1488:1586" ph="SELECT * FRO... tests" />
-                <marker date="1543441929044" expanded="true" signature="2090:2269" ph="INSERT INTO users... " />
-                <marker date="1543441929044" expanded="true" signature="2818:2908" ph="UPDATE users... " />
-                <marker date="1543441929044" expanded="true" signature="3358:3385" ph="SELECT * FRO... tests" />
-                <marker date="1543441929044" expanded="true" signature="4009:4079" ph="SELECT * FRO... tests" />
-                <marker date="1543441929044" expanded="true" signature="4887:4938" ph="DELETE FROM " />
-                <marker date="1543441929044" expanded="true" signature="5358:5400" ph="UPDATE tests... " />
-                <marker date="1543441929044" expanded="true" signature="5358:5415" ph="UPDATE tests... " />
-                <marker date="1543441929044" expanded="true" signature="5358:5454" ph="UPDATE tests... " />
-                <marker date="1543441929044" expanded="true" signature="5894:6570" ph="UPDATE tests... " />
-                <marker date="1543441929044" expanded="true" signature="8218:8935" ph="INSERT INTO tests... " />
-                <marker date="1543441929044" expanded="true" signature="10612:10723" ph="SELECT * FRO... users" />
-                <marker date="1543441929044" expanded="true" signature="10612:10724" ph="SELECT * FRO... users" />
-                <marker date="1543441929044" expanded="true" signature="11273:11446" ph="SELECT * FRO... users" />
-                <marker date="1543441929044" expanded="true" signature="12090:12214" ph="SELECT * FRO... users" />
-                <marker date="1543441929044" expanded="true" signature="12838:12949" ph="SELECT * FRO... users" />
+                <element signature="method#getDbConnection#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getQues#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getDirectQues#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#signUpUser#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#SetPass#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#TestCount#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getLessonName#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#SetTests#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#SetDBTest#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getNames#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getMarkFio#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getMark#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getAdmin#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getUser#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getLogin#0;class#DatabaseHandler#0" expanded="false" />
+                <marker date="1543451064833" expanded="true" signature="784:798" ph="SELECT * FRO... tests" />
+                <marker date="1543451064833" expanded="true" signature="1488:1586" ph="SELECT * FRO... tests" />
+                <marker date="1543451064833" expanded="true" signature="2090:2195" ph="INSERT INTO users... " />
+                <marker date="1543451064833" expanded="true" signature="2090:2294" ph="INSERT INTO users... " />
+                <marker date="1543451064833" expanded="true" signature="2889:2979" ph="UPDATE users... " />
+                <marker date="1543451064833" expanded="true" signature="3429:3456" ph="SELECT * FRO... tests" />
+                <marker date="1543451064833" expanded="true" signature="4080:4150" ph="SELECT * FRO... tests" />
+                <marker date="1543451064833" expanded="true" signature="4983:5034" ph="DELETE FROM " />
+                <marker date="1543451064833" expanded="true" signature="5434:5490" ph="UPDATE users... " />
+                <marker date="1543451064833" expanded="true" signature="5434:5492" ph="UPDATE users... " />
+                <marker date="1543451064833" expanded="true" signature="5908:5950" ph="UPDATE tests... " />
+                <marker date="1543451064833" expanded="true" signature="5908:5965" ph="UPDATE tests... " />
+                <marker date="1543451064833" expanded="true" signature="5908:6004" ph="UPDATE tests... " />
+                <marker date="1543451064833" expanded="true" signature="6444:7120" ph="UPDATE tests... " />
+                <marker date="1543451064833" expanded="true" signature="8768:9485" ph="INSERT INTO tests... " />
+                <marker date="1543451064833" expanded="true" signature="11148:11162" ph="SELECT * FRO... users" />
+                <marker date="1543451064833" expanded="true" signature="11148:11183" ph="SELECT * FRO... users" />
+                <marker date="1543451064833" expanded="true" signature="11697:11803" ph="SELECT * FRO... users" />
+                <marker date="1543451064833" expanded="true" signature="12355:12466" ph="SELECT * FRO... users" />
+                <marker date="1543451064833" expanded="true" signature="12355:12467" ph="SELECT * FRO... users" />
+                <marker date="1543451064833" expanded="true" signature="13016:13189" ph="SELECT * FRO... users" />
+                <marker date="1543451064833" expanded="true" signature="13833:13957" ph="SELECT * FRO... users" />
+                <marker date="1543451064833" expanded="true" signature="14581:14692" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="y_AdminAccountController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="y_PersonalAccountController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="y_LessonViewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+            <state relative-caret-position="229">
+              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,22 +189,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Users.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Users.java">
+      <file leaf-file-name="testWriterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/testWriterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="603">
+              <caret line="162" column="43" lean-forward="false" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testWriterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/testWriterController.java">
+      <file leaf-file-name="y_AdminAccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="115" column="40" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="40" />
+            <state relative-caret-position="-1615">
+              <caret line="172" column="94" lean-forward="true" selection-start-line="172" selection-start-column="27" selection-end-line="172" selection-end-column="94" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="y_PersonalAccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="739">
+              <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+              <folding>
+                <element signature="e#1846#1854#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,9 +224,45 @@
       <file leaf-file-name="openController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/openController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="184">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/RegController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="82" column="33" lean-forward="false" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="y_LessonViewController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testsViewer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/testsViewer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+              <folding>
+                <element signature="e#2154#2162#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,8 +270,8 @@
       <file leaf-file-name="Tests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="38" />
+            <state relative-caret-position="-306">
+              <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -244,13 +302,11 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/src/sample/Const.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/testWriter.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/RegSuccess.fxml" />
         <option value="$PROJECT_DIR$/src/sample/RegSuccessController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/y_Lesson.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/y_PersonalAccount.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/testWriterController.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/course/empties/p1.html" />
         <option value="$PROJECT_DIR$/src/sample/course/empties/p2.html" />
@@ -274,13 +330,16 @@
         <option value="$PROJECT_DIR$/src/sample/course/empties/last (1).html" />
         <option value="$PROJECT_DIR$/src/sample/y_EditorController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/y_Editor.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/RegController.java" />
         <option value="$PROJECT_DIR$/src/sample/Tests.java" />
-        <option value="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" />
         <option value="$PROJECT_DIR$/src/sample/testsViewer.java" />
+        <option value="$PROJECT_DIR$/src/sample/RegController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Users.java" />
+        <option value="$PROJECT_DIR$/src/sample/Const.java" />
+        <option value="$PROJECT_DIR$/src/sample/testWriterController.java" />
+        <option value="$PROJECT_DIR$/src/sample/y_AdminAccountController.java" />
         <option value="$PROJECT_DIR$/src/sample/DatabaseHandler.java" />
-        <option value="$PROJECT_DIR$/src/sample/y_LessonViewController.java" />
         <option value="$PROJECT_DIR$/src/sample/y_PersonalAccountController.java" />
+        <option value="$PROJECT_DIR$/src/sample/y_LessonViewController.java" />
       </list>
     </option>
   </component>
@@ -848,12 +907,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543432005576</updated>
-      <workItem from="1543432008407" duration="9638000" />
+      <workItem from="1543432008407" duration="18659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47544000" />
+    <option name="totallyTimeSpent" value="56565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -907,7 +966,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -915,14 +976,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -954,13 +1007,6 @@
     <entry file="file://$PROJECT_DIR$/src/sample/courses/1/p1.html" />
     <entry file="file://$PROJECT_DIR$/src/sample/courses/1/les1/p1.html" />
     <entry file="file://$PROJECT_DIR$/src/sample/d_ChooseTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Java/jdk-10.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1134,14 +1180,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/d_tree.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/RegController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="101" column="1" lean-forward="false" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/RegSuccessController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -1158,40 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/y_Lesson.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1203,73 +1207,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/openController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/DatabaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="282" column="29" lean-forward="false" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
+        <state relative-caret-position="357">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
-            <marker date="1543441929044" expanded="true" signature="784:798" ph="SELECT * FRO... tests" />
-            <marker date="1543441929044" expanded="true" signature="1488:1586" ph="SELECT * FRO... tests" />
-            <marker date="1543441929044" expanded="true" signature="2090:2269" ph="INSERT INTO users... " />
-            <marker date="1543441929044" expanded="true" signature="2818:2908" ph="UPDATE users... " />
-            <marker date="1543441929044" expanded="true" signature="3358:3385" ph="SELECT * FRO... tests" />
-            <marker date="1543441929044" expanded="true" signature="4009:4079" ph="SELECT * FRO... tests" />
-            <marker date="1543441929044" expanded="true" signature="4887:4938" ph="DELETE FROM " />
-            <marker date="1543441929044" expanded="true" signature="5358:5400" ph="UPDATE tests... " />
-            <marker date="1543441929044" expanded="true" signature="5358:5415" ph="UPDATE tests... " />
-            <marker date="1543441929044" expanded="true" signature="5358:5454" ph="UPDATE tests... " />
-            <marker date="1543441929044" expanded="true" signature="5894:6570" ph="UPDATE tests... " />
-            <marker date="1543441929044" expanded="true" signature="8218:8935" ph="INSERT INTO tests... " />
-            <marker date="1543441929044" expanded="true" signature="10612:10723" ph="SELECT * FRO... users" />
-            <marker date="1543441929044" expanded="true" signature="10612:10724" ph="SELECT * FRO... users" />
-            <marker date="1543441929044" expanded="true" signature="11273:11446" ph="SELECT * FRO... users" />
-            <marker date="1543441929044" expanded="true" signature="12090:12214" ph="SELECT * FRO... users" />
-            <marker date="1543441929044" expanded="true" signature="12838:12949" ph="SELECT * FRO... users" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/testsViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding>
-            <element signature="e#2154#2162#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/registration.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/testWriterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="115" column="40" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="40" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Const.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+        <state relative-caret-position="119">
+          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RegController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="82" column="33" lean-forward="false" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/openController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/testsViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+          <folding>
+            <element signature="e#2154#2162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/y_AdminAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1615">
+          <caret line="172" column="94" lean-forward="true" selection-start-line="172" selection-start-column="27" selection-end-line="172" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DatabaseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="177" column="29" lean-forward="false" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
+          <folding>
+            <element signature="method#getDbConnection#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getQues#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getDirectQues#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#signUpUser#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#SetPass#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#TestCount#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getLessonName#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#SetTests#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#SetDBTest#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getNames#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getMarkFio#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getMark#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getAdmin#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getUser#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#getLogin#0;class#DatabaseHandler#0" expanded="false" />
+            <marker date="1543451064833" expanded="true" signature="784:798" ph="SELECT * FRO... tests" />
+            <marker date="1543451064833" expanded="true" signature="1488:1586" ph="SELECT * FRO... tests" />
+            <marker date="1543451064833" expanded="true" signature="2090:2195" ph="INSERT INTO users... " />
+            <marker date="1543451064833" expanded="true" signature="2090:2294" ph="INSERT INTO users... " />
+            <marker date="1543451064833" expanded="true" signature="2889:2979" ph="UPDATE users... " />
+            <marker date="1543451064833" expanded="true" signature="3429:3456" ph="SELECT * FRO... tests" />
+            <marker date="1543451064833" expanded="true" signature="4080:4150" ph="SELECT * FRO... tests" />
+            <marker date="1543451064833" expanded="true" signature="4983:5034" ph="DELETE FROM " />
+            <marker date="1543451064833" expanded="true" signature="5434:5490" ph="UPDATE users... " />
+            <marker date="1543451064833" expanded="true" signature="5434:5492" ph="UPDATE users... " />
+            <marker date="1543451064833" expanded="true" signature="5908:5950" ph="UPDATE tests... " />
+            <marker date="1543451064833" expanded="true" signature="5908:5965" ph="UPDATE tests... " />
+            <marker date="1543451064833" expanded="true" signature="5908:6004" ph="UPDATE tests... " />
+            <marker date="1543451064833" expanded="true" signature="6444:7120" ph="UPDATE tests... " />
+            <marker date="1543451064833" expanded="true" signature="8768:9485" ph="INSERT INTO tests... " />
+            <marker date="1543451064833" expanded="true" signature="11148:11162" ph="SELECT * FRO... users" />
+            <marker date="1543451064833" expanded="true" signature="11148:11183" ph="SELECT * FRO... users" />
+            <marker date="1543451064833" expanded="true" signature="11697:11803" ph="SELECT * FRO... users" />
+            <marker date="1543451064833" expanded="true" signature="12355:12466" ph="SELECT * FRO... users" />
+            <marker date="1543451064833" expanded="true" signature="12355:12467" ph="SELECT * FRO... users" />
+            <marker date="1543451064833" expanded="true" signature="13016:13189" ph="SELECT * FRO... users" />
+            <marker date="1543451064833" expanded="true" signature="13833:13957" ph="SELECT * FRO... users" />
+            <marker date="1543451064833" expanded="true" signature="14581:14692" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/testWriterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="162" column="43" lean-forward="false" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/y_PersonalAccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="739">
+          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding>
+            <element signature="e#1846#1854#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/y_LessonViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

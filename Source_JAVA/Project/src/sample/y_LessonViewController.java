@@ -40,15 +40,20 @@ public class y_LessonViewController extends openController{
                 DatabaseHandler dbt = new DatabaseHandler();
                ResultSet NeW = dbt.getMark(Users.getUserName());
                 try {
-                    NeW.next();{ if(NeW.getInt(4+y_PersonalAccountController.lessonInd) == 0){
-                        testsButton.getScene().getWindow().hide();
-                        super.openShow("FXML/testsView.fxml");}
+                    NeW.next();
+                    {
+                        if (NeW.getInt(4 + y_PersonalAccountController.lessonInd) == 0) {
+                            testsButton.getScene().getWindow().hide();
+                            super.openShow("FXML/testsView.fxml");
+                        }
                     }
+
+
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-                testsButton.getScene().getWindow().hide();
-                super.openShow("/sample/FXML/y_PersonalAccount.fxml");
+                /*testsButton.getScene().getWindow().hide();
+                super.openShow("/sample/FXML/y_PersonalAccount.fxml");*/
 
 
             });
