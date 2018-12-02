@@ -63,10 +63,11 @@
             <Font name="Consolas" size="18.0" />
          </font>
       </Text>
-      <Label fx:id="markLable" layoutX="116.0" layoutY="460.0" prefHeight="31.0" prefWidth="89.0" textFill="RED">
+      <Label fx:id="markLabel" layoutX="116.0" layoutY="460.0" prefHeight="31.0" prefWidth="89.0" textFill="RED">
          <font>
             <Font name="Candara Bold" size="24.0" />
          </font>
       </Label>
+      <Button fx:id="GetAnotherChance" layoutX="416.0" layoutY="421.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Анулировать" />
    </children>
 </AnchorPane>

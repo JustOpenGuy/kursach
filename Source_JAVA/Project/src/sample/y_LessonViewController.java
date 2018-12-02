@@ -45,7 +45,7 @@ public class y_LessonViewController extends openController{
                         if (NeW.getInt(4 + y_PersonalAccountController.lessonInd) == 0) {
                             testsButton.getScene().getWindow().hide();
                             super.openShow("FXML/testsView.fxml");
-                        }
+                        } else {testsButton.getScene().getWindow().hide(); super.openShow("FXML/y_PersonalAccount.fxml");}
                     }
 
 

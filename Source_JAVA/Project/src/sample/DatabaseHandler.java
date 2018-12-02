@@ -1,19 +1,15 @@
 package sample;
 
-import sample.Configs;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import  java.sql.ResultSet;
-
+import java.sql.ResultSet;
 
 public class DatabaseHandler extends Configs {
     Connection dbConnection;
 
-    public Connection getDbConnection()
-            throws ClassNotFoundException, SQLException {     //Строка подключения к бД
+    public Connection getDbConnection() throws ClassNotFoundException, SQLException {     //Строка подключения к бД
         String connectionString = "jdbc:mysql://" + dbHost + ":"
                 + dbPort + "/" + dbName;
 
@@ -139,27 +135,22 @@ public class DatabaseHandler extends Configs {
         try {
             if (resSet.next())
                 try {
-                answer = resSet.getString(22);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+                    answer = resSet.getString(22);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return answer;
     }
-//DELETE FROM `kursach`.`tests` WHERE (`idtests` = '4');
 
     public void deleteTests(int id){
-
         SetMarksNull(id);
         String sqlUpdate = "DELETE FROM `kursach`.`tests` WHERE (`idtests` = ?)";
-
-
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
             prSt.setInt(1, id);
-
             prSt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -167,23 +158,19 @@ public class DatabaseHandler extends Configs {
             e.printStackTrace();
         }
     }
-
 
     public void SetMarksNull(int id){
         String sqlUpdate = "UPDATE users "
                 + "SET mark" + id + " = ? ";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
-
             prSt.setInt(1,  0);
-
             prSt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
     public void SetMarks(int id, int score, String us){
@@ -201,7 +188,23 @@ public class DatabaseHandler extends Configs {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
 
+    public void SetMarksFio(int id, int score, String us){
+        String sqlUpdate = "UPDATE users "
+                + "SET mark" + id + " = ? "
+                + "WHERE name = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
+            prSt.setInt(1,  score);
+            prSt.setString(2,  us);
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void SetTests(Tests test){
@@ -247,21 +250,19 @@ public class DatabaseHandler extends Configs {
         }
     }
 
-
-
     public void SetDBTest(Tests test){
 
 
         String sqlUpdate =
-        "INSERT INTO " + Const.TESTS_TABLE + " (" +//помещаем в табл польз
-                "firstQues" + ",  secQues"+ ",  thurdQues"+ ",  fourthQues"+ ",  fifthQues"
-                + ",  firstFirstAnsw"+ ",  firstSecondAnsw"+ ",  secFirstAnsw"+ ",  secSecondAnsw"+ ",  thirdFirstAnsw"
-                + ",  thirdSecondAnsw"+ ",  fourthFirstAnsw"+ ",  fourthSecondAnsw"+ ",  fifthfFirstAnsw"+ ",  fifthSecondAnsw"
-                + ",  firstTrueThirdAnsw"+ ",  secTrueThirdAnsw"+ ",  thirdTrueThirdAnsw"+ ",  fourthTrueThirdAnsw"
-                + ",  fifthTrueThirdAnsw"
-                + ", courseName"
-                + ", idtests" + ")"//пароль и имя
-                + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                "INSERT INTO " + Const.TESTS_TABLE + " (" +//помещаем в табл польз
+                        "firstQues" + ",  secQues"+ ",  thurdQues"+ ",  fourthQues"+ ",  fifthQues"
+                        + ",  firstFirstAnsw"+ ",  firstSecondAnsw"+ ",  secFirstAnsw"+ ",  secSecondAnsw"+ ",  thirdFirstAnsw"
+                        + ",  thirdSecondAnsw"+ ",  fourthFirstAnsw"+ ",  fourthSecondAnsw"+ ",  fifthfFirstAnsw"+ ",  fifthSecondAnsw"
+                        + ",  firstTrueThirdAnsw"+ ",  secTrueThirdAnsw"+ ",  thirdTrueThirdAnsw"+ ",  fourthTrueThirdAnsw"
+                        + ",  fifthTrueThirdAnsw"
+                        + ", courseName"
+                        + ", idtests" + ")"//пароль и имя
+                        + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(sqlUpdate);
             prSt.setString(1,  test.getFirstQues());
@@ -295,7 +296,7 @@ public class DatabaseHandler extends Configs {
         }
     }
 
-    public ResultSet getNames( ) {
+    public ResultSet getNames() {
         ResultSet resSet = null;
 
         String select = "SELECT * FROM " + Const.USER_TABLE ;//где логин и пароля чему-то равны
@@ -319,12 +320,10 @@ public class DatabaseHandler extends Configs {
         ResultSet resSet = null;
 
         String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " + //выбираем все из бд
-                Const.USER_FIO + "=? ";//где логин и пароля чему-то равны
+                Const.USER_FIO + "=? ";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             prSt.setString(1, usernam);
-
-
 
             resSet = prSt.executeQuery();  //executeQuery - получение данных из БД
         } catch (SQLException e) {
@@ -356,7 +355,6 @@ public class DatabaseHandler extends Configs {
 
         return resSet;
     }
-
 
     public ResultSet getAdmin(Users user) {
         ResultSet resSet = null;
